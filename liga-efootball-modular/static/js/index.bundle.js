@@ -1,3 +1,4 @@
+/* script block 1 */
 
 // ══ MVP OBLIGATORIO — funciones globales ══════════════════════
 window._mvpForceCallback = null;
@@ -48,20 +49,21 @@ window.confirmMvpForce = function(btn) {
 // ══════════════════════════════════════════════════════════════
 
 
+/* script block 2 */
 (function(){
 var _sc={a:0,b:0};var _rojas={a:0,b:0};var _events=[];var _timerSec=0;var _timerInterval=null;var _timerRunning=false;
 var _htDone=false;var _etDone=false;var _et1Done=false;var _matchFinished=false;var _pendingEvt=null;
 var _etPhase=false;
 // ═══ REGISTRO GLOBAL DE PLANTILLAS ═══
 window.TEAM_RATINGS={
-  'Real Madrid':91,
-  'FC Barcelona':89,
+  'Real Madrid':85,
+  'FC Barcelona':85,
   'Atlético Madrid':87,
-  'Real Sociedad':85,
-  'Real Betis':84,
-  'Sevilla FC':83,
-  'Villarreal CF':83,
-  'Athletic Club':83,
+  'Real Sociedad':77,
+  'Real Betis':79,
+  'Sevilla FC':75,
+  'Villarreal CF':79,
+  'Athletic Club':80,
   'Girona FC':77,
   'Osasuna':77,
   'Rayo Vallecano':77,
@@ -69,533 +71,729 @@ window.TEAM_RATINGS={
   'Mallorca':76,
   'Getafe CF':75,
   'Celta de Vigo':76,
-  'Espanyol':77,
+  'Espanyol':76,
   'Deportivo Alavés':74,
   'Elche CF':74,
   'Córdoba CF':74,
-  'Albacete BP':74
+  'Albacete BP':68,
+  'Levante UD':73,
+  'Real Oviedo':73,
 };
 window.SQUAD_REGISTRY={
   'Real Madrid':[
     {h:'🧤 PORTEROS'},
-    ['1','T. Courtois',90],
-    ['13','A. Lunin',82],
-    ['26','F. González',65],
+    ['1','Courtois',89],
+    ['13','Lunin',80],
+    ['26','Fran González',64],
+    ['25','Mestre',60],
     {h:'🛡 DEFENSAS'},
-    ['23','F. Mendy',84],
-    ['22','A. Rüdiger',87],
-    ['3','É. Militão',87],
-    ['12','T. Alexander-Arnold',87],
-    ['20','F. García',78],
-    ['4','D. Alaba',80],
-    ['17','R. Asencio',78],
-    ['18','Á. Carreras',76],
-    ['24','D. Huijsen',78],
+    ['12','Trent',86],
+    ['2','Carvajal',85],
+    ['22','Rüdiger',85],
+    ['3','Militão',84],
+    ['24','Huijsen',82],
+    ['4','Alaba',80],
+    ['23','Mendy',81],
+    ['18','Carreras',80],
+    ['15','Asencio',78],
+    ['20','Fran García',77],
+    ['27','Aguado',59],
     {h:'⚙️ MEDIOS'},
-    ['5','J. Bellingham',91],
-    ['14','A. Tchouaméni',85],
-    ['8','F. Valverde',88],
-    ['6','E. Camavinga',84],
-    ['15','A. Güler',82],
-    ['19','D. Ceballos',80],
-    ['21','B. Díaz',84],
-    ['7','L. Modric',82],
+    ['5','Bellingham',89],
+    ['8','Valverde',88],
+    ['14','Tchouaméni',84],
+    ['6','Camavinga',82],
+    ['10','Arda Güler',82],
+    ['21','Brahim',81],
+    ['19','Ceballos',80],
+    ['16','Gonzalo',73],
+    ['30','Mastantuono',77],
+    ['45','Pitarch',60],
+    ['28','Cestero',63],
     {h:'⚡ DELANTEROS'},
-    ['11','V. Júnior',92],
-    ['9','K. Mbappé',92],
-    ['10','R. Goes',86],
-    ['30','F. Mastantuono',79],
+    ['9','Mbappé',91],
+    ['7','Vinicius',89],
+    ['11','Rodrygo',84],
   ],
   'FC Barcelona':[
     {h:'🧤 PORTEROS'},
-    ['25','W. Szczęsny',84],
-    ['13','J. García',80],
-    ['1','I. Peña',72],
+    ['1','Joan García',85],
+    ['13','Szczęsny',83],
+    ['25','Kochen',61],
     {h:'🛡 DEFENSAS'},
-    ['3','A. Balde',84],
-    ['5','P. Cubarsí',83],
-    ['4','R. Araújo',87],
-    ['23','J. Koundé',86],
-    ['2','H. Fort',74],
-    ['24','É. García',78],
-    ['6','G. Christensen',78],
+    ['23','Koundé',86],
+    ['2','Cancelo',84],
+    ['3','Balde',83],
+    ['24','Eric García',83],
+    ['4','Araújo',82],
+    ['5','Cubarsí',82],
+    ['18','G. Martín',76],
+    ['15','Christensen',80],
     {h:'⚙️ MEDIOS'},
-    ['8','P. Gavi',85],
-    ['21','F. de Jong',86],
-    ['16','F. Pedri',88],
-    ['17','D. Olmo',86],
-    ['14','M. Casadó',80],
-    ['20','M. Bernal',79],
-    ['15','A. Fermín',81],
-    ['22','P. Torre',79],
+    ['8','Pedri',90],
+    ['21','F. de Jong',87],
+    ['20','Dani Olmo',84],
+    ['6','Gavi',83],
+    ['16','Fermín',83],
+    ['14','Rashford',81],
+    ['17','Casadó',79],
+    ['22','Bernal',74],
+    ['35','T. Fernández',64],
+    ['40','Jofre',61],
+    ['34','G. Fernández',60],
+    ['43','Marqués',59],
     {h:'⚡ DELANTEROS'},
-    ['10','A. Lewandowski',88],
-    ['11','R. Ferran',86],
-    ['19','L. Yamal',88],
-    ['9','V. Guiu',78],
-    ['7','F. López',76],
-  ],
-  'Atlético Madrid':[
-    {h:'🧤 PORTEROS'},
-    ['1','J. Oblak',90],
-    ['13','A. Grbić',76],
-    {h:'🛡 DEFENSAS'},
-    ['2','N. Molina',82],
-    ['3','J. Giménez',85],
-    ['15','C. Lenglet',80],
-    ['23','R. Lodi',80],
-    ['20','A. Witsel',80],
-    ['14','A. Azpilicueta',76],
-    ['12','J. Nehuen',76],
-    ['4','M. Hermoso',75],
-    {h:'⚙️ MEDIOS'},
-    ['5','R. De Paul',84],
-    ['8','K. Koke',83],
-    ['6','M. Llorente',82],
-    ['11','T. Lemar',80],
-    ['16','P. Barrios',81],
-    ['7','S. Riquelme',80],
-    ['17','A. Galán',79],
-    ['22','J. Serrano',76],
-    {h:'⚡ DELANTEROS'},
-    ['19','Á. Morata',84],
-    ['9','J. Correa',79],
-    ['10','J. Griezmann',88],
-    ['21','A. Sørloth',83],
-    ['18','S. Memphis',80],
-  ],
-  'Real Sociedad':[
-    {h:'🧤 PORTEROS'},
-    ['1','A. Remiro',85],
-    ['13','M. Zubikarai',74],
-    {h:'🛡 DEFENSAS'},
-    ['2','A. Gorosabel',78],
-    ['5','I. Zubeldia',80],
-    ['6','A. Le Normand',83],
-    ['3','D. Rico',79],
-    ['22','Aihen',77],
-    ['14','J. Pacheco',76],
-    ['16','H. Aramburu',74],
-    ['15','J. Elustondo',76],
-    {h:'⚙️ MEDIOS'},
-    ['4','M. Merino',84],
-    ['24','M. Zubimendi',87],
-    ['8','T. Kubo',85],
-    ['20','B. Turrientes',80],
-    ['10','D. Oyarzabal',86],
-    ['7','D. Silva',88],
-    ['11','U. Marín',78],
-    ['17','G. Aguerd',78],
-    {h:'⚡ DELANTEROS'},
-    ['9','A. Barrenetxea',82],
-    ['19','I. Sadiq',79],
-    ['21','I. Karrikaburu',78],
-    ['18','M. Navarro',77],
-  ],
-  'Real Betis':[
-    {h:'🧤 PORTEROS'},
-    ['1','R. Silva',84],
-    ['13','F. Pacheco',80],
-    {h:'🛡 DEFENSAS'},
-    ['2','E. Sabaly',80],
-    ['5','M. Bartra',79],
-    ['6','G. Pezzella',79],
-    ['3','A. Cornejo',77],
-    ['23','R. Perraud',78],
-    ['15','Pablo Fornals',77],
-    ['22','C. Akouokou',76],
-    ['14','A. Ruibal',76],
-    {h:'⚙️ MEDIOS'},
-    ['4','W. Carvalho',84],
-    ['8','G. Rodríguez',82],
-    ['10','Isco',86],
-    ['20','J. Roca',81],
-    ['7','A. Fekir',84],
-    ['17','M. Hermoso',78],
-    ['11','R. Iglesias',79],
-    ['16','J. Miranda',78],
-    {h:'⚡ DELANTEROS'},
-    ['9','B. Iglesias',84],
-    ['19','A. Ayoze',82],
-    ['21','J. Abner',79],
-    ['18','M. Bakambu',80],
-  ],
-  'Sevilla FC':[
-    {h:'🧤 PORTEROS'},
-    ['1','Y. Bounou',86],
-    ['13','M. Dmitrović',80],
-    {h:'🛡 DEFENSAS'},
-    ['2','J. Navas',79],
-    ['4','L. Badé',82],
-    ['5','M. Gudelj',80],
-    ['3','A. Acuña',80],
-    ['23','M. Carmona',78],
-    ['15','M. Nianzou',80],
-    ['22','L. Juanlu',78],
-    ['6','G. Rekik',75],
-    {h:'⚙️ MEDIOS'},
-    ['8','I. Rakitić',83],
-    ['17','J. Navas',78],
-    ['10','E. Ocampos',83],
-    ['20','D. Sow',79],
-    ['7','L. Agoumé',78],
-    ['16','A. González',79],
-    ['11','J. Jordán',81],
-    ['14','R. Gil',78],
-    {h:'⚡ DELANTEROS'},
-    ['9','Y. En-Nesyri',84],
-    ['19','I. Romero',81],
-    ['21','A. Sánchez',80],
-    ['18','A. Adams',78],
-  ],
-  'Villarreal CF':[
-    {h:'🧤 PORTEROS'},
-    ['1','G. Rulli',84],
-    ['13','F. Maresca',76],
-    {h:'🛡 DEFENSAS'},
-    ['2','J. Foyth',82],
-    ['5','P. Torres',85],
-    ['6','R. Albiol',82],
-    ['3','A. Pedraza',81],
-    ['23','C. Pino',79],
-    ['15','E. Bailly',79],
-    ['22','A. Moreno',80],
-    ['14','J. Cuenca',77],
-    {h:'⚙️ MEDIOS'},
-    ['4','E. Lo Celso',84],
-    ['8','D. Parejo',85],
-    ['10','S. Baena',82],
-    ['20','A. Capoue',80],
-    ['7','N. Jackson',81],
-    ['17','G. Moreno',84],
-    ['11','S. Chukwueze',82],
-    ['16','Y. Brereton',78],
-    {h:'⚡ DELANTEROS'},
-    ['9','G. Moreno',83],
-    ['19','G. Pedrosa',80],
-    ['21','J. Danjuma',81],
-    ['18','C. Pino',80],
+    ['10','Lamine Yamal',89],
+    ['11','Raphinha',89],
+    ['9','Lewandowski',87],
+    ['7','Ferran Torres',84],
+    ['28','Bardghji',74],
   ],
   'Athletic Club':[
     {h:'🧤 PORTEROS'},
-    ['1','U. Simón',87],
-    ['13','J. Agirrezabala',79],
+    ['1','Unai Simón',84],
+    ['13','Padilla',69],
+    ['25','Manex',63],
     {h:'🛡 DEFENSAS'},
-    ['2','A. De Marcos',80],
-    ['5','D. Vivian',81],
-    ['6','A. Yeray',82],
-    ['3','Y. Berchiche',80],
-    ['22','J. Lekue',78],
-    ['15','O. Sancet',81],
-    ['23','K. García',78],
-    ['14','I. Ruiz de Galarreta',79],
+    ['4','Laporte',82],
+    ['5','Vivian',83],
+    ['6','Yeray',82],
+    ['17','Berchiche',79],
+    ['19','Gorosabel',76],
+    ['18','Areso',77],
+    ['20','Lekue',73],
+    ['7','Paredes',78],
+    ['27','Maroan',73],
+    ['24','A. Hierro',60],
+    ['21','Monreal',70],
+    ['14','Egiluz',70],
     {h:'⚙️ MEDIOS'},
-    ['4','M. Vesga',82],
-    ['8','U. Nico Williams',88],
-    ['10','O. Sancet',84],
-    ['20','A. Vencedor',81],
-    ['7','I. Williams',86],
-    ['17','A. Berenguer',80],
-    ['11','J. Muniain',82],
-    ['16','J. Djaló',79],
+    ['9','Sancet',83],
+    ['22','B. Prados',78],
+    ['10','Galarreta',80],
+    ['23','Jauregizar',80],
+    ['15','Vesga',73],
+    ['16','U. Gómez',73],
+    ['26','N. Serrano',70],
+    ['25','Boiro',73],
+    ['11','Rego',71],
+    ['29','Selton',62],
     {h:'⚡ DELANTEROS'},
-    ['9','G. Uriarte',81],
-    ['19','O. Sancet',82],
-    ['21','R. Morcillo',78],
-    ['18','A. Villalibre',80],
+    ['11','Nico Williams',86],
+    ['12','Iñaki Williams',82],
+    ['3','Berenguer',81],
+    ['2','Guruzeta',78],
+    ['28','Izeta',71],
   ],
-  'Girona FC':[
+  'Atlético Madrid':[
     {h:'🧤 PORTEROS'},
-    ['1','P. Gazzaniga',78],
-    ['13','R. Blanco',73],
+    ['1','Oblak',88],
+    ['13','Musso',79],
+    ['26','Esquivel',63],
     {h:'🛡 DEFENSAS'},
-    ['2','A. Martínez',78],
-    ['5','D. Blind',76],
-    ['6','V. Reis',75],
-    ['3','A. Moreno',77],
-    ['22','Francés',75],
-    ['14','H. Rincón',73],
-    ['23','D. López',76],
+    ['3','Marcos Llorente',84],
+    ['2','Hancko',83],
+    ['5','Giménez',83],
+    ['4','Le Normand',81],
+    ['6','Lenglet',78],
+    ['12','Pubill',78],
+    ['20','N. Molina',77],
+    ['23','Ruggeri',76],
+    ['36','Kostis',68],
     {h:'⚙️ MEDIOS'},
-    ['4','F. Beltrán',77],
-    ['8','I. Martín',77],
-    ['10','T. Lemar',77],
-    ['20','J. Roca',72],
-    ['7','B. Gil',77],
-    ['17','V. Tsygankov',78],
-    ['11','C. Echeverri',73],
-    ['16','A. Witsel',76],
+    ['7','Griezmann',84],
+    ['14','P. Barrios',83],
+    ['8','Koke',81],
+    ['10','Cardoso',80],
+    ['18','G. Simeone',81],
+    ['17','De Paul',79],
+    ['22','Mendoza',71],
+    ['27','Monserrate',58],
+    ['19','Almada',79],
+    ['24','Rayane',61],
     {h:'⚡ DELANTEROS'},
-    ['9','V. Vanat',77],
-    ['19','C. Stuani',76],
-    ['21','A. Ruiz',72],
-    ['18','D. van de Beek',75],
-    ['15','Portu',75],
+    ['9','Julián Álvarez',87],
+    ['11','Sørloth',83],
+    ['15','Lookman',83],
+    ['16','Álex Baena',83],
+    ['25','N. González',79],
+  ],
+  'Real Betis':[
+    {h:'🧤 PORTEROS'},
+    ['1','Valles',78],
+    ['13','Pau López',78],
+    ['25','Adrián',72],
+    ['30','Ó. González',62],
+    ['16','Gavin',57],
+    {h:'🛡 DEFENSAS'},
+    ['5','Bartra',79],
+    ['4','Natan',79],
+    ['24','Ruibal',77],
+    ['23','Llorente',76],
+    ['3','Junior Firpo',75],
+    ['40','Á. Ortiz',70],
+    ['2','Chimy',73],
+    {h:'⚙️ MEDIOS'},
+    ['22','Isco',84],
+    ['15','Lo Celso',81],
+    ['8','Fornals',81],
+    ['7','Antony',81],
+    ['17','Fidalgo',78],
+    ['21','M. Roca',78],
+    ['6','Altimira',77],
+    ['14','Amrabat',79],
+    ['18','Deossa',76],
+    ['10','Riquelme',59],
+    ['11','Corralejo',59],
+    ['20','D. Pérez',63],
+    {h:'⚡ DELANTEROS'},
+    ['19','Cucho',79],
+    ['9','Abde',79],
+    ['26','P. García',70],
+    ['28','V. Gómez',76],
+  ],
+  'Real Sociedad':[
+    {h:'🧤 PORTEROS'},
+    ['1','Remiro',82],
+    ['13','U. Marrero',69],
+    {h:'🛡 DEFENSAS'},
+    ['5','Zubeldia',77],
+    ['31','Jon Martín',75],
+    ['6','Elustondo',74],
+    ['16','Ćaleta-Car',74],
+    ['20','Odriozola',73],
+    ['2','Jon Aramburu',77],
+    ['3','S. Gómez',79],
+    {h:'⚙️ MEDIOS'},
+    ['17','Brais Méndez',80],
+    ['14','Kubo',81],
+    ['21','Zakharyan',73],
+    ['4','Gorrotxa',75],
+    ['12','Y. Herrera',81],
+    ['8','Turrientes',73],
+    ['11','Guedes',75],
+    ['18','C. Soler',77],
+    ['24','Sučić',75],
+    ['15','P. Marín',73],
+    ['22','Wesley',69],
+    {h:'⚡ DELANTEROS'},
+    ['10','Oyarzabal',82],
+    ['7','Barrenetxea',78],
+    ['9','Óskarsson',74],
+    ['19','Karrikaburu',67],
+  ],
+  'Sevilla FC':[
+    {h:'🧤 PORTEROS'},
+    ['1','Vlachodimos',78],
+    ['13','Nyland',75],
+    ['25','A. Flores',65],
+    ['30','R. Romero',62],
+    {h:'🛡 DEFENSAS'},
+    ['3','Azpilicueta',78],
+    ['22','Gudelj',76],
+    ['15','Babá Mendy',76],
+    ['4','Kike Salas',75],
+    ['12','Suazo',75],
+    ['16','Juanlu',75],
+    ['23','Marcão',74],
+    ['5','Nianzou',72],
+    ['18','Castrín',67],
+    {h:'⚙️ MEDIOS'},
+    ['6','Agoumé',75],
+    ['17','D. Sow',76],
+    ['8','Joan Jordán',74],
+    ['19','Cardoso',74],
+    ['24','Januzaj',74],
+    ['10','Peque',74],
+    ['11','Carmona',77],
+    ['20','Sierra',64],
+    ['21','Bueno',65],
+    ['22','Altozano',58],
+    {h:'⚡ DELANTEROS'},
+    ['7','R. Vargas',78],
+    ['9','Ejuke',77],
+    ['14','Á. Sánchez',76],
+    ['28','Maupay',74],
+    ['26','Akor Adams',74],
+    ['15','Isaac Romero',74],
+    ['29','Gattoni',71],
+  ],
+  'Villarreal CF':[
+    {h:'🧤 PORTEROS'},
+    ['1','Luís Júnior',78],
+    ['13','Tenas',75],
+    ['25','Conde',76],
+    ['30','R. Gómez',63],
+    {h:'🛡 DEFENSAS'},
+    ['12','R. Veiga',77],
+    ['23','Cardona',79],
+    ['26','Pau Navarro',69],
+    ['24','Pedraza',76],
+    ['2','Logan Costa',77],
+    ['15','Mouriño',78],
+    ['4','Rafa Marín',76],
+    ['5','Kambwala',72],
+    ['8','Foyth',79],
+    ['14','Cabanes',65],
+    {h:'⚙️ MEDIOS'},
+    ['18','P. Gueye',79],
+    ['11','Comesaña',78],
+    ['10','Moleiro',81],
+    ['17','Buchanan',75],
+    ['16','Partey',80],
+    ['6','Maciá',62],
+    ['9','H. López',60],
+    ['22','Diatta',62],
+    {h:'⚡ DELANTEROS'},
+    ['7','Gerard Moreno',81],
+    ['27','Ayoze',82],
+    ['19','Pépé',81],
+    ['21','Oluwaseyi',70],
+    ['28','Mikautadze',78],
+    ['20','Freeman',73],
+    ['33','J.Y. Valou',62],
+    ['29','Alfon',75],
+  ],
+  'Espanyol':[
+    {h:'🧤 PORTEROS'},
+    ['1','Dmitrović',80],
+    ['13','Fortuño',65],
+    ['25','Tristán',64],
+    {h:'🛡 DEFENSAS'},
+    ['3','L. Cabrera',79],
+    ['5','C. Romero',78],
+    ['2','El Hilali',77],
+    ['23','Calero',75],
+    ['6','Riedel',72],
+    ['15','M. Rubio',70],
+    ['18','Salinas',72],
+    {h:'⚙️ MEDIOS'},
+    ['10','Edu Expósito',78],
+    ['8','P. Lozano',76],
+    ['11','P. Milla',76],
+    ['14','U. González',75],
+    ['7','T. Dolan',75],
+    ['4','Terrats',75],
+    ['17','Jofre',74],
+    ['20','A. Roca',73],
+    ['22','Noonge',72],
+    ['21','R. Sánchez',70],
+    ['19','Pickel',71],
+    ['24','Puado',77],
+    {h:'⚡ DELANTEROS'},
+    ['9','R. Fernández',75],
+    ['16','Tristán',64],
+  ],
+  'Getafe CF':[
+    {h:'🧤 PORTEROS'},
+    ['1','David Soria',80],
+    ['13','Letáček',69],
+    ['25','J. Benito',58],
+    ['31','J. Pérez',56],
+    {h:'🛡 DEFENSAS'},
+    ['21','Femenía',74],
+    ['3','Djené',77],
+    ['22','D. Duarte',74],
+    ['4','Z. Romero',72],
+    ['2','D. Rico',77],
+    ['6','Abqar',74],
+    ['26','Boselli',72],
+    ['23','J. Iglesias',74],
+    ['28','Davinchi',67],
+    ['27','Mayoral',77],
+    {h:'⚙️ MEDIOS'},
+    ['8','Arambarri',80],
+    ['5','Luis Milla',81],
+    ['10','M. Martín',72],
+    ['14','J. Muñoz',74],
+    ['17','Sancris',73],
+    ['20','Nvom',71],
+    ['16','Birmančević',77],
+    ['9','Mestanza',59],
+    ['11','Risco',62],
+    ['12','J. Montes',57],
+    ['29','Kamara',68],
+    ['24','Solozábal',59],
+    ['18','Bekhoucha',64],
+    {h:'⚡ DELANTEROS'},
+    ['7','Satriano',74],
+    ['15','L. Vázquez',70],
+    ['19','A. Liso',72],
+    ['30','Juanmi',73],
+  ],
+  'Albacete BP':[
+    {h:'🧤 PORTEROS'},
+    ['1','Mariño',67],
+    ['13','Lizoain',69],
+    ['25','M. Ramos',58],
+    {h:'🛡 DEFENSAS'},
+    ['21','C. Neva',71],
+    ['23','P. Sánchez',68],
+    ['22','L. López',68],
+    ['24','Vallejo',72],
+    ['5','J. Moreno',64],
+    ['2','Lorenzo',64],
+    ['15','J. Germán',64],
+    ['16','F. Gámez',69],
+    ['3','Bernabéu',60],
+    ['14','Jota',59],
+    ['26','Á. Rubio',65],
+    {h:'⚙️ MEDIOS'},
+    ['4','Agus Medina',71],
+    ['8','Pacheco',64],
+    ['6','Meléndez',65],
+    ['12','Cedeño',66],
+    ['17','M. Fernández',69],
+    ['9','Obeng',67],
+    ['11','J. Villar',65],
+    ['7','Valverde',65],
+    ['20','Capi',61],
+    ['10','Bartolomé',65],
+    ['29','Morientes',58],
+    {h:'⚡ DELANTEROS'},
+    ['27','Puertas',72],
+    ['18','Jefté',70],
+    ['19','Higinio',68],
+    ['28','Lazo',68],
+  ],
+  'Celta de Vigo':[
+    {h:'🧤 PORTEROS'},
+    ['1','Iván Villar',78],
+    ['13','Andrei Radu',76],
+    ['30','M. Vidal',75],
+    ['25','El-Abdellaoui',72],
+    {h:'🛡 DEFENSAS'},
+    ['22','Á. Núñez',76],
+    ['4','Jutglà',76],
+    ['26','Aidoo',76],
+    ['2','Carreira',75],
+    ['3','Marcos Alonso',79],
+    ['5','Starfelt',78],
+    ['6','J. Rodríguez',76],
+    ['28','Durán',74],
+    ['33','Domínguez',73],
+    ['27','Y. Lago',71],
+    ['12','Ristić',73],
+    ['21','M. Fernández',70],
+    {h:'⚙️ MEDIOS'},
+    ['18','H. Álvarez',75],
+    ['15','Vecino',76],
+    ['20','Sotelo',74],
+    ['7','Mingueza',80],
+    ['10','M. Román',72],
+    ['8','Moriba',76],
+    {h:'⚡ DELANTEROS'},
+    ['11','Swedberg',75],
+    ['9','Borja Iglesias',80],
+    ['17','F. López',73],
+    ['14','Iago Aspas',82],
   ],
   'Osasuna':[
     {h:'🧤 PORTEROS'},
     ['1','S. Herrera',79],
     ['13','A. Fernández',77],
+    ['28','Stamatakis',62],
     {h:'🛡 DEFENSAS'},
-    ['2','V. Rosier',77],
-    ['5','Catena',78],
-    ['6','F. Boyomo',78],
-    ['3','J. Galán',77],
-    ['22','K. Baria',73],
-    ['14','A. Bretones',75],
-    ['23','Herrando',75],
+    ['22','R. García',73],
+    ['5','Boyomo',78],
+    ['4','Catena',78],
+    ['2','Rosier',77],
+    ['3','Galán',77],
+    ['23','Bretones',75],
+    ['24','J. Cruz',73],
+    ['15','Herrando',75],
     {h:'⚙️ MEDIOS'},
-    ['4','L. Torró',78],
-    ['8','Moncayola',78],
-    ['10','A. Oroz',78],
-    ['20','M. Gómez',77],
     ['7','V. Muñoz',76],
-    ['17','R. García',78],
-    ['11','R. Moro',75],
-    ['16','I. Muñoz',71],
+    ['11','R. García',78],
+    ['17','R. Moro',75],
+    ['8','Moncayola',78],
+    ['6','Torró',78],
+    ['20','Baria',73],
+    ['16','Í. Muñoz',75],
+    ['10','Aimar Oroz',78],
+    ['27','Mauro',64],
+    ['29','I. Benito',71],
+    ['14','M. Gómez',77],
     {h:'⚡ DELANTEROS'},
-    ['9','A. Budimir',81],
-    ['19','R. García',73],
-    ['21','Osambela',65],
-  ],
-  'Celta de Vigo':[
-    {h:'🧤 PORTEROS'},
-    ['1','I. A. Radu',78],
-    ['13','I. Villar',72],
-    {h:'🛡 DEFENSAS'},
-    ['2','M. Alonso',79],
-    ['5','C. Starfelt',78],
-    ['6','J. Rodríguez',76],
-    ['3','Carreira',75],
-    ['22','Á. Núñez',76],
-    ['14','J. Rueda',73],
-    ['23','M. Fernández',70],
-    {h:'⚙️ MEDIOS'},
-    ['4','Mingueza',80],
-    ['8','I. Moriba',76],
-    ['10','M. Román',72],
-    ['20','H. Álvarez',75],
-    ['7','H. Sotelo',74],
-    ['17','F. Cervi',70],
-    ['11','M. Vecino',72],
-    {h:'⚡ DELANTEROS'},
-    ['9','B. Iglesias',80],
-    ['19','W. Swedberg',75],
-    ['21','F. López',73],
-    ['18','I. Aspas',82],
-    ['15','P. Durán',74],
-    ['16','F. Jutglà',72],
+    ['9','Budimir',81],
+    ['18','Arnau',73],
   ],
   'Deportivo Alavés':[
     {h:'🧤 PORTEROS'},
     ['1','Sivera',77],
     ['13','R. Fernández',72],
+    ['28','Swiderski',61],
     {h:'🛡 DEFENSAS'},
-    ['2','N. Tenaglia',77],
-    ['5','Pacheco',74],
-    ['6','F. Garcés',72],
+    ['23','Parada',70],
+    ['5','Garcés',72],
+    ['24','Yusi',68],
+    ['25','Mariano',70],
+    ['22','Diabate',72],
+    ['26','Koski',66],
+    ['2','Tenaglia',77],
+    ['4','Pacheco',74],
     ['3','Jonny',75],
-    ['22','V. Parada',70],
-    ['14','A. Rebbach',72],
-    ['23','Yusi',68],
+    ['30','Mañas',63],
+    ['29','Morcillo',59],
     {h:'⚙️ MEDIOS'},
-    ['4','P. Ibáñez',73],
-    ['8','A. Blanco',75],
     ['10','Aleñá',74],
-    ['20','D. Suárez',74],
-    ['7','A. Guevara',74],
-    ['17','Guridi',74],
+    ['14','D. Suárez',74],
+    ['18','Guridi',74],
+    ['19','Protesoni',73],
+    ['6','P. Ibáñez',73],
+    ['27','Á. Pérez',64],
+    ['8','A. Blanco',75],
+    ['15','Guevara',74],
+    ['17','Rebbach',72],
+    ['31','Pinillos',70],
     ['11','Calebe',71],
     {h:'⚡ DELANTEROS'},
-    ['9','L. Boyé',74],
-    ['19','T. Martínez',75],
-    ['21','I. Diabate',72],
-    ['18','Mariano',70],
-    ['15','G. Swiderski',72],
+    ['9','Boyé',74],
+    ['16','T. Martínez',75],
+  ],
+  'Girona FC':[
+    {h:'🧤 PORTEROS'},
+    ['13','Gazzaniga',78],
+    ['1','R. Blanco',73],
+    ['25','J. Carlos',71],
+    ['30','Krapyvtsov',64],
+    {h:'🛡 DEFENSAS'},
+    ['3','A. Moreno',77],
+    ['5','V. Reis',75],
+    ['4','Blind',76],
+    ['2','A. Martínez',78],
+    ['23','Rincón',73],
+    ['27','A. Ruiz',72],
+    ['24','Witsel',76],
+    ['22','Francés',75],
+    ['26','D. López',76],
+    {h:'⚙️ MEDIOS'},
+    ['10','Lemar',77],
+    ['7','Bryan Gil',77],
+    ['6','Beltrán',77],
+    ['8','I. Martín',77],
+    ['11','Tsygankov',78],
+    ['14','Echeverri',73],
+    ['15','J. Roca',72],
+    ['28','Ounahi',78],
+    ['16','Van de Beek',75],
+    ['18','Portu',75],
+    ['20','Kourouma',65],
+    ['21','J. Arango',61],
+    ['29','Dame Ba',62],
+    {h:'⚡ DELANTEROS'},
+    ['9','Vanat',77],
+    ['17','Stuani',76],
+    ['31','ter Stegen',85],
+  ],
+  'Real Oviedo':[
+    {h:'🧤 PORTEROS'},
+    ['1','Escandell',78],
+    ['13','Moldovan',71],
+    ['32','Narváez',63],
+    {h:'🛡 DEFENSAS'},
+    ['2','N. Vidal',72],
+    ['3','J. López',72],
+    ['4','D. Carmo',75],
+    ['5','Costas',74],
+    ['22','Borbas',72],
+    ['23','Bailly',73],
+    ['24','D. Calvo',72],
+    ['25','Alhassane',71],
+    ['26','Forés',70],
+    ['31','M. Esteban',64],
+    {h:'⚙️ MEDIOS'},
+    ['6','Colombatto',73],
+    ['8','Sibo',68],
+    ['10','A. Reina',73],
+    ['7','Chairá',72],
+    ['11','H. Hassan',74],
+    ['14','Cazorla',75],
+    ['17','T. Fernández',74],
+    ['16','Ahiado',68],
+    ['18','Dendoncker',74],
+    ['19','Fonseca',73],
+    ['27','Ilić',69],
+    ['28','Ejaria',66],
+    ['30','Agudín',63],
+    {h:'⚡ DELANTEROS'},
+    ['9','F. Viñas',72],
+  ],
+  'Levante UD':[
+    {h:'🧤 PORTEROS'},
+    ['1','M. Ryan',79],
+    ['13','Campos',69],
+    ['30','Primo',60],
+    {h:'🛡 DEFENSAS'},
+    ['2','Toljan',74],
+    ['3','M. Sánchez',75],
+    ['4','M. Moreno',70],
+    ['5','Dela',73],
+    ['23','Floezabal',71],
+    ['24','Matturro',68],
+    ['25','Morales',74],
+    ['19','Pampín',69],
+    ['26','Espí',68],
+    ['31','N. Pérez',63],
+    ['33','Brugui',73],
+    {h:'⚙️ MEDIOS'},
+    ['6','P. Martínez',74],
+    ['8','Raghouber',69],
+    ['10','C. Álvarez',77],
+    ['7','I. Romero',74],
+    ['11','Tunde',66],
+    ['22','Arriaga',74],
+    ['14','Olasagasti',73],
+    ['15','Vencedor',72],
+    ['17','Losada',71],
+    ['16','V. García',70],
+    ['27','O. Rey',73],
+    ['28','Abed',65],
+    {h:'⚡ DELANTEROS'},
+    ['9','K. Edouard',74],
+    ['32','P. Cortés',66],
   ],
   'Mallorca':[
     {h:'🧤 PORTEROS'},
-    ['1','L. Román',77],
-    ['13','Á. Prats',72],
-    ['20','L. Bergström',67],
+    ['1','Leo Román',77],
+    ['20','Bergström',67],
+    ['32','Cuéllar',67],
     {h:'🛡 DEFENSAS'},
-    ['3','J. Mojica',78],
+    ['3','Mojica',78],
     ['4','Raillo',80],
-    ['5','M. Valjent',77],
+    ['5','Valjent',77],
     ['22','Maffeo',78],
-    ['19','M. Morev',73],
+    ['2','Kumbulla',77],
+    ['19','Morev',73],
     ['16','T. Lato',73],
-    ['2','M. Kumbulla',77],
-    ['25','I. Salhi',60],
+    ['30','D. López',68],
+    ['25','Salhi',60],
+    ['28','Á. Prats',72],
     {h:'⚙️ MEDIOS'},
-    ['8','O. Mascarell',75],
-    ['6','S. Costa',78],
-    ['11','J. Virgilí',75],
-    ['10','S. Darder',80],
+    ['8','Mascarell',75],
+    ['6','Samú Costa',78],
+    ['11','Virgilí',75],
+    ['10','Darder',80],
     ['21','M. Joseph',72],
-    ['7','M. Morlanes',77],
-    ['14','T. Asano',74],
-    ['17','P. Torre',74],
+    ['7','Morlanes',77],
+    ['14','Asano',74],
+    ['17','Pablo Torre',74],
     ['23','A. Sánchez',73],
+    ['29','Salas',62],
+    ['31','Kalumba',65],
+    ['27','Llabrés',69],
     {h:'⚡ DELANTEROS'},
-    ['9','V. Muriqi',80],
-    ['13','Á. Prats',72],
-    ['18','A. Sánchez',73],
+    ['9','Muriqi',80],
+    ['24','Luvumbo',70],
   ],
   'Elche CF':[
     {h:'🧤 PORTEROS'},
-    ['1','I. Peña',77],
-    ['12','M. Dituro',75],
+    ['1','Iván Peña',77],
+    ['12','Dituro',75],
     ['31','Iturbe',66],
     {h:'🛡 DEFENSAS'},
     ['5','Bigas',76],
-    ['4','D. Affengruber',76],
+    ['4','Affengruber',76],
     ['3','V. Chust',73],
-    ['2','A. Pedrosa',75],
-    ['22','L. Pétrot',70],
-    ['20','J. Donald',69],
+    ['17','Ceneda',72],
+    ['2','Pedrosa',75],
+    ['22','Pétrot',70],
+    ['20','Donald',69],
+    ['26','Boayar',62],
     ['27','Albert',58],
-    ['29','B. Sangaré',63],
+    ['29','Sangaré',63],
     ['32','H. Fort',71],
     {h:'⚙️ MEDIOS'},
     ['6','M. Aguado',73],
     ['11','Valera',75],
-    ['8','A. Febas',78],
+    ['8','Álex Febas',78],
     ['10','M. Neto',72],
     ['21','Josan',72],
-    ['13','R. Mir',75],
-    ['17','L. Ceneda',72],
     ['14','G. Villar',72],
-    ['15','Y. Santiago',70],
-    ['19','G. Diangana',70],
-    {h:'⚡ DELANTEROS'},
-    ['9','A. Rodríguez',71],
-    ['7','A. da Silva',76],
+    ['15','Yaw Santiago',70],
+    ['19','Diangana',70],
     ['24','F. Redondo',70],
-    ['28','T. Morente',71],
+    ['28','Tete Morente',71],
+    ['30','Á. Sánchez',62],
+    ['25','A. Martínez',59],
+    {h:'⚡ DELANTEROS'},
+    ['9','Álex Rodríguez',71],
+    ['7','André da Silva',76],
+    ['13','Rafa Mir',75],
   ],
   'Valencia CF':[
     {h:'🧤 PORTEROS'},
-    ['1','S. Dimitrievski',77],
-    ['31','Agirrezabala',77],
+    ['1','Dimitrievski',77],
     ['2','C. Rivero',65],
+    ['31','Agirrezabala',77],
     {h:'🛡 DEFENSAS'},
     ['12','Gayà',78],
     ['5','Copete',74],
-    ['6','C. Tárrega',75],
+    ['6','Tárrega',75],
     ['23','T. Correia',75],
+    ['4','U. Sadiq',75],
     ['3','J. Vázquez',71],
-    ['4','U. Núñez',75],
-    ['22','E. Cömert',72],
-    ['29','D. Foulquier',73],
-    ['32','M. Diakhaby',76],
+    ['22','Cömert',72],
+    ['27','Iranzo',64],
+    ['29','Foulquier',73],
+    ['32','Diakhaby',76],
     {h:'⚙️ MEDIOS'},
     ['8','Pepelu',76],
-    ['14','F. Ugrinič',74],
+    ['14','Ugrinič',74],
     ['11','D. López',77],
     ['10','L. Beltrán',75],
-    ['7','L. Rioja',77],
-    ['20','J. Guerra',77],
+    ['7','Luis Rioja',77],
+    ['20','Javi Guerra',77],
     ['15','G. Rodríguez',75],
-    ['16','A. Daniuma',75],
-    ['17','B. Santamaría',75],
+    ['16','Daniuma',75],
+    ['17','Santamaría',75],
     ['18','A. Almeida',74],
     ['24','D. Raba',75],
-    ['25','L. Ramazani',74],
+    ['25','Ramazani',74],
+    ['28','L. Núñez',61],
+    ['30','Otorbi',63],
     {h:'⚡ DELANTEROS'},
-    ['9','H. Duro',77],
+    ['9','Hugo Duro',77],
     ['13','U. Sadio',76],
-    ['26','A. Blázquez',62],
-    ['30','D. Otorbi',63],
+    ['26','Blázquez',62],
   ],
   'Rayo Vallecano':[
     {h:'🧤 PORTEROS'},
-    ['1','A. Batalla',79],
-    ['13','D. Cárdenas',73],
+    ['1','Batalla',79],
+    ['13','Cárdenas',73],
+    ['31','J. Gil',58],
     ['32','A. Molina',54],
     {h:'🛡 DEFENSAS'},
-    ['12','P. Chavarría',78],
+    ['12','Chavarría',78],
     ['5','N. Mendy',73],
-    ['4','F. Lejeune',78],
-    ['23','A. Ratiu',79],
-    ['3','I. Balliu',75],
-    ['2','L. Feline',75],
-    ['17','P. Espino',72],
-    ['33','A. Mumín',77],
+    ['4','Lejeune',78],
+    ['23','Ratiu',79],
+    ['3','Balliu',75],
+    ['2','Feline',75],
+    ['17','Espino',72],
+    ['27','Vertrouwd',67],
+    ['33','Mumín',77],
     {h:'⚙️ MEDIOS'},
     ['6','U. López',76],
     ['8','P. Ciss',78],
     ['11','Á. García',81],
     ['10','Isi',81],
-    ['7','I. Akhomach',74],
+    ['7','Akhomach',74],
     ['15','Ó. Valentín',77],
     ['16','Gumbau',72],
     ['18','P. Díaz',75],
-    ['25','S. Camello',72],
+    ['26','F. Pérez',71],
+    ['28','Trejo',70],
+    ['29','Becerra',60],
+    ['34','D. Méndez',64],
     {h:'⚡ DELANTEROS'},
     ['9','D. Frutos',80],
     ['14','Alemão',73],
-    ['24','R. Nteka',70],
-    ['26','F. Pérez',71],
+    ['20','C. Martín',69],
+    ['24','Nteka',70],
+    ['25','Camello',72],
   ],
-  'Getafe CF':[
-    {h:'🧤 PORTEROS'},
-    ['13','D. Soria',86],
-    ['1','J. Letáček',69],
-    ['34','J. Benito',58],
-    {h:'🛡 DEFENSAS'},
-    ['16','D. Rico',77],
-    ['5','Z. Romero',72],
-    ['4','D. Duarte',74],
-    ['22','D. Djené',77],
-    ['17','K. Femenía',74],
-    ['3','A. Abqar',74],
-    ['21','J. Iglesias',74],
-    ['36','Davinchi',67],
-    {h:'⚙️ MEDIOS'},
-    ['8','M. Arambarri',80],
-    ['5','L. Milla',81],
-    ['7','M. Martín',72],
-    ['10','J. Muñoz',74],
-    ['18','Á. Sancris',73],
-    ['19','V. Birmančević',77],
-    ['29','A. Kamara',68],
-    ['31','A. Risco',62],
-    {h:'⚡ DELANTEROS'},
-    ['9','M. Satriano',74],
-    ['20','L. Vázquez',70],
-    ['37','B. Mayoral',77],
-    ['14','A. Liso',72],
-  ],
-  'Espanyol':[
-    {h:'🧤 PORTEROS'},
-    ['1','J. Lecomte',79],
-    ['13','D. Fortuño',72],
-    {h:'🛡 DEFENSAS'},
-    ['2','E. Óscar',78],
-    ['5','L. Cabrera',80],
-    ['6','J. Calero',79],
-    ['3','N. Ontiveros',78],
-    ['22','B. Alarcón',76],
-    ['14','B. Cornet',77],
-    ['23','R. Oliván',75],
-    ['15','A. Javi López',74],
-    {h:'⚙️ MEDIOS'},
-    ['4','O. Granell',78],
-    ['8','A. Darder',81],
-    ['10','J. Puado',79],
-    ['20','E. Expósito',79],
-    ['7','L. De la Torre',78],
-    ['17','J. Pol Lozano',77],
-    ['11','C. Braithwaite',77],
-    ['16','P. Milla',77],
-    {h:'⚡ DELANTEROS'},
-    ['9','R. Fernández',81],
-    ['19','M. Myrto Uzuni',79],
-    ['21','B. Alarcón',76],
-    ['18','Salinas',74],
-  ],
-  'Córdoba CF':[
+    'Córdoba CF':[
     {h:'🧤 PORTEROS'},
     ['1','F. Palatsí',75],
     ['13','T. Fernández',70],
@@ -622,69 +820,143 @@ window.SQUAD_REGISTRY={
     ['21','A. Cruz',73],
     ['18','D. Casado',72],
   ],
-  'Albacete BP':[
-    {h:'🧤 PORTEROS'},
-    ['1','D. Mariño',76],
-    ['13','R. Lizoain',70],
-    {h:'🛡 DEFENSAS'},
-    ['2','J. G. González',75],
-    ['5','P. Sánchez',74],
-    ['6','Vallejo',74],
-    ['3','F. Gámez',73],
-    ['22','J. Roca',73],
-    ['14','J. Delmás',72],
-    ['23','Á. Vega',71],
-    {h:'⚙️ MEDIOS'},
-    ['4','M. Tejero',75],
-    ['8','A. Prieto',74],
-    ['10','A. Djetei',75],
-    ['20','C. Romero',74],
-    ['7','G. Valles',73],
-    ['17','J. Álvaro',73],
-    ['11','B. Ruiz',72],
-    ['16','R. Expósito',72],
-    {h:'⚡ DELANTEROS'},
-    ['9','R. Pina',76],
-    ['19','J. Santos',74],
-    ['21','G. Sintes',73],
-    ['18','N. Kone',72],
-  ]
 }
-
-window.sqFromRegistry = function(teamName) {
-  var reg = window.SQUAD_REGISTRY[teamName];
-  if (!reg) return null;
+// ═══ ALIASES GLOBALES DE EQUIPOS ═══
+window.TEAM_ALIASES = {
+  'real madrid':'Real Madrid',
+  'fc barcelona':'FC Barcelona',
+  'barcelona':'FC Barcelona',
+  'athletic club':'Athletic Club',
+  'athletic':'Athletic Club',
+  'real betis':'Real Betis',
+  'betis':'Real Betis',
+  'real sociedad':'Real Sociedad',
+  'sociedad':'Real Sociedad',
+  'atletico madrid':'Atlético Madrid',
+  'atlético madrid':'Atlético Madrid',
+  'atletico':'Atlético Madrid',
+  'atlético':'Atlético Madrid',
+  'albacete bp':'Albacete BP',
+  'albacete':'Albacete BP',
+  'villarreal':'Villarreal CF',
+  'villarreal cf':'Villarreal CF',
+  'sevilla':'Sevilla FC',
+  'sevilla fc':'Sevilla FC',
+  'espanyol':'Espanyol',
+  'getafe':'Getafe CF',
+  'getafe cf':'Getafe CF',
+  'rc celta':'Celta de Vigo',
+  'celta de vigo':'Celta de Vigo',
+  'celta':'Celta de Vigo',
+  'ca osasuna':'Osasuna',
+  'osasuna':'Osasuna',
+  'deportivo alaves':'Deportivo Alavés',
+  'deportivo alavés':'Deportivo Alavés',
+  'alaves':'Deportivo Alavés',
+  'alavés':'Deportivo Alavés',
+  'girona':'Girona FC',
+  'girona fc':'Girona FC',
+  'mallorca':'Mallorca',
+  'rcd mallorca':'Mallorca',
+  'elche':'Elche CF',
+  'elche cf':'Elche CF',
+  'valencia':'Valencia CF',
+  'valencia cf':'Valencia CF',
+  'rayo vallecano':'Rayo Vallecano',
+  'rayo':'Rayo Vallecano',
+  'córdoba cf':'Córdoba CF',
+  'cordoba cf':'Córdoba CF',
+  'cordoba':'Córdoba CF',
+  'córdoba':'Córdoba CF'
+};
+window.sqFromRegistry = function(teamName, opts) {
+  // opts: { excluded: ['NombreJugador',...] }  ← lesionados/sancionados
+  // Resolver alias (ej: 'Sevilla' → 'Sevilla FC', 'Villarreal' → 'Villarreal CF')
+  var aliases = window.TEAM_ALIASES || {};
+  var trimmed = (teamName || '').trim();
+  var resolved = aliases[trimmed.toLowerCase()] || trimmed;
+  var reg = window.SQUAD_REGISTRY[resolved] || window.SQUAD_REGISTRY[trimmed] || window.SQUAD_REGISTRY[teamName];
+  if (!reg) {
+    console.warn('sqFromRegistry: equipo no encontrado:', teamName, '(resolved:', resolved, ')');
+    return [];
+  }
   var posMap = {'🧤 PORTEROS':'P','🛡 DEFENSAS':'D','⚙️ MEDIOS':'M','⚡ DELANTEROS':'F',
                 '⚙️CENTROCAMPISTAS':'M','⚙️ CENTROCAMPISTAS':'M'};
-  var result = []; var curPos = 'M';
+  var excluded = (opts && opts.excluded) ? opts.excluded : [];
+
+  // 1. Parsear plantilla completa con posición y poder
+  var full = []; var curPos = 'M';
   for (var i = 0; i < reg.length; i++) {
     var e = reg[i];
     if (e.h) { curPos = posMap[e.h] || 'M'; }
     else {
-      // e[2] puede ser peso explícito si está definido, sino usar posición en array
-      var w = (e.length >= 3) ? e[2] : undefined;
-      result.push([e[0], e[1], curPos, w]);
+      var poder = (e.length >= 3) ? (e[2] || 70) : 70;
+      var nombre = e[1];
+      // Saltar lesionados/sancionados
+      if (excluded.indexOf(nombre) !== -1) continue;
+      full.push([e[0], nombre, curPos, poder]);
     }
   }
-  // Si no hay pesos explícitos, asignar por posición en array (primero=titular)
-  var hasExplicit = result.some(function(p){ return p[3] !== undefined; });
-  if (!hasExplicit) {
-    var gkSeen = 0, outfieldSeen = 0;
-    for (var j = 0; j < result.length; j++) {
-      if (result[j][2] === 'P') { result[j][3] = (gkSeen++ === 0) ? 70 : 8; }
-      else { result[j][3] = (outfieldSeen++ < 10) ? 90 : 12; }
-    }
+
+  // 2. Separar porteros y de campo, ordenar por poder desc
+  var gks      = full.filter(function(p){ return p[2]==='P'; })
+                     .sort(function(a,b){ return b[3]-a[3]; });
+  var outfield = full.filter(function(p){ return p[2]!=='P'; })
+                     .sort(function(a,b){ return b[3]-a[3]; });
+
+  // 3. Convocatoria de 18: 2 porteros + 16 de campo (11 titulares + 7 banquillo, mínimo 1 portero siempre)
+  var conv = [];
+  // Portero titular + 1 suplente portero (si hay)
+  var gk1 = gks[0] || null;
+  var gk2 = gks[1] || null;
+  if (gk1) conv.push(gk1);
+  if (gk2) conv.push(gk2);
+  // Top 16 de campo por poder
+  var fieldSlots = 18 - conv.length; // 16 si hay 2 porteros
+  for (var fi = 0; fi < outfield.length && conv.length < 18; fi++) {
+    conv.push(outfield[fi]);
   }
-  return result;
+  // Si hay menos de 18 disponibles, usamos los que hay
+  // Si hay más de 18, ya está limitado por el bucle
+
+  // 4. Marcar titulares (pos 0-10) y suplentes (pos 11-17)
+  //    Los primeros 11 son: portero titular + los 10 de campo de más poder
+  //    El resto son banquillo
+  for (var ci = 0; ci < conv.length; ci++) {
+    conv[ci] = [conv[ci][0], conv[ci][1], conv[ci][2], conv[ci][3], ci < 11 ? 'titular' : 'suplente'];
+  }
+
+  return conv;
+};
+
+// Versión SIN límite de 18 — para partidos manuales (humano)
+window.sqFromRegistryFull = function(teamName) {
+  var aliases = window.TEAM_ALIASES || {};
+  var trimmed = (teamName || '').trim();
+  var resolved = aliases[trimmed.toLowerCase()] || trimmed;
+  var reg = window.SQUAD_REGISTRY[resolved] || window.SQUAD_REGISTRY[trimmed] || window.SQUAD_REGISTRY[teamName];
+  if (!reg) {
+    console.warn('sqFromRegistry: equipo no encontrado:', teamName, '(resolved:', resolved, ')');
+    return [];
+  }
+  var posMap = {'🧤 PORTEROS':'P','🛡 DEFENSAS':'D','⚙️ MEDIOS':'M','⚡ DELANTEROS':'F',
+                '⚙️CENTROCAMPISTAS':'M','⚙️ CENTROCAMPISTAS':'M'};
+  var full = []; var curPos = 'M';
+  for (var i = 0; i < reg.length; i++) {
+    var e = reg[i];
+    if (e.h) { curPos = posMap[e.h] || 'M'; }
+    else { full.push([e[0], e[1], curPos, (e.length>=3 ? e[2] : 70)]); }
+  }
+  return full;
 };
 // ════════════════════════════════════
 var TEAM_A_NAME="Real Madrid";var TEAM_B_NAME="FC Barcelona";
-var TEAM_A_OPTS='<option value="1|Thibaut Courtois">1. Thibaut Courtois</option><option value="13|Andriy Lunin">13. Andriy Lunin</option><option value="2|Daniel Carvajal">2. Daniel Carvajal</option><option value="3|Éder Militão">3. Éder Militão</option><option value="4|David Alaba">4. David Alaba</option><option value="5|Jude Bellingham">5. Jude Bellingham</option><option value="6|Eduardo Camavinga">6. Eduardo Camavinga</option><option value="7|Vinicius Júnior">7. Vinicius Júnior</option><option value="8|Federico Valverde">8. Federico Valverde</option><option value="9|Kylian Mbappé">9. Kylian Mbappé</option><option value="11|Rodrygo">11. Rodrygo</option><option value="12|Trent Alexander-Arnold">12. Trent Alexander-Arnold</option><option value="14|Aurélien Tchouaméni">14. Aurélien Tchouaméni</option><option value="15|Arda Güler">15. Arda Güler</option><option value="17|Raúl Asencio">17. Raúl Asencio</option><option value="18|Álvaro Carreras">18. Álvaro Carreras</option><option value="19|Dani Ceballos">19. Dani Ceballos</option><option value="20|Fran García">20. Fran García</option><option value="21|Brahim Díaz">21. Brahim Díaz</option><option value="22|Antonio Rüdiger">22. Antonio Rüdiger</option><option value="23|Ferland Mendy">23. Ferland Mendy</option><option value="24|Dean Huijsen">24. Dean Huijsen</option><option value="30|Franco Mastantuono">30. Franco Mastantuono</option>';var TEAM_B_OPTS='<option value="13|Joan García">13. Joan García</option><option value="25|Wojciech Szczęsny">25. Wojciech Szczęsny</option><option value="2|João Cancelo">2. João Cancelo</option><option value="3|Alejandro Balde">3. Alejandro Balde</option><option value="4|Ronald Araújo">4. Ronald Araújo</option><option value="5|Pau Cubarsí">5. Pau Cubarsí</option><option value="6|Pablo Gavi">6. Pablo Gavi</option><option value="7|Ferran Torres">7. Ferran Torres</option><option value="8|Pedri">8. Pedri</option><option value="9|Robert Lewandowski">9. Robert Lewandowski</option><option value="10|Lamine Yamal">10. Lamine Yamal</option><option value="11|Raphinha">11. Raphinha</option><option value="14|Marcus Rashford">14. Marcus Rashford</option><option value="15|Andreas Christensen">15. Andreas Christensen</option><option value="16|Fermín López">16. Fermín López</option><option value="17|Marc Casadó">17. Marc Casadó</option><option value="18|Gerard Martín">18. Gerard Martín</option><option value="20|Dani Olmo">20. Dani Olmo</option><option value="21|Frenkie de Jong">21. Frenkie de Jong</option><option value="23|Jules Koundé">23. Jules Koundé</option><option value="24|Eric García">24. Eric García</option><option value="28|Roony Bardghji">28. Roony Bardghji</option>';
+var TEAM_A_OPTS='<option value="1|Thibaut Courtois">1. Thibaut Courtois</option><option value="13|Andriy Lunin">13. Andriy Lunin</option><option value="26|Fran González">26. Fran González</option><option value="43|Sergio Mestre">43. Sergio Mestre</option><option value="9|Kylian Mbappé">9. Kylian Mbappé</option><option value="38|César Palacios">38. César Palacios</option><option value="5|Jude Bellingham">5. Jude Bellingham</option><option value="7|Vinicius Júnior">7. Vinicius Júnior</option><option value="8|Federico Valverde">8. Federico Valverde</option><option value="12|Trent Alexander-Arnold">12. Trent Alexander-Arnold</option><option value="2|Daniel Carvajal">2. Daniel Carvajal</option><option value="22|Antonio Rüdiger">22. Antonio Rüdiger</option><option value="3|Éder Militão">3. Éder Militão</option><option value="14|Aurélien Tchouaméni">14. Aurélien Tchouaméni</option><option value="11|Rodrygo">11. Rodrygo</option><option value="24|Dean Huijsen">24. Dean Huijsen</option><option value="6|Eduardo Camavinga">6. Eduardo Camavinga</option><option value="15|Arda Güler">15. Arda Güler</option><option value="28|Jorge Cestero">28. Jorge Cestero</option><option value="4|David Alaba">4. David Alaba</option><option value="23|Ferland Mendy">23. Ferland Mendy</option><option value="21|Brahim Díaz">21. Brahim Díaz</option><option value="18|Álvaro Carreras">18. Álvaro Carreras</option><option value="19|Dani Ceballos">19. Dani Ceballos</option><option value="17|Raúl Asencio">17. Raúl Asencio</option><option value="20|Fran García">20. Fran García</option><option value="30|Franco Mastantuono">30. Franco Mastantuono</option><option value="16|Gonzalo García">16. Gonzalo García</option><option value="37|Manuel Ángel Morán">37. Manuel Ángel Morán</option><option value="48|Lamini Fati">48. Lamini Fati</option><option value="45|Thiago Pitarch">45. Thiago Pitarch</option><option value="27|Diego Aguado">27. Diego Aguado</option>';var TEAM_B_OPTS='<option value="13|Joan García">13. Joan García</option><option value="31|Diego Kochen">31. Diego Kochen</option><option value="25|Wojciech Szczęsny">25. Wojciech Szczęsny</option><option value="8|Pedri">8. Pedri</option><option value="10|Lamine Yamal">10. Lamine Yamal</option><option value="11|Raphinha">11. Raphinha</option><option value="21|Frenkie de Jong">21. Frenkie de Jong</option><option value="9|Robert Lewandowski">9. Robert Lewandowski</option><option value="23|Jules Koundé">23. Jules Koundé</option><option value="2|João Cancelo">2. João Cancelo</option><option value="36|Álvaro Cortés">36. Álvaro Cortés</option><option value="20|Dani Olmo">20. Dani Olmo</option><option value="7|Ferran Torres">7. Ferran Torres</option><option value="3|Alejandro Balde">3. Alejandro Balde</option><option value="24|Eric García">24. Eric García</option><option value="6|Pablo Gavi">6. Pablo Gavi</option><option value="16|Fermín López">16. Fermín López</option><option value="43|Tomás Marqués">43. Tomás Marqués</option><option value="4|Ronald Araújo">4. Ronald Araújo</option><option value="5|Pau Cubarsí">5. Pau Cubarsí</option><option value="14|Marcus Rashford">14. Marcus Rashford</option><option value="15|Andreas Christensen">15. Andreas Christensen</option><option value="17|Marc Casadó">17. Marc Casadó</option><option value="18|Gerard Martín">18. Gerard Martín</option><option value="22|Marc Bernal">22. Marc Bernal</option><option value="28|Roony Bardghji">28. Roony Bardghji</option><option value="42|Xavi Espart">42. Xavi Espart</option>';
 var MAX_NORMAL=5400;var MAX_ET=7200;
 var NORMAL_SPEED=1000;var ET_SPEED=233;
 window.mlTimerClick_j1m1=function(){if(_matchFinished)return;if(_timerRunning){clearInterval(_timerInterval);_timerRunning=false;_renderTimer_j1m1();}else{_timerRunning=true;_startInterval_j1m1();}};
 function _startInterval_j1m1(){var spd=_etPhase?ET_SPEED:NORMAL_SPEED;_timerInterval=setInterval(function(){_timerSec+=5;var maxSec=_etDone?MAX_ET:MAX_NORMAL;if(!_htDone&&_timerSec>=2700){_htDone=true;_addMarker_j1m1("— DESCANSO (45 min) —");}if(_etDone&&!_et1Done&&_timerSec>=6300){_et1Done=true;_addMarker_j1m1("— DESCANSO PRÓRROGA (105 min) —");}if(_timerSec>=maxSec){_timerSec=maxSec;clearInterval(_timerInterval);_timerRunning=false;if(_etDone){_checkPenalties_j1m1();}} _renderTimer_j1m1();},spd);};
-function _renderTimer_j1m1(){var btn=document.getElementById('ml-timer-j1m1');if(!btn)return;var totalMin=Math.floor(_timerSec/60);if(_matchFinished){btn.textContent='🏁 FIN';btn.className='ml-timer finished';return;}var label=_timerRunning?'⏸ ':(_timerSec>=(_etDone?MAX_ET:MAX_NORMAL)?'🔁 ':'▶ ');btn.textContent=label+totalMin+"'";btn.className='ml-timer'+(_timerRunning?' running':'');};
+function _renderTimer_j1m1(){var btn=document.getElementById('ml-timer-j1m1');if(!btn)return;var totalMin=Math.floor(_timerSec/60);if(_matchFinished){btn.textContent='🏁 FIN';btn.className='ml-timer finished';if(window._setScoreState)window._setScoreState('j1m1','finished');return;}var label=_timerRunning?'⏸ ':(_timerSec>=(_etDone?MAX_ET:MAX_NORMAL)?'🔁 ':'▶ ');btn.textContent=label+totalMin+"'";btn.className='ml-timer'+(_timerRunning?' running':'');if(window._setScoreState)window._setScoreState('j1m1',_timerRunning?'playing':'pending');var _bl=document.getElementById('ball-j1m1');if(_bl){if(_timerRunning){_bl.classList.remove('spinning');_bl.classList.add('static');}else{_bl.classList.remove('static');_bl.classList.add('spinning');}}};
 function _currentMin_j1m1(){return Math.min(_etDone?120:90,Math.floor(_timerSec/60));};
 function _addMarker_j1m1(txt){var list=document.getElementById('ml-acta-list-j1m1');var div=document.createElement('div');div.className='ml-ht';div.textContent=txt;list.appendChild(div);_removeEmpty_j1m1();};
 window.mlActivateET_j1m1=function(){if(_etDone||_matchFinished)return;_etDone=true;_etPhase=true;if(_timerRunning){clearInterval(_timerInterval);_startInterval_j1m1();}if(_timerSec<MAX_NORMAL)_timerSec=MAX_NORMAL;_addMarker_j1m1('— PRÓRROGA —');var btn=document.getElementById('ml-btn-et-j1m1');if(btn){btn.disabled=true;btn.style.opacity='0.35';}var penBtn=document.getElementById('ml-btn-pen-j1m1');if(penBtn)penBtn.style.display='';_renderTimer_j1m1();};
@@ -693,8 +965,8 @@ window.mlEndMatch_j1m1=function(winner){if(_matchFinished)return;if(!winner&&_sc
   // ── MVP obligatorio ──
   var hasMvp=_events.some(function(e){return e.type==='mvp';});
   if(!hasMvp){
-    var sqA_=window.SQUAD_REGISTRY['Real Madrid']||_sqA_j1m1;
-    var sqB_=window.SQUAD_REGISTRY['FC Barcelona']||_sqB_j1m1;
+    var sqA_=_sqA_j1m1;
+    var sqB_=_sqB_j1m1;
     window.showMvpForce('j1m1','Real Madrid','FC Barcelona',sqA_,sqB_,_sc.a,_sc.b,function(team,num,name){
       var icons={gol:'⚽',propia:'🚫','pen-gol':'🥅','pen-fallo':'❌','pen-prov':'🤦','pen-parado':'🖐','falta-gol':'🎯',amarilla:'🟨','d-amarilla':'🟨🟥',roja:'🟥',mvp:'⭐'};
       _events.push({min:90,label:'MVP del Partido',type:'mvp',team:team,num:num,name:name,ico:'⭐',id:Date.now()});
@@ -703,29 +975,30 @@ window.mlEndMatch_j1m1=function(winner){if(_matchFinished)return;if(!winner&&_sc
     });
     return;
   }
-clearInterval(_timerInterval);_timerRunning=false;_matchFinished=true;var penWinner=null;if(winner==='a'||winner==='b'){if(_sc.a===_sc.b)penWinner=winner;}if(!winner){if(_sc.a>_sc.b)winner='a';else if(_sc.b>_sc.a)winner='b';else winner='draw';}var btn=document.getElementById('ml-btn-end-j1m1');if(btn){btn.disabled=true;btn.style.opacity='0.35';}var etBtn=document.getElementById('ml-btn-et-j1m1');if(etBtn){etBtn.disabled=true;etBtn.style.opacity='0.35';}var penBtn=document.getElementById('ml-btn-pen-j1m1');if(penBtn){penBtn.disabled=true;penBtn.style.opacity='0.35';}var _ta_a=_events.filter(function(e){return e.team==='a'&&(e.type==='amarilla'||e.type==='d-amarilla');}).length;var _tr_a=_events.filter(function(e){return e.team==='a'&&(e.type==='roja'||e.type==='d-amarilla');}).length;var _ta_b=_events.filter(function(e){return e.team==='b'&&(e.type==='amarilla'||e.type==='d-amarilla');}).length;var _tr_b=_events.filter(function(e){return e.team==='b'&&(e.type==='roja'||e.type==='d-amarilla');}).length;var _mvp_a=_events.filter(function(e){return e.team==='a'&&e.type==='mvp';}).length;var _mvp_b=_events.filter(function(e){return e.team==='b'&&e.type==='mvp';}).length;if(typeof window.registrarResultadoLiga==='function')window.registrarResultadoLiga('j1m1',TEAM_A_NAME,TEAM_B_NAME,_sc.a,_sc.b,_ta_a,_tr_a,_ta_b,_tr_b,_mvp_a,_mvp_b,penWinner); if(typeof window.registrarLigaPlayerStats==='function')window.registrarLigaPlayerStats('j1m1',TEAM_A_NAME,TEAM_B_NAME,_events.map(function(ev){return {type:(ev.type==='amarilla'||ev.type==='roja'||ev.type==='d-amarilla')?'card':ev.type,ico:ev.ico,team:ev.team,player:[ev.num,ev.name]};}),(_events.find(function(e){return e.type==='mvp';})||{}).name||'',(_events.find(function(e){return e.type==='mvp';})||{}).team==='a'?TEAM_A_NAME:((_events.find(function(e){return e.type==='mvp';})||{}).team==='b'?TEAM_B_NAME:'')); _renderTimer_j1m1();};
+clearInterval(_timerInterval);_timerRunning=false;_matchFinished=true;var penWinner=null;if(winner==='a'||winner==='b'){if(_sc.a===_sc.b)penWinner=winner;}if(!winner){if(_sc.a>_sc.b)winner='a';else if(_sc.b>_sc.a)winner='b';else winner='draw';}var btn=document.getElementById('ml-btn-end-j1m1');if(btn){btn.disabled=true;btn.style.opacity='0.35';}var etBtn=document.getElementById('ml-btn-et-j1m1');if(etBtn){etBtn.disabled=true;etBtn.style.opacity='0.35';}var penBtn=document.getElementById('ml-btn-pen-j1m1');if(penBtn){penBtn.disabled=true;penBtn.style.opacity='0.35';}var _ta_a=_events.filter(function(e){return e.team==='a'&&e.type==='amarilla';}).length;var _tr_a=_events.filter(function(e){return e.team==='a'&&(e.type==='roja'||e.type==='d-amarilla');}).length;var _ta_b=_events.filter(function(e){return e.team==='b'&&e.type==='amarilla';}).length;var _tr_b=_events.filter(function(e){return e.team==='b'&&(e.type==='roja'||e.type==='d-amarilla');}).length;var _mvp_a=_events.filter(function(e){return e.team==='a'&&e.type==='mvp';}).length;var _mvp_b=_events.filter(function(e){return e.team==='b'&&e.type==='mvp';}).length;if(typeof window.registrarResultadoLiga==='function')window.registrarResultadoLiga('j1m1',TEAM_A_NAME,TEAM_B_NAME,_sc.a,_sc.b,_ta_a,_tr_a,_ta_b,_tr_b,_mvp_a,_mvp_b,penWinner); if(typeof window.registrarLigaPlayerStats==='function')window.registrarLigaPlayerStats('j1m1',TEAM_A_NAME,TEAM_B_NAME,_events.map(function(ev){return {type:(ev.type==='amarilla'||ev.type==='roja'||ev.type==='d-amarilla')?'card':ev.type,ico:ev.ico,team:ev.team,player:[ev.num,ev.name]};}),(_events.find(function(e){return e.type==='mvp';})||{}).name||'',(_events.find(function(e){return e.type==='mvp';})||{}).team==='a'?TEAM_A_NAME:((_events.find(function(e){return e.type==='mvp';})||{}).team==='b'?TEAM_B_NAME:'')); _renderTimer_j1m1(); if(typeof window.procesarSancionesPostPartido==='function')window.procesarSancionesPostPartido(_events,'a',TEAM_A_NAME,'liga');};
 function _checkPenalties_j1m1(){if(_sc.a===_sc.b){_addMarker_j1m1("— EMPATE AL 120' —");var pp=document.getElementById("ml-pen-panel-j1m1");if(pp)pp.classList.add("show");var addBtn=document.getElementById("ml-add-btn-j1m1");if(addBtn){addBtn.disabled=true;addBtn.style.opacity="0.35";}}else{mlEndMatch_j1m1();}};window.mlConfirmPen_j1m1=function(){var pa=parseInt(document.getElementById("ml-pen-a-j1m1").value)||0;var pb=parseInt(document.getElementById("ml-pen-b-j1m1").value)||0;if(pa===pb){alert("⚠️ Los penaltis no pueden terminar en empate. Introduce un resultado válido.");return;}var penWinner=pa>pb?"a":"b";var psEl=document.getElementById("pen-score-j1m1");if(psEl){psEl.textContent=pa+"–"+pb;psEl.classList.add("show");}var pp=document.getElementById("ml-pen-panel-j1m1");if(pp)pp.classList.remove("show");mlEndMatch_j1m1(penWinner);};
 window.mlShowEvOv_j1m1=function(){document.getElementById("ml-ev-overlay-j1m1").classList.add("show");};window.mlHideEvOv_j1m1=function(){document.getElementById("ml-ev-overlay-j1m1").classList.remove("show");};window.mlEvPick_j1m1=function(label,type){document.getElementById("ml-ev-overlay-j1m1").classList.remove("show");mlShowTP_j1m1(label,type);};window.mlShowTP_j1m1=function(label,type){_pendingEvt={label:label,type:type};document.getElementById("ml-tp-ov-evt-j1m1").textContent=label;document.getElementById("ml-tp-overlay-j1m1").classList.add("show");};window.mlHideTP_j1m1=function(){document.getElementById("ml-tp-overlay-j1m1").classList.remove("show");_pendingEvt=null;};window.mlTPSelect_j1m1=function(team){document.getElementById("ml-tp-overlay-j1m1").classList.remove("show");mlDirectPick_j1m1(_pendingEvt.label,_pendingEvt.type,team);};window.mlTogglePanel_j1m1=function(){mlShowEvOv_j1m1();};
-var _sqA_j1m1=[{'h':'🧤 PORTEROS'},['1','Thibaut Courtois'],['13','Andriy Lunin'],{'h':'🛡 DEFENSAS'},['23','Ferland Mendy'],['22','Antonio Rüdiger'],['3','Éder Militão'],['12','Trent Alexander-Arnold'],['20','Fran García'],['4','David Alaba'],['17','Raúl Asencio'],['18','Álvaro Carreras'],['24','Dean Huijsen'],{'h':'⚙️ MEDIOS'},['5','Jude Bellingham'],['14','Aurélien Tchouaméni'],['8','Federico Valverde'],['6','Eduardo Camavinga'],['15','Arda Güler'],['19','Dani Ceballos'],['21','Brahim Díaz'],{'h':'⚡ DELANTEROS'},['7','Vinicius Júnior'],['9','Kylian Mbappé'],['11','Rodrygo'],['30','Franco Mastantuono']];var _sqB_j1m1=[{'h':'🧤 PORTEROS'},['25','Wojciech Szczęsny'],['13','Joan García'],{'h':'🛡 DEFENSAS'},['3','Alejandro Balde'],['5','Pau Cubarsí'],['4','Ronald Araújo'],['23','Jules Koundé'],['2','João Cancelo'],['15','Andreas Christensen'],['24','Eric García'],['18','Gerard Martín'],{'h':'⚙️ MEDIOS'},['8','Pedri'],['17','Marc Casadó'],['6','Pablo Gavi'],['21','Frenkie de Jong'],['20','Dani Olmo'],['16','Fermín López'],['22','Marc Bernal'],{'h':'⚡ DELANTEROS'},['10','Lamine Yamal'],['9','Robert Lewandowski'],['11','Raphinha'],['7','Ferran Torres'],['14','Marcus Rashford'],['28','Roony Bardghji']];window.mlShowPl_j1m1=function(){var ov=document.getElementById("ml-pl-overlay-j1m1");var e=_pendingEvt;var sq=(e.team==="a")?(window.SQUAD_REGISTRY[TEAM_A_NAME]||_sqA_j1m1):(window.SQUAD_REGISTRY[TEAM_B_NAME]||_sqB_j1m1);var tname=(e.team==="a")?TEAM_A_NAME:TEAM_B_NAME;document.getElementById("ml-pl-ov-evt-j1m1").textContent=e.label;document.getElementById("ml-pl-ov-team-j1m1").textContent=tname;var list=document.getElementById("ml-pl-ov-list-j1m1");list.innerHTML=sq.map(function(p){if(p.h)return '<div class="ml-pl-ov-sec">'+p.h+'</div>';return '<button class="ml-pl-ov-btn" onclick="mlPlConfirm_j1m1(\''+p[0]+'\',\''+p[1].replace(/\'/g,"\\'")+ '\')">'+'<span class="ml-pl-ov-num">'+p[0]+'</span>'+'<span class="ml-pl-ov-name">'+p[1]+'</span>'+'</button>';}).join("");ov.classList.add("show");};window.mlHidePl_j1m1=function(){document.getElementById("ml-pl-overlay-j1m1").classList.remove("show");};window.mlPlConfirm_j1m1=function(num,name){document.getElementById("ml-pl-overlay-j1m1").classList.remove("show");if(!_pendingEvt)return;var e=_pendingEvt;var min=_currentMin_j1m1();if(e.type==="d-amarilla"){var hasYellow=_events.some(function(ev){return ev.type==="amarilla"&&ev.team===e.team&&ev.num===num;});if(!hasYellow){alert("⚠️ "+name+" no tiene amarilla previa. No se puede mostrar doble amarilla.");_pendingEvt=null;return;}}var scoringTypes=["gol","propia","pen-gol","falta-gol"];if(scoringTypes.indexOf(e.type)!==-1){var st=(e.type==="propia")?(e.team==="a"?"b":"a"):e.team;_sc[st]++;document.getElementById("sc-j1m1-a").textContent=_sc.a;document.getElementById("sc-j1m1-b").textContent=_sc.b;}if((e.type==="d-amarilla"||e.type==="roja")&&(e.type!=="roja"||_events.filter(function(ev){return(ev.type==="roja"||ev.type==="d-amarilla")&&ev.team===e.team;}).length===0)){_rojas=_rojas||{};_rojas[e.team]=(_rojas[e.team]||0)+1;}var icons={gol:"⚽",propia:"🚫","pen-gol":"🥅","pen-fallo":"❌","pen-prov":"🤦","pen-parado":"🖐","falta-gol":"🎯",amarilla:"🟨","d-amarilla":"🟨🟥",roja:"🟥",mvp:"⭐"};_events.push({min:min,label:e.label,type:e.type,team:e.team,num:num,name:name,ico:icons[e.type]||"•",id:Date.now()});_renderActa_j1m1();_pendingEvt=null;};window.mlDirectPick_j1m1=function(label,type,team){_pendingEvt={label:label,type:type,team:team};mlShowPl_j1m1();};
+var _sqA_j1m1=[];var _sqB_j1m1=[];(function(){  var regA=window.sqFromRegistryFull('Real Madrid');  var regB=window.sqFromRegistryFull('FC Barcelona');  function toOverlayFmt(sq){    if(!sq||!sq.length)return [];    var out=[];    var posLabels={P:'🧤 PORTEROS',D:'🛡 DEFENSAS',M:'⚙️ MEDIOS',F:'⚡ DELANTEROS'};    var curPos=null;    sq.forEach(function(p){      if(p[2]!==curPos){curPos=p[2];out.push({h:posLabels[curPos]||curPos});}       out.push([p[0],p[1]]);    });    return out;  }  if(regA){var fmt=toOverlayFmt(regA);fmt.forEach(function(p){_sqA_j1m1.push(p);});}  if(regB){var fmt2=toOverlayFmt(regB);fmt2.forEach(function(p){_sqB_j1m1.push(p);});}})();window._sqA_j1m1=_sqA_j1m1;window._sqB_j1m1=_sqB_j1m1;window.mlShowPl_j1m1=function(){var ov=document.getElementById("ml-pl-overlay-j1m1");var e=_pendingEvt;var sq=(e.team==="a")?(_sqA_j1m1):(_sqB_j1m1);var tname=(e.team==="a")?TEAM_A_NAME:TEAM_B_NAME;document.getElementById("ml-pl-ov-evt-j1m1").textContent=e.label;document.getElementById("ml-pl-ov-team-j1m1").textContent=tname;var list=document.getElementById("ml-pl-ov-list-j1m1");list.innerHTML=sq.map(function(p){if(p.h)return '<div class="ml-pl-ov-sec">'+p.h+'</div>';return '<button class="ml-pl-ov-btn" onclick="mlPlConfirm_j1m1(\''+p[0]+'\',\''+p[1].replace(/\'/g,"\\'")+ '\')">'+'<span class="ml-pl-ov-num">'+p[0]+'</span>'+'<span class="ml-pl-ov-name">'+p[1]+'</span>'+'</button>';}).join("");ov.classList.add("show");};window.mlHidePl_j1m1=function(){document.getElementById("ml-pl-overlay-j1m1").classList.remove("show");};window.mlPlConfirm_j1m1=function(num,name){document.getElementById("ml-pl-overlay-j1m1").classList.remove("show");if(!_pendingEvt)return;var e=_pendingEvt;var min=_currentMin_j1m1();if(e.type==="d-amarilla"){var hasYellow=_events.some(function(ev){return ev.type==="amarilla"&&ev.team===e.team&&ev.num===num;});if(!hasYellow){_pendingEvt=null;return;}}var scoringTypes=["gol","propia","pen-gol","falta-gol"];if(scoringTypes.indexOf(e.type)!==-1){var st=(e.type==="propia")?(e.team==="a"?"b":"a"):e.team;_sc[st]++;document.getElementById("sc-j1m1-a").textContent=_sc.a;document.getElementById("sc-j1m1-b").textContent=_sc.b;}if((e.type==="d-amarilla"||e.type==="roja")&&(e.type!=="roja"||_events.filter(function(ev){return(ev.type==="roja"||ev.type==="d-amarilla")&&ev.team===e.team;}).length===0)){_rojas=_rojas||{};_rojas[e.team]=(_rojas[e.team]||0)+1;}var icons={gol:"⚽",propia:"🚫","pen-gol":"🥅","pen-fallo":"❌","pen-prov":"🤦","pen-parado":"🖐","falta-gol":"🎯",amarilla:"🟨","d-amarilla":"🟨🟥",roja:"🟥",mvp:"⭐"};_events.push({min:min,label:e.label,type:e.type,team:e.team,num:num,name:name,ico:icons[e.type]||"•",id:Date.now()});_renderActa_j1m1();  _pendingEvt=null;};window.mlDirectPick_j1m1=function(label,type,team){_pendingEvt={label:label,type:type,team:team};mlShowPl_j1m1();};
 window.mlCloseModal_j1m1=function(){document.getElementById('ml-modal-j1m1').classList.remove('show');_pendingEvt=null;};
 var _evtToStat={gol:'gol',amarilla:'yel','d-amarilla':'yel',roja:'red',mvp:'mvp','pen-prov':'pen-prov','pen-parado':'pen-parado','pen-gol':'pen-gol','falta-gol':'falta-gol',propia:'propia'};
 function _removeEmpty_j1m1(){var emp=document.querySelector('#ml-acta-list-j1m1 .ml-acta-empty');if(emp)emp.remove();};
-window.mlConfirmEvt_j1m1=function(){if(!_pendingEvt)return;var sel=document.getElementById('ml-modal-sel-j1m1');var parts=sel.value.split('|');var num=parts[0],name=parts[1];var e=_pendingEvt;var min=_currentMin_j1m1();var scoringTypes=['gol','propia','pen-gol','falta-gol'];if(scoringTypes.indexOf(e.type)!==-1){var st=(e.type==='propia')?(e.team==='a'?'b':'a'):e.team;_sc[st]++;document.getElementById('sc-j1m1-a').textContent=_sc.a;document.getElementById('sc-j1m1-b').textContent=_sc.b;}var icons={gol:'⚽',propia:'🚫','pen-gol':'🥅','pen-fallo':'❌','pen-prov':'🤦','pen-parado':'🖐','falta-gol':'🎯',amarilla:'🟨','d-amarilla':'🟨🟥',roja:'🟥',mvp:'⭐'};_events.push({min:min,label:e.label,type:e.type,team:e.team,num:num,name:name,ico:icons[e.type]||'•',id:Date.now()});_renderActa_j1m1();mlCloseModal_j1m1();};
-function _renderActa_j1m1(){var list=document.getElementById('ml-acta-list-j1m1');var sorted=_events.slice().sort(function(a,b){return a.min-b.min;});list.innerHTML='';if(sorted.length===0){list.innerHTML='<div class="ml-acta-empty">Sin eventos registrados</div>';return;}sorted.forEach(function(ev){var row=document.createElement('div');row.className='ml-evt-item';var tl=(ev.team==='a')?TEAM_A_NAME:TEAM_B_NAME;row.innerHTML='<span class="ml-evt-min">'+ev.min+"'</span>"+'<span class="ml-evt-ico">'+ev.ico+'</span>'+'<span class="ml-evt-name">'+ev.num+'. '+ev.name+'</span>'+'<span class="ml-evt-team">'+tl+'</span>'+'<button class="ml-evt-del" onclick="mlDelEvt_j1m1('+ev.id+')">✕</button>';list.appendChild(row);});};
+window.mlConfirmEvt_j1m1=function(){if(!_pendingEvt)return;var sel=document.getElementById('ml-modal-sel-j1m1');var parts=sel.value.split('|');var num=parts[0],name=parts[1];var e=_pendingEvt;var min=_currentMin_j1m1();var scoringTypes=['gol','propia','pen-gol','falta-gol'];if(scoringTypes.indexOf(e.type)!==-1){var st=(e.type==='propia')?(e.team==='a'?'b':'a'):e.team;_sc[st]++;document.getElementById('sc-j1m1-a').textContent=_sc.a;document.getElementById('sc-j1m1-b').textContent=_sc.b;}var icons={gol:'⚽',propia:'🚫','pen-gol':'🥅','pen-fallo':'❌','pen-prov':'🤦','pen-parado':'🖐','falta-gol':'🎯',amarilla:'🟨','d-amarilla':'🟨🟥',roja:'🟥',mvp:'⭐'};_events.push({min:min,label:e.label,type:e.type,team:e.team,num:num,name:name,ico:icons[e.type]||'•',id:Date.now()});_renderActa_j1m1();  mlCloseModal_j1m1();};
+function _renderActa_j1m1(){var list=document.getElementById('ml-acta-list-j1m1');var sorted=_events.slice().sort(function(a,b){return a.min-b.min;});list.innerHTML='';if(sorted.length===0){list.innerHTML='<div class="ml-acta-empty">Sin eventos registrados</div>';return;}sorted.forEach(function(ev){var row=document.createElement('div');row.className='ml-evt-item';row.setAttribute('data-team',ev.team);row.setAttribute('data-type',ev.type);var tl=(ev.team==='a')?TEAM_A_NAME:TEAM_B_NAME;row.innerHTML='<span class="ml-evt-min">'+ev.min+"'</span>"+'<span class="ml-evt-ico">'+ev.ico+'</span>'+'<span class="ml-evt-name">'+ev.num+'. '+ev.name+'</span>'+'<span class="ml-evt-team">'+tl+'</span>'+'<button class="ml-evt-edit" onclick="window._openEditModal(\'j1m1\','+ev.id+')" title="Editar">✏️</button>'+'<button class="ml-evt-del" onclick="mlDelEvt_j1m1('+ev.id+')">✕</button>';list.appendChild(row);});};
 window.mlDelEvt_j1m1=function(id){var ev=_events.find(function(e){return e.id===id;});if(!ev)return;var scoringTypes=['gol','propia','pen-gol','falta-gol'];if(scoringTypes.indexOf(ev.type)!==-1){var st=(ev.type==='propia')?(ev.team==='a'?'b':'a'):ev.team;_sc[st]=Math.max(0,_sc[st]-1);document.getElementById('sc-j1m1-a').textContent=_sc.a;document.getElementById('sc-j1m1-b').textContent=_sc.b;}_events=_events.filter(function(e){return e.id!==id;});_renderActa_j1m1();};
 })();
 
+/* script block 3 */
 (function(){
 var _sc={a:0,b:0};var _rojas={a:0,b:0};var _events=[];var _timerSec=0;var _timerInterval=null;var _timerRunning=false;
 var _htDone=false;var _etDone=false;var _et1Done=false;var _matchFinished=false;var _pendingEvt=null;
 var _etPhase=false;
 var TEAM_A_NAME="Athletic Club";var TEAM_B_NAME="Real Betis";
-var TEAM_A_OPTS='<option value="1|Unai Simón">1. Unai Simón</option><option value="2|De Marcos">2. De Marcos</option><option value="3|Yuri Berchiche">3. Yuri Berchiche</option><option value="4|Aitor Paredes">4. Aitor Paredes</option><option value="5|Dani Vivian">5. Dani Vivian</option><option value="6|Yeray Álvarez">6. Yeray Álvarez</option><option value="7|Iñaki Williams">7. Iñaki Williams</option><option value="8|Beñat Turrientes">8. Beñat Turrientes</option><option value="9|Gorka Guruzeta">9. Gorka Guruzeta</option><option value="10|Oihan Sancet">10. Oihan Sancet</option><option value="11|Nico Williams">11. Nico Williams</option><option value="14|Javier Martínez">14. Javier Martínez</option><option value="16|Mikel Vesga">16. Mikel Vesga</option><option value="17|Unai Gómez">17. Unai Gómez</option><option value="18|Dani García">18. Dani García</option><option value="22|Mikel Prados">22. Mikel Prados</option><option value="24|Marcelino Prados">24. Marcelino Prados</option>';var TEAM_B_OPTS='<option value="1|Rui Silva">1. Rui Silva</option><option value="2|Héctor Bellerín">2. Héctor Bellerín</option><option value="3|Álex Moreno">3. Álex Moreno</option><option value="4|Germán Pezzella">4. Germán Pezzella</option><option value="5|Marc Bartra">5. Marc Bartra</option><option value="7|Juanmi">7. Juanmi</option><option value="8|Guido Rodríguez">8. Guido Rodríguez</option><option value="9|Borja Iglesias">9. Borja Iglesias</option><option value="10|Nabil Fekir">10. Nabil Fekir</option><option value="11|Isco">11. Isco</option><option value="14|Carvalho">14. Carvalho</option><option value="15|Ricardo Rodríguez">15. Ricardo Rodríguez</option><option value="16|Ayoze Pérez">16. Ayoze Pérez</option><option value="18|Riad">18. Riad</option><option value="22|Youssouf Sabaly">22. Youssouf Sabaly</option><option value="28|Assane Diao">28. Assane Diao</option>';
+var TEAM_A_OPTS='<option value="1|Unai Simón">1. Unai Simón</option><option value="13|Alex Padilla">13. Alex Padilla</option><option value="11|Nico Williams">11. Nico Williams</option><option value="28|Maroan Sannadi">28. Maroan Sannadi</option><option value="7|Aitor Paredes">7. Aitor Paredes</option><option value="4|Aymeric Laporte">4. Aymeric Laporte</option><option value="5|Daniel Vivian">5. Daniel Vivian</option><option value="9|Oihan Sancet">9. Oihan Sancet</option><option value="22|Beñat Prados">22. Beñat Prados</option><option value="6|Yeray Álvarez">6. Yeray Álvarez</option><option value="12|Iñaki Williams">12. Iñaki Williams</option><option value="10|Iñigo R. Galarreta">10. Iñigo R. Galarreta</option><option value="23|Mikel Jauregizar">23. Mikel Jauregizar</option><option value="17|Yuri Berchiche">17. Yuri Berchiche</option><option value="21|Iker Monreal">21. Iker Monreal</option><option value="2|Gorka Guruzeta">2. Gorka Guruzeta</option><option value="19|Andoni Gorosabel">19. Andoni Gorosabel</option><option value="3|Álex Berenguer">3. Álex Berenguer</option><option value="8|Adama Boiro">8. Adama Boiro</option><option value="18|Jesús Areso">18. Jesús Areso</option><option value="20|Íñigo Lekue">20. Íñigo Lekue</option><option value="14|Mikel Vesga">14. Mikel Vesga</option><option value="15|Robert Navarro">15. Robert Navarro</option><option value="16|Unai Gómez">16. Unai Gómez</option><option value="29|Urko Izeta">29. Urko Izeta</option><option value="31|Alejandro Rego">31. Alejandro Rego</option><option value="24|Nico Serrano">24. Nico Serrano</option><option value="25|Eder Garcia">25. Eder Garcia</option><option value="27|Unai Eguíluz">27. Unai Eguíluz</option><option value="26|Selton Sanchez">26. Selton Sanchez</option><option value="30|Asier Hierro">30. Asier Hierro</option>';var TEAM_B_OPTS='<option value="1|Álvaro Valles">1. Álvaro Valles</option><option value="25|Pau López">25. Pau López</option><option value="13|Adrián">13. Adrián</option><option value="22|Isco">22. Isco</option><option value="8|Pablo Fornals">8. Pablo Fornals</option><option value="15|Álvaro Fidalgo">15. Álvaro Fidalgo</option><option value="20|Giovani Lo Celso">20. Giovani Lo Celso</option><option value="7|Antony">7. Antony</option><option value="23|Diego Llorente">23. Diego Llorente</option><option value="40|Angel Ortiz">40. Angel Ortiz</option><option value="5|Marc Bartra">5. Marc Bartra</option><option value="14|Sofyan Amrabat">14. Sofyan Amrabat</option><option value="19|Cucho Hernández">19. Cucho Hernández</option><option value="4|Natan">4. Natan</option><option value="24|Aitor Ruibal">24. Aitor Ruibal</option><option value="6|Sergi Altimira">6. Sergi Altimira</option><option value="17|Rodrigo Riquelme">17. Rodrigo Riquelme</option><option value="21|Marc Roca">21. Marc Roca</option><option value="2|Héctor Bellerín">2. Héctor Bellerín</option><option value="16|Valentín Gómez">16. Valentín Gómez</option><option value="10|Abdessamad Ezzalzouli">10. Abdessamad Ezzalzouli</option><option value="3|Junior Firpo">3. Junior Firpo</option><option value="18|Nelson Deossa">18. Nelson Deossa</option><option value="9|Chimy Ávila">9. Chimy Ávila</option><option value="11|Cédric Bakambu">11. Cédric Bakambu</option><option value="12|Ricardo Rodríguez">12. Ricardo Rodríguez</option>';
 var MAX_NORMAL=5400;var MAX_ET=7200;
 var NORMAL_SPEED=1000;var ET_SPEED=233;
 window.mlTimerClick_j1m2=function(){if(_matchFinished)return;if(_timerRunning){clearInterval(_timerInterval);_timerRunning=false;_renderTimer_j1m2();}else{_timerRunning=true;_startInterval_j1m2();}};
 function _startInterval_j1m2(){var spd=_etPhase?ET_SPEED:NORMAL_SPEED;_timerInterval=setInterval(function(){_timerSec+=5;var maxSec=_etDone?MAX_ET:MAX_NORMAL;if(!_htDone&&_timerSec>=2700){_htDone=true;_addMarker_j1m2("— DESCANSO (45 min) —");}if(_etDone&&!_et1Done&&_timerSec>=6300){_et1Done=true;_addMarker_j1m2("— DESCANSO PRÓRROGA (105 min) —");}if(_timerSec>=maxSec){_timerSec=maxSec;clearInterval(_timerInterval);_timerRunning=false;if(_etDone){_checkPenalties_j1m2();}} _renderTimer_j1m2();},spd);};
-function _renderTimer_j1m2(){var btn=document.getElementById('ml-timer-j1m2');if(!btn)return;var totalMin=Math.floor(_timerSec/60);if(_matchFinished){btn.textContent='🏁 FIN';btn.className='ml-timer finished';return;}var label=_timerRunning?'⏸ ':(_timerSec>=(_etDone?MAX_ET:MAX_NORMAL)?'🔁 ':'▶ ');btn.textContent=label+totalMin+"'";btn.className='ml-timer'+(_timerRunning?' running':'');};
+function _renderTimer_j1m2(){var btn=document.getElementById('ml-timer-j1m2');if(!btn)return;var totalMin=Math.floor(_timerSec/60);if(_matchFinished){btn.textContent='🏁 FIN';btn.className='ml-timer finished';if(window._setScoreState)window._setScoreState('j1m2','finished');return;}var label=_timerRunning?'⏸ ':(_timerSec>=(_etDone?MAX_ET:MAX_NORMAL)?'🔁 ':'▶ ');btn.textContent=label+totalMin+"'";btn.className='ml-timer'+(_timerRunning?' running':'');if(window._setScoreState)window._setScoreState('j1m2',_timerRunning?'playing':'pending');var _bl=document.getElementById('ball-j1m2');if(_bl){if(_timerRunning){_bl.classList.remove('spinning');_bl.classList.add('static');}else{_bl.classList.remove('static');_bl.classList.add('spinning');}}};
 function _currentMin_j1m2(){return Math.min(_etDone?120:90,Math.floor(_timerSec/60));};
 function _addMarker_j1m2(txt){var list=document.getElementById('ml-acta-list-j1m2');var div=document.createElement('div');div.className='ml-ht';div.textContent=txt;list.appendChild(div);_removeEmpty_j1m2();};
 window.mlActivateET_j1m2=function(){if(_etDone||_matchFinished)return;_etDone=true;_etPhase=true;if(_timerRunning){clearInterval(_timerInterval);_startInterval_j1m2();}if(_timerSec<MAX_NORMAL)_timerSec=MAX_NORMAL;_addMarker_j1m2('— PRÓRROGA —');var btn=document.getElementById('ml-btn-et-j1m2');if(btn){btn.disabled=true;btn.style.opacity='0.35';}var penBtn=document.getElementById('ml-btn-pen-j1m2');if(penBtn)penBtn.style.display='';_renderTimer_j1m2();};
@@ -734,8 +1007,8 @@ window.mlEndMatch_j1m2=function(winner){if(_matchFinished)return;if(!winner&&_sc
   // ── MVP obligatorio ──
   var hasMvp=_events.some(function(e){return e.type==='mvp';});
   if(!hasMvp){
-    var sqA_=window.SQUAD_REGISTRY['Athletic Club']||_sqA_j1m2;
-    var sqB_=window.SQUAD_REGISTRY['Real Betis']||_sqB_j1m2;
+    var sqA_=_sqA_j1m2;
+    var sqB_=_sqB_j1m2;
     window.showMvpForce('j1m2','Athletic Club','Real Betis',sqA_,sqB_,_sc.a,_sc.b,function(team,num,name){
       var icons={gol:'⚽',propia:'🚫','pen-gol':'🥅','pen-fallo':'❌','pen-prov':'🤦','pen-parado':'🖐','falta-gol':'🎯',amarilla:'🟨','d-amarilla':'🟨🟥',roja:'🟥',mvp:'⭐'};
       _events.push({min:90,label:'MVP del Partido',type:'mvp',team:team,num:num,name:name,ico:'⭐',id:Date.now()});
@@ -744,26 +1017,27 @@ window.mlEndMatch_j1m2=function(winner){if(_matchFinished)return;if(!winner&&_sc
     });
     return;
   }
-clearInterval(_timerInterval);_timerRunning=false;_matchFinished=true;var penWinner=null;if(winner==='a'||winner==='b'){if(_sc.a===_sc.b)penWinner=winner;}if(!winner){if(_sc.a>_sc.b)winner='a';else if(_sc.b>_sc.a)winner='b';else winner='draw';}var btn=document.getElementById('ml-btn-end-j1m2');if(btn){btn.disabled=true;btn.style.opacity='0.35';}var etBtn=document.getElementById('ml-btn-et-j1m2');if(etBtn){etBtn.disabled=true;etBtn.style.opacity='0.35';}var penBtn=document.getElementById('ml-btn-pen-j1m2');if(penBtn){penBtn.disabled=true;penBtn.style.opacity='0.35';}var _ta_a=_events.filter(function(e){return e.team==='a'&&(e.type==='amarilla'||e.type==='d-amarilla');}).length;var _tr_a=_events.filter(function(e){return e.team==='a'&&(e.type==='roja'||e.type==='d-amarilla');}).length;var _ta_b=_events.filter(function(e){return e.team==='b'&&(e.type==='amarilla'||e.type==='d-amarilla');}).length;var _tr_b=_events.filter(function(e){return e.team==='b'&&(e.type==='roja'||e.type==='d-amarilla');}).length;var _mvp_a=_events.filter(function(e){return e.team==='a'&&e.type==='mvp';}).length;var _mvp_b=_events.filter(function(e){return e.team==='b'&&e.type==='mvp';}).length;if(typeof window.registrarResultadoLiga==='function')window.registrarResultadoLiga('j1m2',TEAM_A_NAME,TEAM_B_NAME,_sc.a,_sc.b,_ta_a,_tr_a,_ta_b,_tr_b,_mvp_a,_mvp_b,penWinner); if(typeof window.registrarLigaPlayerStats==='function')window.registrarLigaPlayerStats('j1m2',TEAM_A_NAME,TEAM_B_NAME,_events.map(function(ev){return {type:(ev.type==='amarilla'||ev.type==='roja'||ev.type==='d-amarilla')?'card':ev.type,ico:ev.ico,team:ev.team,player:[ev.num,ev.name]};}),(_events.find(function(e){return e.type==='mvp';})||{}).name||'',(_events.find(function(e){return e.type==='mvp';})||{}).team==='a'?TEAM_A_NAME:((_events.find(function(e){return e.type==='mvp';})||{}).team==='b'?TEAM_B_NAME:'')); _renderTimer_j1m2();};
+clearInterval(_timerInterval);_timerRunning=false;_matchFinished=true;var penWinner=null;if(winner==='a'||winner==='b'){if(_sc.a===_sc.b)penWinner=winner;}if(!winner){if(_sc.a>_sc.b)winner='a';else if(_sc.b>_sc.a)winner='b';else winner='draw';}var btn=document.getElementById('ml-btn-end-j1m2');if(btn){btn.disabled=true;btn.style.opacity='0.35';}var etBtn=document.getElementById('ml-btn-et-j1m2');if(etBtn){etBtn.disabled=true;etBtn.style.opacity='0.35';}var penBtn=document.getElementById('ml-btn-pen-j1m2');if(penBtn){penBtn.disabled=true;penBtn.style.opacity='0.35';}var _ta_a=_events.filter(function(e){return e.team==='a'&&e.type==='amarilla';}).length;var _tr_a=_events.filter(function(e){return e.team==='a'&&(e.type==='roja'||e.type==='d-amarilla');}).length;var _ta_b=_events.filter(function(e){return e.team==='b'&&e.type==='amarilla';}).length;var _tr_b=_events.filter(function(e){return e.team==='b'&&(e.type==='roja'||e.type==='d-amarilla');}).length;var _mvp_a=_events.filter(function(e){return e.team==='a'&&e.type==='mvp';}).length;var _mvp_b=_events.filter(function(e){return e.team==='b'&&e.type==='mvp';}).length;if(typeof window.registrarResultadoLiga==='function')window.registrarResultadoLiga('j1m2',TEAM_A_NAME,TEAM_B_NAME,_sc.a,_sc.b,_ta_a,_tr_a,_ta_b,_tr_b,_mvp_a,_mvp_b,penWinner); if(typeof window.registrarLigaPlayerStats==='function')window.registrarLigaPlayerStats('j1m2',TEAM_A_NAME,TEAM_B_NAME,_events.map(function(ev){return {type:(ev.type==='amarilla'||ev.type==='roja'||ev.type==='d-amarilla')?'card':ev.type,ico:ev.ico,team:ev.team,player:[ev.num,ev.name]};}),(_events.find(function(e){return e.type==='mvp';})||{}).name||'',(_events.find(function(e){return e.type==='mvp';})||{}).team==='a'?TEAM_A_NAME:((_events.find(function(e){return e.type==='mvp';})||{}).team==='b'?TEAM_B_NAME:'')); _renderTimer_j1m2(); if(typeof window.procesarSancionesPostPartido==='function')window.procesarSancionesPostPartido(_events,'a',TEAM_A_NAME,'liga');};
 function _checkPenalties_j1m2(){if(_sc.a===_sc.b){_addMarker_j1m2("— EMPATE AL 120' —");var pp=document.getElementById("ml-pen-panel-j1m2");if(pp)pp.classList.add("show");var addBtn=document.getElementById("ml-add-btn-j1m2");if(addBtn){addBtn.disabled=true;addBtn.style.opacity="0.35";}}else{mlEndMatch_j1m2();}};window.mlConfirmPen_j1m2=function(){var pa=parseInt(document.getElementById("ml-pen-a-j1m2").value)||0;var pb=parseInt(document.getElementById("ml-pen-b-j1m2").value)||0;if(pa===pb){alert("⚠️ Los penaltis no pueden terminar en empate. Introduce un resultado válido.");return;}var penWinner=pa>pb?"a":"b";var psEl=document.getElementById("pen-score-j1m2");if(psEl){psEl.textContent=pa+"–"+pb;psEl.classList.add("show");}var pp=document.getElementById("ml-pen-panel-j1m2");if(pp)pp.classList.remove("show");mlEndMatch_j1m2(penWinner);};
 window.mlShowEvOv_j1m2=function(){document.getElementById("ml-ev-overlay-j1m2").classList.add("show");};window.mlHideEvOv_j1m2=function(){document.getElementById("ml-ev-overlay-j1m2").classList.remove("show");};window.mlEvPick_j1m2=function(label,type){document.getElementById("ml-ev-overlay-j1m2").classList.remove("show");mlShowTP_j1m2(label,type);};window.mlShowTP_j1m2=function(label,type){_pendingEvt={label:label,type:type};document.getElementById("ml-tp-ov-evt-j1m2").textContent=label;document.getElementById("ml-tp-overlay-j1m2").classList.add("show");};window.mlHideTP_j1m2=function(){document.getElementById("ml-tp-overlay-j1m2").classList.remove("show");_pendingEvt=null;};window.mlTPSelect_j1m2=function(team){document.getElementById("ml-tp-overlay-j1m2").classList.remove("show");mlDirectPick_j1m2(_pendingEvt.label,_pendingEvt.type,team);};window.mlTogglePanel_j1m2=function(){mlShowEvOv_j1m2();};
-var _sqA_j1m2=[{'h':'🧤 PORTEROS'},['1','Unai Simón'],['13','Alex Padilla'],{'h':'🛡 DEFENSAS'},['17','Yuri Berchiche'],['6','Yeray Álvarez'],['4','Aymeric Laporte'],['19','Andoni Gorosabel'],['5','Daniel Vivian'],['18','Jesús Areso'],['20','Íñigo Lekue'],{'h':'⚙️ MEDIOS'},['9','Oihan Sancet'],['10','Iñigo R. Galarreta'],['14','Mikel Vesga'],['15','Robert Navarro'],['16','Unai Gómez'],{'h':'⚡ DELANTEROS'},['11','Nico Williams'],['12','Iñaki Williams'],['2','Gorka Guruzeta'],['3','Álex Berenguer']];var _sqB_j1m2=[{'h':'🧤 PORTEROS'},['1','Álvaro Valles'],['13','Adrián'],{'h':'🛡 DEFENSAS'},['3','Junior Firpo'],['23','Diego Llorente'],['5','Marc Bartra'],['24','Aitor Ruibal'],['2','Héctor Bellerín'],['4','Natan'],['12','Ricardo Rodríguez'],{'h':'⚙️ MEDIOS'},['22','Isco'],['14','Sofyan Amrabat'],['8','Pablo Fornals'],['10','Abdessamad Ezzalzouli'],['17','Rodrigo Riquelme'],['18','Nelson Deossa'],['20','Giovani Lo Celso'],{'h':'⚡ DELANTEROS'},['7','Antony'],['19','Cucho Hernández'],['11','Cédric Bakambu'],['9','Chimy Ávila']];window.mlShowPl_j1m2=function(){var ov=document.getElementById("ml-pl-overlay-j1m2");var e=_pendingEvt;var sq=(e.team==="a")?(window.SQUAD_REGISTRY[TEAM_A_NAME]||_sqA_j1m2):(window.SQUAD_REGISTRY[TEAM_B_NAME]||_sqB_j1m2);var tname=(e.team==="a")?TEAM_A_NAME:TEAM_B_NAME;document.getElementById("ml-pl-ov-evt-j1m2").textContent=e.label;document.getElementById("ml-pl-ov-team-j1m2").textContent=tname;var list=document.getElementById("ml-pl-ov-list-j1m2");list.innerHTML=sq.map(function(p){if(p.h)return '<div class="ml-pl-ov-sec">'+p.h+'</div>';return '<button class="ml-pl-ov-btn" onclick="mlPlConfirm_j1m2(\''+p[0]+'\',\''+p[1].replace(/\'/g,"\\'")+ '\')">'+'<span class="ml-pl-ov-num">'+p[0]+'</span>'+'<span class="ml-pl-ov-name">'+p[1]+'</span>'+'</button>';}).join("");ov.classList.add("show");};window.mlHidePl_j1m2=function(){document.getElementById("ml-pl-overlay-j1m2").classList.remove("show");};window.mlPlConfirm_j1m2=function(num,name){document.getElementById("ml-pl-overlay-j1m2").classList.remove("show");if(!_pendingEvt)return;var e=_pendingEvt;var min=_currentMin_j1m2();if(e.type==="d-amarilla"){var hasYellow=_events.some(function(ev){return ev.type==="amarilla"&&ev.team===e.team&&ev.num===num;});if(!hasYellow){alert("⚠️ "+name+" no tiene amarilla previa. No se puede mostrar doble amarilla.");_pendingEvt=null;return;}}var scoringTypes=["gol","propia","pen-gol","falta-gol"];if(scoringTypes.indexOf(e.type)!==-1){var st=(e.type==="propia")?(e.team==="a"?"b":"a"):e.team;_sc[st]++;document.getElementById("sc-j1m2-a").textContent=_sc.a;document.getElementById("sc-j1m2-b").textContent=_sc.b;}if((e.type==="d-amarilla"||e.type==="roja")&&(e.type!=="roja"||_events.filter(function(ev){return(ev.type==="roja"||ev.type==="d-amarilla")&&ev.team===e.team;}).length===0)){_rojas=_rojas||{};_rojas[e.team]=(_rojas[e.team]||0)+1;}var icons={gol:"⚽",propia:"🚫","pen-gol":"🥅","pen-fallo":"❌","pen-prov":"🤦","pen-parado":"🖐","falta-gol":"🎯",amarilla:"🟨","d-amarilla":"🟨🟥",roja:"🟥",mvp:"⭐"};_events.push({min:min,label:e.label,type:e.type,team:e.team,num:num,name:name,ico:icons[e.type]||"•",id:Date.now()});_renderActa_j1m2();_pendingEvt=null;};window.mlDirectPick_j1m2=function(label,type,team){_pendingEvt={label:label,type:type,team:team};mlShowPl_j1m2();};
+var _sqA_j1m2=[];var _sqB_j1m2=[];(function(){  var regA=window.sqFromRegistryFull('Athletic Club');  var regB=window.sqFromRegistryFull('Real Betis');  function toOverlayFmt(sq){    if(!sq||!sq.length)return [];    var out=[];    var posLabels={P:'🧤 PORTEROS',D:'🛡 DEFENSAS',M:'⚙️ MEDIOS',F:'⚡ DELANTEROS'};    var curPos=null;    sq.forEach(function(p){      if(p[2]!==curPos){curPos=p[2];out.push({h:posLabels[curPos]||curPos});}       out.push([p[0],p[1]]);    });    return out;  }  if(regA){var fmt=toOverlayFmt(regA);fmt.forEach(function(p){_sqA_j1m2.push(p);});}  if(regB){var fmt2=toOverlayFmt(regB);fmt2.forEach(function(p){_sqB_j1m2.push(p);});}})();window._sqA_j1m2=_sqA_j1m2;window._sqB_j1m2=_sqB_j1m2;window.mlShowPl_j1m2=function(){var ov=document.getElementById("ml-pl-overlay-j1m2");var e=_pendingEvt;var sq=(e.team==="a")?(_sqA_j1m2):(_sqB_j1m2);var tname=(e.team==="a")?TEAM_A_NAME:TEAM_B_NAME;document.getElementById("ml-pl-ov-evt-j1m2").textContent=e.label;document.getElementById("ml-pl-ov-team-j1m2").textContent=tname;var list=document.getElementById("ml-pl-ov-list-j1m2");list.innerHTML=sq.map(function(p){if(p.h)return '<div class="ml-pl-ov-sec">'+p.h+'</div>';return '<button class="ml-pl-ov-btn" onclick="mlPlConfirm_j1m2(\''+p[0]+'\',\''+p[1].replace(/\'/g,"\\'")+ '\')">'+'<span class="ml-pl-ov-num">'+p[0]+'</span>'+'<span class="ml-pl-ov-name">'+p[1]+'</span>'+'</button>';}).join("");ov.classList.add("show");};window.mlHidePl_j1m2=function(){document.getElementById("ml-pl-overlay-j1m2").classList.remove("show");};window.mlPlConfirm_j1m2=function(num,name){document.getElementById("ml-pl-overlay-j1m2").classList.remove("show");if(!_pendingEvt)return;var e=_pendingEvt;var min=_currentMin_j1m2();if(e.type==="d-amarilla"){var hasYellow=_events.some(function(ev){return ev.type==="amarilla"&&ev.team===e.team&&ev.num===num;});if(!hasYellow){_pendingEvt=null;return;}}var scoringTypes=["gol","propia","pen-gol","falta-gol"];if(scoringTypes.indexOf(e.type)!==-1){var st=(e.type==="propia")?(e.team==="a"?"b":"a"):e.team;_sc[st]++;document.getElementById("sc-j1m2-a").textContent=_sc.a;document.getElementById("sc-j1m2-b").textContent=_sc.b;}if((e.type==="d-amarilla"||e.type==="roja")&&(e.type!=="roja"||_events.filter(function(ev){return(ev.type==="roja"||ev.type==="d-amarilla")&&ev.team===e.team;}).length===0)){_rojas=_rojas||{};_rojas[e.team]=(_rojas[e.team]||0)+1;}var icons={gol:"⚽",propia:"🚫","pen-gol":"🥅","pen-fallo":"❌","pen-prov":"🤦","pen-parado":"🖐","falta-gol":"🎯",amarilla:"🟨","d-amarilla":"🟨🟥",roja:"🟥",mvp:"⭐"};_events.push({min:min,label:e.label,type:e.type,team:e.team,num:num,name:name,ico:icons[e.type]||"•",id:Date.now()});_renderActa_j1m2();  _pendingEvt=null;};window.mlDirectPick_j1m2=function(label,type,team){_pendingEvt={label:label,type:type,team:team};mlShowPl_j1m2();};
 window.mlCloseModal_j1m2=function(){document.getElementById('ml-modal-j1m2').classList.remove('show');_pendingEvt=null;};
 var _evtToStat={gol:'gol',amarilla:'yel','d-amarilla':'yel',roja:'red',mvp:'mvp','pen-prov':'pen-prov','pen-parado':'pen-parado','pen-gol':'pen-gol','falta-gol':'falta-gol',propia:'propia'};
 function _removeEmpty_j1m2(){var emp=document.querySelector('#ml-acta-list-j1m2 .ml-acta-empty');if(emp)emp.remove();};
-window.mlConfirmEvt_j1m2=function(){if(!_pendingEvt)return;var sel=document.getElementById('ml-modal-sel-j1m2');var parts=sel.value.split('|');var num=parts[0],name=parts[1];var e=_pendingEvt;var min=_currentMin_j1m2();var scoringTypes=['gol','propia','pen-gol','falta-gol'];if(scoringTypes.indexOf(e.type)!==-1){var st=(e.type==='propia')?(e.team==='a'?'b':'a'):e.team;_sc[st]++;document.getElementById('sc-j1m2-a').textContent=_sc.a;document.getElementById('sc-j1m2-b').textContent=_sc.b;}var icons={gol:'⚽',propia:'🚫','pen-gol':'🥅','pen-fallo':'❌','pen-prov':'🤦','pen-parado':'🖐','falta-gol':'🎯',amarilla:'🟨','d-amarilla':'🟨🟥',roja:'🟥',mvp:'⭐'};_events.push({min:min,label:e.label,type:e.type,team:e.team,num:num,name:name,ico:icons[e.type]||'•',id:Date.now()});_renderActa_j1m2();mlCloseModal_j1m2();};
-function _renderActa_j1m2(){var list=document.getElementById('ml-acta-list-j1m2');var sorted=_events.slice().sort(function(a,b){return a.min-b.min;});list.innerHTML='';if(sorted.length===0){list.innerHTML='<div class="ml-acta-empty">Sin eventos registrados</div>';return;}sorted.forEach(function(ev){var row=document.createElement('div');row.className='ml-evt-item';var tl=(ev.team==='a')?TEAM_A_NAME:TEAM_B_NAME;row.innerHTML='<span class="ml-evt-min">'+ev.min+"'</span>"+'<span class="ml-evt-ico">'+ev.ico+'</span>'+'<span class="ml-evt-name">'+ev.num+'. '+ev.name+'</span>'+'<span class="ml-evt-team">'+tl+'</span>'+'<button class="ml-evt-del" onclick="mlDelEvt_j1m2('+ev.id+')">✕</button>';list.appendChild(row);});};
+window.mlConfirmEvt_j1m2=function(){if(!_pendingEvt)return;var sel=document.getElementById('ml-modal-sel-j1m2');var parts=sel.value.split('|');var num=parts[0],name=parts[1];var e=_pendingEvt;var min=_currentMin_j1m2();var scoringTypes=['gol','propia','pen-gol','falta-gol'];if(scoringTypes.indexOf(e.type)!==-1){var st=(e.type==='propia')?(e.team==='a'?'b':'a'):e.team;_sc[st]++;document.getElementById('sc-j1m2-a').textContent=_sc.a;document.getElementById('sc-j1m2-b').textContent=_sc.b;}var icons={gol:'⚽',propia:'🚫','pen-gol':'🥅','pen-fallo':'❌','pen-prov':'🤦','pen-parado':'🖐','falta-gol':'🎯',amarilla:'🟨','d-amarilla':'🟨🟥',roja:'🟥',mvp:'⭐'};_events.push({min:min,label:e.label,type:e.type,team:e.team,num:num,name:name,ico:icons[e.type]||'•',id:Date.now()});_renderActa_j1m2();  mlCloseModal_j1m2();};
+function _renderActa_j1m2(){var list=document.getElementById('ml-acta-list-j1m2');var sorted=_events.slice().sort(function(a,b){return a.min-b.min;});list.innerHTML='';if(sorted.length===0){list.innerHTML='<div class="ml-acta-empty">Sin eventos registrados</div>';return;}sorted.forEach(function(ev){var row=document.createElement('div');row.className='ml-evt-item';row.setAttribute('data-team',ev.team);row.setAttribute('data-type',ev.type);var tl=(ev.team==='a')?TEAM_A_NAME:TEAM_B_NAME;row.innerHTML='<span class="ml-evt-min">'+ev.min+"'</span>"+'<span class="ml-evt-ico">'+ev.ico+'</span>'+'<span class="ml-evt-name">'+ev.num+'. '+ev.name+'</span>'+'<span class="ml-evt-team">'+tl+'</span>'+'<button class="ml-evt-edit" onclick="window._openEditModal(\'j1m2\','+ev.id+')" title="Editar">✏️</button>'+'<button class="ml-evt-del" onclick="mlDelEvt_j1m2('+ev.id+')">✕</button>';list.appendChild(row);});};
 window.mlDelEvt_j1m2=function(id){var ev=_events.find(function(e){return e.id===id;});if(!ev)return;var scoringTypes=['gol','propia','pen-gol','falta-gol'];if(scoringTypes.indexOf(ev.type)!==-1){var st=(ev.type==='propia')?(ev.team==='a'?'b':'a'):ev.team;_sc[st]=Math.max(0,_sc[st]-1);document.getElementById('sc-j1m2-a').textContent=_sc.a;document.getElementById('sc-j1m2-b').textContent=_sc.b;}_events=_events.filter(function(e){return e.id!==id;});_renderActa_j1m2();};
 })();
 
+/* script block 4 */
 (function(){
 var _sc={a:0,b:0};var _rojas={a:0,b:0};var _events=[];var _timerSec=0;var _timerInterval=null;var _timerRunning=false;
 var _htDone=false;var _matchFinished=false;var _pendingEvt=null;
 var TEAM_A_NAME="Real Sociedad";var TEAM_B_NAME="Rayo Vallecano";
-var TEAM_A_OPTS='<option value="1|Alex Remiro">1. Alex Remiro</option><option value="2|Aritz Zaldua">2. Aritz Zaldua</option><option value="3|Aihen Muñoz">3. Aihen Muñoz</option><option value="5|Igor Zubeldia">5. Igor Zubeldia</option><option value="6|Jon Pacheco">6. Jon Pacheco</option><option value="8|Mikel Merino">8. Mikel Merino</option><option value="10|David Silva">10. David Silva</option><option value="11|Carlos Fernández">11. Carlos Fernández</option><option value="14|Brais Méndez">14. Brais Méndez</option><option value="15|Mikel Oyarzabal">15. Mikel Oyarzabal</option><option value="17|Zakharyan">17. Zakharyan</option><option value="18|Takefusa Kubo">18. Takefusa Kubo</option><option value="19|Cho">19. Cho</option><option value="21|Hamari Traoré">21. Hamari Traoré</option><option value="22|Martin Zubimendi">22. Martin Zubimendi</option><option value="24|Ander Barrenetxea">24. Ander Barrenetxea</option>';var TEAM_B_OPTS='<option value="0|Jugador IA">Jugador IA</option>';
+var TEAM_A_OPTS='<option value="1|Álex Remiro">1. Álex Remiro</option><option value="13|Unai Marrero">13. Unai Marrero</option><option value="41|Theo Folgado">41. Theo Folgado</option><option value="15|Pablo Marín">15. Pablo Marín</option><option value="9|Orri Steinn Óskarsson">9. Orri Steinn Óskarsson</option><option value="14|Takefusa Kubo">14. Takefusa Kubo</option><option value="17|Sergio Gómez">17. Sergio Gómez</option><option value="21|Arsen Zakharyan">21. Arsen Zakharyan</option><option value="10|Mikel Oyarzabal">10. Mikel Oyarzabal</option><option value="5|Igor Zubeldia">5. Igor Zubeldia</option><option value="23|Brais Méndez">23. Brais Méndez</option><option value="2|Jon Aramburu">2. Jon Aramburu</option><option value="3|Aihen Muñoz">3. Aihen Muñoz</option><option value="31|Jon Martin">31. Jon Martin</option><option value="4|Jon Gorrotxategi">4. Jon Gorrotxategi</option><option value="12|Yangel Herrera">12. Yangel Herrera</option><option value="7|Ander Barrenetxea">7. Ander Barrenetxea</option><option value="6|Aritz Elustondo">6. Aritz Elustondo</option><option value="16|Duje Ćaleta-Car">16. Duje Ćaleta-Car</option><option value="19|Jon Karrikaburu">19. Jon Karrikaburu</option><option value="20|Álvaro Odriozola">20. Álvaro Odriozola</option><option value="8|Beñat Turrientes">8. Beñat Turrientes</option><option value="11|Gonçalo Guedes">11. Gonçalo Guedes</option><option value="18|Carlos Soler">18. Carlos Soler</option><option value="24|Luka Sučić">24. Luka Sučić</option><option value="22|Wesley">22. Wesley</option>';var TEAM_B_OPTS='<option value="1|A. Batalla">1. A. Batalla</option><option value="13|D. Cárdenas">13. D. Cárdenas</option><option value="32|A. Molina">32. A. Molina</option><option value="10|Isi">10. Isi</option><option value="11|Á. García">11. Á. García</option><option value="9|D. Frutos">9. D. Frutos</option><option value="23|A. Ratiu">23. A. Ratiu</option><option value="4|F. Lejeune">4. F. Lejeune</option><option value="12|P. Chavarría">12. P. Chavarría</option><option value="8|P. Ciss">8. P. Ciss</option><option value="33|A. Mumín">33. A. Mumín</option><option value="15|Ó. Valentín">15. Ó. Valentín</option><option value="26|U. López">26. U. López</option><option value="6|L. Feline">6. L. Feline</option><option value="5|I. Balliu">5. I. Balliu</option><option value="18|P. Díaz">18. P. Díaz</option><option value="7|I. Akhomach">7. I. Akhomach</option><option value="3|N. Mendy">3. N. Mendy</option><option value="14|Alemão">14. Alemão</option><option value="17|P. Espino">17. P. Espino</option><option value="16|Gumbau">16. Gumbau</option><option value="25|S. Camello">25. S. Camello</option><option value="34|Ó. Trejo">34. Ó. Trejo</option><option value="24|R. Nteka">24. R. Nteka</option><option value="29|C. Martín">29. C. Martín</option><option value="19|J. Vertrouwd">19. J. Vertrouwd</option><option value="36|D. Méndez">36. D. Méndez</option><option value="35|S. Becerra">35. S. Becerra</option><option value="30|D. las Sías">30. D. las Sías</option>';
 var MAX_NORMAL=5400;var TICK_MS=667;
 window.mlTimerClick_j1m3=function(){if(_matchFinished)return;if(_timerRunning){clearInterval(_timerInterval);_timerRunning=false;_renderTimer_j1m3();}else{_timerRunning=true;_timerInterval=setInterval(function(){_timerSec+=5;if(!_htDone&&_timerSec>=2700){_htDone=true;_addMarker_j1m3("— DESCANSO (45 min) —");}if(_timerSec>=MAX_NORMAL){_timerSec=MAX_NORMAL;clearInterval(_timerInterval);_timerRunning=false;} _renderTimer_j1m3();},TICK_MS);}};
-function _renderTimer_j1m3(){var btn=document.getElementById('ml-timer-j1m3');if(!btn)return;var min=Math.floor(_timerSec/60);if(_matchFinished){btn.textContent='🏁 FIN';btn.className='ml-timer finished';return;}var label=_timerRunning?'⏸ ':(_timerSec>=MAX_NORMAL?'🔁 ':'▶ ');btn.textContent=label+min+"'";btn.className='ml-timer'+(_timerRunning?' running':'');};
+function _renderTimer_j1m3(){var btn=document.getElementById('ml-timer-j1m3');if(!btn)return;var min=Math.floor(_timerSec/60);if(_matchFinished){btn.textContent='🏁 FIN';btn.className='ml-timer finished';if(window._setScoreState)window._setScoreState('j1m3','finished');return;}var label=_timerRunning?'⏸ ':(_timerSec>=MAX_NORMAL?'🔁 ':'▶ ');btn.textContent=label+min+"'";btn.className='ml-timer'+(_timerRunning?' running':'');if(window._setScoreState)window._setScoreState('j1m3',_timerRunning?'playing':'pending');var _bl=document.getElementById('ball-j1m3');if(_bl){if(_timerRunning){_bl.classList.remove('spinning');_bl.classList.add('static');}else{_bl.classList.remove('static');_bl.classList.add('spinning');}}};
 function _currentMin_j1m3(){return Math.min(90,Math.floor(_timerSec/60));};
 function _addMarker_j1m3(txt){var list=document.getElementById('ml-acta-list-j1m3');var div=document.createElement('div');div.className='ml-ht';div.textContent=txt;list.appendChild(div);_removeEmpty_j1m3();};
 window.mlEndMatch_j1m3=function(){if(_matchFinished)return;
@@ -779,16 +1053,17 @@ window.mlEndMatch_j1m3=function(){if(_matchFinished)return;
     });
     return;
   }
-  clearInterval(_timerInterval);_timerRunning=false;_matchFinished=true;var winner;if(_sc.a>_sc.b)winner='a';else if(_sc.b>_sc.a)winner='b';else winner='draw';var btn=document.getElementById('ml-btn-end-j1m3');if(btn){btn.disabled=true;btn.style.opacity='0.35';}var _ta_a=_events.filter(function(e){return e.team==='a'&&(e.type==='amarilla'||e.type==='d-amarilla');}).length;var _tr_a=_events.filter(function(e){return e.team==='a'&&(e.type==='roja'||e.type==='d-amarilla');}).length;var _ta_b=_events.filter(function(e){return e.team==='b'&&(e.type==='amarilla'||e.type==='d-amarilla');}).length;var _tr_b=_events.filter(function(e){return e.team==='b'&&(e.type==='roja'||e.type==='d-amarilla');}).length;var _mvp_a=_events.filter(function(e){return e.team==='a'&&e.type==='mvp';}).length;var _mvp_b=_events.filter(function(e){return e.team==='b'&&e.type==='mvp';}).length;if(typeof window.registrarResultadoLiga==='function')window.registrarResultadoLiga('j1m3',TEAM_A_NAME,TEAM_B_NAME,_sc.a,_sc.b,_ta_a,_tr_a,_ta_b,_tr_b,_mvp_a,_mvp_b); if(typeof window.registrarLigaPlayerStats==='function')window.registrarLigaPlayerStats('j1m3',TEAM_A_NAME,TEAM_B_NAME,_events.map(function(ev){return {type:(ev.type==='amarilla'||ev.type==='roja'||ev.type==='d-amarilla')?'card':ev.type,ico:ev.ico,team:ev.team,player:[ev.num,ev.name]};}),(_events.find(function(e){return e.type==='mvp';})||{}).name||'',(_events.find(function(e){return e.type==='mvp';})||{}).team==='a'?TEAM_A_NAME:((_events.find(function(e){return e.type==='mvp';})||{}).team==='b'?TEAM_B_NAME:'')); _renderTimer_j1m3();};
+  clearInterval(_timerInterval);_timerRunning=false;_matchFinished=true;var winner;if(_sc.a>_sc.b)winner='a';else if(_sc.b>_sc.a)winner='b';else winner='draw';var btn=document.getElementById('ml-btn-end-j1m3');if(btn){btn.disabled=true;btn.style.opacity='0.35';}var _ta_a=_events.filter(function(e){return e.team==='a'&&e.type==='amarilla';}).length;var _tr_a=_events.filter(function(e){return e.team==='a'&&(e.type==='roja'||e.type==='d-amarilla');}).length;var _ta_b=_events.filter(function(e){return e.team==='b'&&e.type==='amarilla';}).length;var _tr_b=_events.filter(function(e){return e.team==='b'&&(e.type==='roja'||e.type==='d-amarilla');}).length;var _mvp_a=_events.filter(function(e){return e.team==='a'&&e.type==='mvp';}).length;var _mvp_b=_events.filter(function(e){return e.team==='b'&&e.type==='mvp';}).length;if(typeof window.registrarResultadoLiga==='function')window.registrarResultadoLiga('j1m3',TEAM_A_NAME,TEAM_B_NAME,_sc.a,_sc.b,_ta_a,_tr_a,_ta_b,_tr_b,_mvp_a,_mvp_b); if(typeof window.registrarLigaPlayerStats==='function')window.registrarLigaPlayerStats('j1m3',TEAM_A_NAME,TEAM_B_NAME,_events.map(function(ev){return {type:(ev.type==='amarilla'||ev.type==='roja'||ev.type==='d-amarilla')?'card':ev.type,ico:ev.ico,team:ev.team,player:[ev.num,ev.name]};}),(_events.find(function(e){return e.type==='mvp';})||{}).name||'',(_events.find(function(e){return e.type==='mvp';})||{}).team==='a'?TEAM_A_NAME:((_events.find(function(e){return e.type==='mvp';})||{}).team==='b'?TEAM_B_NAME:'')); _renderTimer_j1m3(); if(typeof window.procesarSancionesPostPartido==='function')window.procesarSancionesPostPartido(_events,'a',TEAM_A_NAME,'liga');};
 window.mlShowEvOv_j1m3=function(){document.getElementById("ml-ev-overlay-j1m3").classList.add("show");};window.mlHideEvOv_j1m3=function(){document.getElementById("ml-ev-overlay-j1m3").classList.remove("show");};window.mlEvPick_j1m3=function(label,type){document.getElementById("ml-ev-overlay-j1m3").classList.remove("show");mlShowTP_j1m3(label,type);};window.mlShowTP_j1m3=function(label,type){_pendingEvt={label:label,type:type};document.getElementById("ml-tp-ov-evt-j1m3").textContent=label;document.getElementById("ml-tp-overlay-j1m3").classList.add("show");};window.mlHideTP_j1m3=function(){document.getElementById("ml-tp-overlay-j1m3").classList.remove("show");_pendingEvt=null;};window.mlTPSelect_j1m3=function(team){document.getElementById("ml-tp-overlay-j1m3").classList.remove("show");mlDirectPick_j1m3(_pendingEvt.label,_pendingEvt.type,team);};window.mlTogglePanel_j1m3=function(){mlShowEvOv_j1m3();};
-var _sqA_j1m3=[{'h':'🧤 PORTEROS'},['1','Álex Remiro'],['13','Unai Marrero'],{'h':'🛡 DEFENSAS'},['3','Aihen Muñoz'],['16','Duje Ćaleta-Car'],['5','Igor Zubeldia'],['2','Jon Aramburu'],['6','Aritz Elustondo'],['20','Álvaro Odriozola'],{'h':'⚙️ MEDIOS'},['23','Brais Méndez'],['4','Jon Gorrotxategi'],['8','Beñat Turrientes'],['14','Takefusa Kubo'],['17','Sergio Gómez'],['18','Carlos Soler'],['21','Arsen Zakharyan'],['24','Luka Sučić'],{'h':'⚡ DELANTEROS'},['10','Mikel Oyarzabal'],['7','Ander Barrenetxea'],['9','Orri Steinn Óskarsson'],['19','Jon Karrikaburu']];var _sqB_j1m3=[{'h':'🧤 PORTEROS'},['0','Jugador IA']];window.mlShowPl_j1m3=function(){var ov=document.getElementById("ml-pl-overlay-j1m3");var e=_pendingEvt;var sq=(e.team==="a")?(window.SQUAD_REGISTRY[TEAM_A_NAME]||_sqA_j1m3):(window.SQUAD_REGISTRY[TEAM_B_NAME]||_sqB_j1m3);var tname=(e.team==="a")?TEAM_A_NAME:TEAM_B_NAME;document.getElementById("ml-pl-ov-evt-j1m3").textContent=e.label;document.getElementById("ml-pl-ov-team-j1m3").textContent=tname;var list=document.getElementById("ml-pl-ov-list-j1m3");list.innerHTML=sq.map(function(p){if(p.h)return '<div class="ml-pl-ov-sec">'+p.h+'</div>';return '<button class="ml-pl-ov-btn" onclick="mlPlConfirm_j1m3(\''+p[0]+'\',\''+p[1].replace(/\'/g,"\\'")+ '\')">'+'<span class="ml-pl-ov-num">'+p[0]+'</span>'+'<span class="ml-pl-ov-name">'+p[1]+'</span>'+'</button>';}).join("");ov.classList.add("show");};window.mlHidePl_j1m3=function(){document.getElementById("ml-pl-overlay-j1m3").classList.remove("show");};window.mlPlConfirm_j1m3=function(num,name){document.getElementById("ml-pl-overlay-j1m3").classList.remove("show");if(!_pendingEvt)return;var e=_pendingEvt;var min=_currentMin_j1m3();if(e.type==="d-amarilla"){var hasYellow=_events.some(function(ev){return ev.type==="amarilla"&&ev.team===e.team&&ev.num===num;});if(!hasYellow){alert("⚠️ "+name+" no tiene amarilla previa. No se puede mostrar doble amarilla.");_pendingEvt=null;return;}}var scoringTypes=["gol","propia","pen-gol","falta-gol"];if(scoringTypes.indexOf(e.type)!==-1){var st=(e.type==="propia")?(e.team==="a"?"b":"a"):e.team;_sc[st]++;document.getElementById("sc-j1m3-a").textContent=_sc.a;document.getElementById("sc-j1m3-b").textContent=_sc.b;}if((e.type==="d-amarilla"||e.type==="roja")&&(e.type!=="roja"||_events.filter(function(ev){return(ev.type==="roja"||ev.type==="d-amarilla")&&ev.team===e.team;}).length===0)){_rojas=_rojas||{};_rojas[e.team]=(_rojas[e.team]||0)+1;}var icons={gol:"⚽",propia:"🚫","pen-gol":"🥅","pen-fallo":"❌","pen-prov":"🤦","pen-parado":"🖐","falta-gol":"🎯",amarilla:"🟨","d-amarilla":"🟨🟥",roja:"🟥",mvp:"⭐"};_events.push({min:min,label:e.label,type:e.type,team:e.team,num:num,name:name,ico:icons[e.type]||"•",id:Date.now()});_renderActa_j1m3();_pendingEvt=null;};window.mlDirectPick_j1m3=function(label,type,team){_pendingEvt={label:label,type:type,team:team};mlShowPl_j1m3();};
+var _sqA_j1m3=[];var _sqB_j1m3=[];(function(){  var regA=window.sqFromRegistryFull('Real Sociedad');  var regB=window.sqFromRegistryFull('Rayo Vallecano');  function toOverlayFmt(sq){    if(!sq||!sq.length)return [];    var out=[];    var posLabels={P:'🧤 PORTEROS',D:'🛡 DEFENSAS',M:'⚙️ MEDIOS',F:'⚡ DELANTEROS'};    var curPos=null;    sq.forEach(function(p){      if(p[2]!==curPos){curPos=p[2];out.push({h:posLabels[curPos]||curPos});}       out.push([p[0],p[1]]);    });    return out;  }  if(regA){var fmt=toOverlayFmt(regA);fmt.forEach(function(p){_sqA_j1m3.push(p);});}  if(regB){var fmt2=toOverlayFmt(regB);fmt2.forEach(function(p){_sqB_j1m3.push(p);});}})();window._sqA_j1m3=_sqA_j1m3;window._sqB_j1m3=_sqB_j1m3;window.mlShowPl_j1m3=function(){var ov=document.getElementById("ml-pl-overlay-j1m3");var e=_pendingEvt;var sq=(e.team==="a")?(_sqA_j1m3):(_sqB_j1m3);var tname=(e.team==="a")?TEAM_A_NAME:TEAM_B_NAME;document.getElementById("ml-pl-ov-evt-j1m3").textContent=e.label;document.getElementById("ml-pl-ov-team-j1m3").textContent=tname;var list=document.getElementById("ml-pl-ov-list-j1m3");list.innerHTML=sq.map(function(p){if(p.h)return '<div class="ml-pl-ov-sec">'+p.h+'</div>';return '<button class="ml-pl-ov-btn" onclick="mlPlConfirm_j1m3(\''+p[0]+'\',\''+p[1].replace(/\'/g,"\\'")+ '\')">'+'<span class="ml-pl-ov-num">'+p[0]+'</span>'+'<span class="ml-pl-ov-name">'+p[1]+'</span>'+'</button>';}).join("");ov.classList.add("show");};window.mlHidePl_j1m3=function(){document.getElementById("ml-pl-overlay-j1m3").classList.remove("show");};window.mlPlConfirm_j1m3=function(num,name){document.getElementById("ml-pl-overlay-j1m3").classList.remove("show");if(!_pendingEvt)return;var e=_pendingEvt;var min=_currentMin_j1m3();if(e.type==="d-amarilla"){var hasYellow=_events.some(function(ev){return ev.type==="amarilla"&&ev.team===e.team&&ev.num===num;});if(!hasYellow){_pendingEvt=null;return;}}var scoringTypes=["gol","propia","pen-gol","falta-gol"];if(scoringTypes.indexOf(e.type)!==-1){var st=(e.type==="propia")?(e.team==="a"?"b":"a"):e.team;_sc[st]++;document.getElementById("sc-j1m3-a").textContent=_sc.a;document.getElementById("sc-j1m3-b").textContent=_sc.b;}if((e.type==="d-amarilla"||e.type==="roja")&&(e.type!=="roja"||_events.filter(function(ev){return(ev.type==="roja"||ev.type==="d-amarilla")&&ev.team===e.team;}).length===0)){_rojas=_rojas||{};_rojas[e.team]=(_rojas[e.team]||0)+1;}var icons={gol:"⚽",propia:"🚫","pen-gol":"🥅","pen-fallo":"❌","pen-prov":"🤦","pen-parado":"🖐","falta-gol":"🎯",amarilla:"🟨","d-amarilla":"🟨🟥",roja:"🟥",mvp:"⭐"};_events.push({min:min,label:e.label,type:e.type,team:e.team,num:num,name:name,ico:icons[e.type]||"•",id:Date.now()});_renderActa_j1m3();  _pendingEvt=null;};window.mlDirectPick_j1m3=function(label,type,team){_pendingEvt={label:label,type:type,team:team};mlShowPl_j1m3();};
 window.mlCloseModal_j1m3=function(){document.getElementById('ml-modal-j1m3').classList.remove('show');_pendingEvt=null;};
 function _removeEmpty_j1m3(){var emp=document.querySelector('#ml-acta-list-j1m3 .ml-acta-empty');if(emp)emp.remove();};
-window.mlConfirmEvt_j1m3=function(){if(!_pendingEvt)return;var sel=document.getElementById('ml-modal-sel-j1m3');var parts=sel.value.split('|');var num=parts[0],name=parts[1];var e=_pendingEvt;var min=_currentMin_j1m3();var scoringTypes=['gol','propia','pen-gol','falta-gol'];if(scoringTypes.indexOf(e.type)!==-1){var st=(e.type==='propia')?(e.team==='a'?'b':'a'):e.team;_sc[st]++;document.getElementById('sc-j1m3-a').textContent=_sc.a;document.getElementById('sc-j1m3-b').textContent=_sc.b;}var icons={gol:'⚽',propia:'🚫','pen-gol':'🥅','pen-fallo':'❌','pen-prov':'🤦','pen-parado':'🖐','falta-gol':'🎯',amarilla:'🟨','d-amarilla':'🟨🟥',roja:'🟥',mvp:'⭐'};_events.push({min:min,label:e.label,type:e.type,team:e.team,num:num,name:name,ico:icons[e.type]||'•',id:Date.now()});_renderActa_j1m3();mlCloseModal_j1m3();};
-function _renderActa_j1m3(){var list=document.getElementById('ml-acta-list-j1m3');var sorted=_events.slice().sort(function(a,b){return a.min-b.min;});list.innerHTML='';if(sorted.length===0){list.innerHTML='<div class="ml-acta-empty">Sin eventos registrados</div>';return;}sorted.forEach(function(ev){var row=document.createElement('div');row.className='ml-evt-item';var tl=(ev.team==='a')?TEAM_A_NAME:TEAM_B_NAME;row.innerHTML='<span class="ml-evt-min">'+ev.min+"'</span>"+'<span class="ml-evt-ico">'+ev.ico+'</span>'+'<span class="ml-evt-name">'+ev.num+'. '+ev.name+'</span>'+'<span class="ml-evt-team">'+tl+'</span>'+'<button class="ml-evt-del" onclick="mlDelEvt_j1m3('+ev.id+')">✕</button>';list.appendChild(row);});};
+window.mlConfirmEvt_j1m3=function(){if(!_pendingEvt)return;var sel=document.getElementById('ml-modal-sel-j1m3');var parts=sel.value.split('|');var num=parts[0],name=parts[1];var e=_pendingEvt;var min=_currentMin_j1m3();var scoringTypes=['gol','propia','pen-gol','falta-gol'];if(scoringTypes.indexOf(e.type)!==-1){var st=(e.type==='propia')?(e.team==='a'?'b':'a'):e.team;_sc[st]++;document.getElementById('sc-j1m3-a').textContent=_sc.a;document.getElementById('sc-j1m3-b').textContent=_sc.b;}var icons={gol:'⚽',propia:'🚫','pen-gol':'🥅','pen-fallo':'❌','pen-prov':'🤦','pen-parado':'🖐','falta-gol':'🎯',amarilla:'🟨','d-amarilla':'🟨🟥',roja:'🟥',mvp:'⭐'};_events.push({min:min,label:e.label,type:e.type,team:e.team,num:num,name:name,ico:icons[e.type]||'•',id:Date.now()});_renderActa_j1m3();  mlCloseModal_j1m3();};
+function _renderActa_j1m3(){var list=document.getElementById('ml-acta-list-j1m3');var sorted=_events.slice().sort(function(a,b){return a.min-b.min;});list.innerHTML='';if(sorted.length===0){list.innerHTML='<div class="ml-acta-empty">Sin eventos registrados</div>';return;}sorted.forEach(function(ev){var row=document.createElement('div');row.className='ml-evt-item';row.setAttribute('data-team',ev.team);row.setAttribute('data-type',ev.type);var tl=(ev.team==='a')?TEAM_A_NAME:TEAM_B_NAME;row.innerHTML='<span class="ml-evt-min">'+ev.min+"'</span>"+'<span class="ml-evt-ico">'+ev.ico+'</span>'+'<span class="ml-evt-name">'+ev.num+'. '+ev.name+'</span>'+'<span class="ml-evt-team">'+tl+'</span>'+'<button class="ml-evt-edit" onclick="window._openEditModal(\'j1m3\','+ev.id+')" title="Editar">✏️</button>'+'<button class="ml-evt-del" onclick="mlDelEvt_j1m3('+ev.id+')">✕</button>';list.appendChild(row);});};
 window.mlDelEvt_j1m3=function(id){var ev=_events.find(function(e){return e.id===id;});if(!ev)return;var scoringTypes=['gol','propia','pen-gol','falta-gol'];if(scoringTypes.indexOf(ev.type)!==-1){var st=(ev.type==='propia')?(ev.team==='a'?'b':'a'):ev.team;_sc[st]=Math.max(0,_sc[st]-1);document.getElementById('sc-j1m3-a').textContent=_sc.a;document.getElementById('sc-j1m3-b').textContent=_sc.b;}_events=_events.filter(function(e){return e.id!==id;});_renderActa_j1m3();};
 })();
 
+/* script block 5 */
 (function(){
 var _simDone=false;
 window.mlSimulate_j1m4=function(){
@@ -797,8 +1072,8 @@ window.mlSimulate_j1m4=function(){
     matchKey:'j1m4',
     teamA:'Sevilla',
     teamB:'Atlético Madrid',
-    sqA:window.sqFromRegistry('Sevilla FC')||[['1','Vlachodimos','P'],['13','Dmitrovic','P'],['3','Azpilicueta','D'],['4','Kike Salas','D'],['5','Nianzou','D'],['16','Juanlu','D'],['22','Loic Badé','D'],['6','N. Gudelj','M'],['8','Joan Jordán','M'],['17','Alfon González','M'],['18','L. Agoumé','M'],['20','D. Sow','M'],['7','Isaac Romero','F'],['9','Akor Adams','F'],['10','A. Sánchez','F'],['11','R. Vargas','F'],['21','C. Ejuke','F']],
-    sqB:window.sqFromRegistry('Atlético Madrid')||[['1','Oblak','P'],['13','Musso','P'],['2','Hancko','D'],['3','M. Llorente','D'],['4','Le Normand','D'],['5','Giménez','D'],['20','Molina','D'],['7','Griezmann','M'],['8','Koke','M'],['14','P. Barrios','M'],['10','J. Cardoso','M'],['17','O. Vargas','M'],['9','Julián Álvarez','F'],['11','Sørloth','F'],['15','Lookman','F'],['16','Nico González','F'],['18','Álex Baena','F']],
+    sqA:window.sqFromRegistry('Sevilla'),
+    sqB:window.sqFromRegistry('Atlético Madrid'),
     btnId:'ml-timer-j1m4',
     listId:'ml-acta-list-j1m4',
     scAId:'sc-j1m4-a',
@@ -808,6 +1083,7 @@ window.mlSimulate_j1m4=function(){
 };
 })();
 
+/* script block 6 */
 (function(){
 var _simDone=false;
 window.mlSimulate_j1m5=function(){
@@ -816,8 +1092,8 @@ window.mlSimulate_j1m5=function(){
     matchKey:'j1m5',
     teamA:'Villarreal',
     teamB:'Elche CF',
-    sqA:window.sqFromRegistry('Villarreal CF')||[['1','Pepe Reina','P'],['25','F. Civitanova','P'],['2','Logan Costa','D'],['4','Rafa Marín','D'],['5','W. Kambwala','D'],['8','Juan Foyth','D'],['24','A. Pedraza','D'],['10','Dani Parejo','M'],['14','S. Comesaña','M'],['16','T. Partey','M'],['17','T. Buchanan','M'],['18','Pape Gueye','M'],['7','G. Moreno','F'],['9','G. Mikautadze','F'],['11','I. Akhomach','F'],['20','A. Moleiro','F'],['22','Ayoze Pérez','F']],
-    sqB:[['1','Werner','P'],['13','Badía','P'],['2','Barragán','D'],['3','Clerc','D'],['5','Bigas','D'],['6','Dani Calvo','D'],['23','Mojica','D'],['4','Guti','M'],['8','Marcone','M'],['10','Raúl Guti','M'],['14','Fidel','M'],['16','Mascarell','M'],['7','Lucas Boyé','F'],['9','Pere Milla','F'],['11','Rigoni','F'],['17','Benedetto','F'],['22','Tete Morente','F']],
+    sqA:window.sqFromRegistry('Villarreal'),
+    sqB:window.sqFromRegistry('Elche CF'),
     btnId:'ml-timer-j1m5',
     listId:'ml-acta-list-j1m5',
     scAId:'sc-j1m5-a',
@@ -827,6 +1103,7 @@ window.mlSimulate_j1m5=function(){
 };
 })();
 
+/* script block 7 */
 (function(){
 var _simDone=false;
 window.mlSimulate_j1m6=function(){
@@ -835,8 +1112,8 @@ window.mlSimulate_j1m6=function(){
     matchKey:'j1m6',
     teamA:'Mallorca',
     teamB:'Girona FC',
-    sqA:[['1','Rajkovic','P'],['13','Reina','P'],['2','Maffeo','D'],['3','Copete','D'],['5','Valjent','D'],['6','Russo','D'],['23','Jaume Costa','D'],['4','Baba','M'],['8','Battaglia','M'],['10','Dani Rodríguez','M'],['14','Morlanes','M'],['16','Muriqi','M'],['7','Abdon','F'],['9','Budimir','F'],['11','Grenier','F'],['17','Lee Kang-in','F'],['22','Lago Junior','F']],
-    sqB:[['1','Gazzaniga','P'],['13','Juan Carlos','P'],['2','Yan Couto','D'],['3','Blind','D'],['5','Juanpe','D'],['6','Santi Bueno','D'],['23','Miguel Gutiérrez','D'],['4','Aleix García','M'],['8','Herrera','M'],['10','Romeu','M'],['14','Tsygankov','M'],['16','Martín','M'],['7','Stuani','F'],['9','Castellanos','F'],['11','Sávio','F'],['17','Taty Castellanos','F'],['22','Iván Martín','F']],
+    sqA:window.sqFromRegistry('Mallorca'),
+    sqB:window.sqFromRegistry('Girona FC'),
     btnId:'ml-timer-j1m6',
     listId:'ml-acta-list-j1m6',
     scAId:'sc-j1m6-a',
@@ -846,6 +1123,7 @@ window.mlSimulate_j1m6=function(){
 };
 })();
 
+/* script block 8 */
 (function(){
 var _simDone=false;
 window.mlSimulate_j1m7=function(){
@@ -854,8 +1132,8 @@ window.mlSimulate_j1m7=function(){
     matchKey:'j1m7',
     teamA:'Valencia CF',
     teamB:'Córdoba CF',
-    sqA:[['1','Mamardashvili','P'],['13','Cillessen','P'],['2','Correia','D'],['3','Gayà','D'],['5','Paulista','D'],['6','Diakhaby','D'],['23','Tárrega','D'],['4','Almeida','M'],['8','Guillamón','M'],['10','Pepelu','M'],['14','Wass','M'],['16','Musah','M'],['7','Guedes','F'],['9','Duro','F'],['11','Lato','F'],['17','Marcos André','F'],['22','Díaz','F']],
-    sqB:[['1','Felipe Ramos','P'],['13','Caro','P'],['2','Moutinho','D'],['3','Calero','D'],['5','Willy','D'],['6','Ekanem','D'],['23','Caballero','D'],['4','Bernal','M'],['8','De las Cuevas','M'],['10','Xavi Molina','M'],['14','Álex Sala','M'],['16','Isma Ruiz','M'],['7','Adilson','F'],['9','Diarra','F'],['11','Kuki Zalazar','F'],['17','Carracedo','F'],['22','Jacobo','F']],
+    sqA:window.sqFromRegistry('Valencia CF'),
+    sqB:window.sqFromRegistry('Córdoba CF'),
     btnId:'ml-timer-j1m7',
     listId:'ml-acta-list-j1m7',
     scAId:'sc-j1m7-a',
@@ -865,6 +1143,7 @@ window.mlSimulate_j1m7=function(){
 };
 })();
 
+/* script block 9 */
 (function(){
 var _simDone=false;
 window.mlSimulate_j1m8=function(){
@@ -873,8 +1152,8 @@ window.mlSimulate_j1m8=function(){
     matchKey:'j1m8',
     teamA:'Espanyol',
     teamB:'Getafe CF',
-    sqA:window.sqFromRegistry('Espanyol')||[['1','M. Dmitrović','P'],['13','Fortuño','P'],['3','C. Romero','D'],['5','L. Cabrera','D'],['25','Calero','D'],['2','O. El Hilali','D'],['10','E. Expósito','M'],['8','P. Lozano','M'],['14','U. González','M'],['11','P. Milla','M'],['7','T. Dolan','M'],['9','R. Fernández','F'],['16','Puado','F'],['4','Terrats','M'],['18','C. Pickel','M'],['6','C. Riedel','D'],['19','Tristán','F']],
-    sqB:window.sqFromRegistry('Getafe CF')||[['1','J. Letáček','P'],['13','David Soria','P'],['2','Djené','D'],['3','A. Abqar','D'],['12','A. Nyom','D'],['16','Diego Rico','D'],['17','Kiko Femenía','D'],['4','Y. Neyou','M'],['5','Luis Milla','M'],['6','Mario Martín','M'],['8','M. Arambarri','M'],['14','Javi Muñoz','M'],['7','Juanmi','F'],['9','B. Mayoral','F'],['10','M. Satriano','F'],['18','Á. Sancris','F'],['20','Coba da Costa','F']],
+    sqA:window.sqFromRegistry('Espanyol'),
+    sqB:window.sqFromRegistry('Getafe CF'),
     btnId:'ml-timer-j1m8',
     listId:'ml-acta-list-j1m8',
     scAId:'sc-j1m8-a',
@@ -884,6 +1163,7 @@ window.mlSimulate_j1m8=function(){
 };
 })();
 
+/* script block 10 */
 (function(){
 var _simDone=false;
 window.mlSimulate_j1m9=function(){
@@ -892,8 +1172,8 @@ window.mlSimulate_j1m9=function(){
     matchKey:'j1m9',
     teamA:'Albacete BP',
     teamB:'Osasuna',
-    sqA:window.sqFromRegistry('Albacete BP')||[['1','Diego Mariño','P'],['13','Raúl Lizoain','P'],['2','Lorenzo','D'],['3','JoGo','D'],['5','Javi Moreno','D'],['15','Fran Gámez','D'],['21','C. Neva','D'],['4','Agus Medina','M'],['6','Pacheco','M'],['8','Martín Fernández','M'],['12','Edward Cedeño','M'],['17','Ale Meléndez','M'],['7','Puertas','F'],['9','Higinio','F'],['10','Jefté','F'],['11','Valverde','F'],['16','Lazo','F']],
-    sqB:[['1','Herrera','P'],['13','Sergio Herrera','P'],['2','Nacho Vidal','D'],['3','Cruz','D'],['5','Unai García','D'],['6','David García','D'],['23','Moncayola','D'],['4','Torró','M'],['8','Darko','M'],['10','Ruben García','M'],['14','Brasanac','M'],['16','Budimir','M'],['7','Kike García','F'],['9','Chimy Ávila','F'],['11','Ezequiel','F'],['17','Torres','F'],['22','Arnaiz','F']],
+    sqA:window.sqFromRegistry('Albacete BP'),
+    sqB:window.sqFromRegistry('Osasuna'),
     btnId:'ml-timer-j1m9',
     listId:'ml-acta-list-j1m9',
     scAId:'sc-j1m9-a',
@@ -903,6 +1183,7 @@ window.mlSimulate_j1m9=function(){
 };
 })();
 
+/* script block 11 */
 (function(){
 var _simDone=false;
 window.mlSimulate_j1m10=function(){
@@ -911,8 +1192,8 @@ window.mlSimulate_j1m10=function(){
     matchKey:'j1m10',
     teamA:'Celta de Vigo',
     teamB:'Deportivo Alavés',
-    sqA:[['1','Dituro','P'],['13','Marchesín','P'],['2','Kevin Vázquez','D'],['3','Jailson','D'],['5','Aidoo','D'],['6','Araujo','D'],['23','Mingueza','D'],['4','Tapia','M'],['8','Beltrán','M'],['10','Fran Beltrán','M'],['14','Cervi','M'],['16','Solari','M'],['7','Aspas','F'],['9','Larsen','F'],['11','Carles Pérez','F'],['17','Williot','F'],['22','Bamba','F']],
-    sqB:[['1','Pacheco','P'],['13','Sivera','P'],['2','Tenaglia','D'],['3','Duarte','D'],['5','Laguardia','D'],['6','Lejeune','D'],['23','Rubén Alcaraz','D'],['4','Pina','M'],['8','Battaglia','M'],['10','Luis Rioja','M'],['14','Manu García','M'],['16','Guridi','M'],['7','Joselu','F'],['9','Deyverson','F'],['11','Edgar Méndez','F'],['17','Florian Miguel','F'],['22','Toni Moya','F']],
+    sqA:window.sqFromRegistry('Celta de Vigo'),
+    sqB:window.sqFromRegistry('Deportivo Alavés'),
     btnId:'ml-timer-j1m10',
     listId:'ml-acta-list-j1m10',
     scAId:'sc-j1m10-a',
@@ -922,6 +1203,7 @@ window.mlSimulate_j1m10=function(){
 };
 })();
 
+/* script block 12 */
 
 (function(){
   var LIGA_TEAMS = [
@@ -1218,6 +1500,7 @@ window.mlSimulate_j1m10=function(){
 })();
 
 
+/* script block 13 */
 
 (function(){
   var SCREEN_TEAM_FALLBACK = {
@@ -1244,46 +1527,7 @@ window.mlSimulate_j1m10=function(){
     'rayo-screen': 'Rayo Vallecano'
   };
 
-  var TEAM_ALIASES = {
-    'real madrid':'Real Madrid',
-    'fc barcelona':'FC Barcelona',
-    'barcelona':'FC Barcelona',
-    'athletic club':'Athletic Club',
-    'real betis':'Real Betis',
-    'betis':'Real Betis',
-    'real sociedad':'Real Sociedad',
-    'atletico madrid':'Atlético Madrid',
-    'atlético madrid':'Atlético Madrid',
-    'albacete bp':'Albacete BP',
-    'villarreal':'Villarreal CF',
-    'villarreal cf':'Villarreal CF',
-    'sevilla':'Sevilla FC',
-    'sevilla fc':'Sevilla FC',
-    'espanyol':'Espanyol',
-    'getafe':'Getafe CF',
-    'getafe cf':'Getafe CF',
-    'rc celta':'RC Celta',
-    'celta de vigo':'RC Celta',
-    'celta':'RC Celta',
-    'ca osasuna':'CA Osasuna',
-    'osasuna':'CA Osasuna',
-    'deportivo alaves':'Deportivo Alavés',
-    'deportivo alavés':'Deportivo Alavés',
-    'd alaves':'Deportivo Alavés',
-    'd alavés':'Deportivo Alavés',
-    'girona':'Girona FC',
-    'girona fc':'Girona FC',
-    'real oviedo':'Real Oviedo',
-    'r oviedo':'Real Oviedo',
-    'levante ud':'Levante UD',
-    'rcd mallorca':'RCD Mallorca',
-    'mallorca':'RCD Mallorca',
-    'elche':'Elche CF',
-    'elche cf':'Elche CF',
-    'valencia':'Valencia CF',
-    'valencia cf':'Valencia CF',
-    'rayo vallecano':'Rayo Vallecano'
-  };
+  
 
   var STAT_CLASS_MAP = {
     'gol': 'ps-gol',
@@ -1323,7 +1567,7 @@ window.mlSimulate_j1m10=function(){
 
   function canonicalTeamName(name){
     var key = normalizeText(name);
-    return TEAM_ALIASES[key] || String(name || '').trim();
+    return (window.TEAM_ALIASES||{})[key] || String(name || '').trim();
   }
 
   function ensureExtraStatSpans(){
@@ -1446,7 +1690,9 @@ window.mlSimulate_j1m10=function(){
       if(ico === '🟨') setLigaStat(row, 'yel', 1);
       else if(ico === '🟥') setLigaStat(row, 'red', 1);
       else if(ico === '🟨🟥'){
-        setLigaStat(row, 'yel', 1);
+        // Doble amarilla: la amarilla previa del jugador en este partido ya fue contada como yel.
+        // Se cancela restando 1 yel, y se registra solo como expulsión (red).
+        setLigaStat(row, 'yel', -1);
         setLigaStat(row, 'red', 1);
       }
     }
@@ -1687,8 +1933,10 @@ window.mlSimulate_j1m10=function(){
 })();
 
 
+/* script block 14 */
 function go(id) { document.querySelectorAll('.screen').forEach(s => s.classList.remove('active')); var el = document.getElementById(id); if (el) { el.classList.add('active'); window.scrollTo(0,0); } } function entTog(id) { var body = document.getElementById(id); var arr = document.getElementById(id + '-arr'); if (!body) return; var isOpen = body.classList.contains('open'); body.classList.toggle('open'); if (arr) arr.classList.toggle('open', !isOpen); } function subTog(id) { var body = document.getElementById(id); var arr = document.getElementById(id + '-arr'); if (!body) return; body.classList.toggle('open'); if (arr) arr.classList.toggle('open'); } function derbyTog(id) { var body = document.getElementById(id); var arr = document.getElementById(id + '-arr'); var btn = document.getElementById(id + '-btn'); if (!body) return; body.classList.toggle('open'); if (arr) arr.classList.toggle('open'); if (btn) btn.classList.toggle('open'); } var athPrevSuperado = false; function athObjCount() { var items = document.querySelectorAll('#ath-obj-club .obj-item'); var total = items.length; var done = 0; items.forEach(function(lbl) { var cb = lbl.querySelector('input[type=checkbox]'); if (cb && cb.checked) { done++; lbl.classList.add('done'); } else { lbl.classList.remove('done'); } }); var countEl = document.getElementById('ath-obj-count'); if (countEl) countEl.textContent = done + ' / ' + total; var PTS_POR_OBJ = 0.40; var MONEY_POR_OBJ = 40; var MAX_PTS = 7.00; var MAX_MONEY = 750; var pts = parseFloat((done * PTS_POR_OBJ).toFixed(2)); var money = done * MONEY_POR_OBJ; var pctPts = Math.min(100, (pts / MAX_PTS) * 100); var pctMoney = Math.min(100, (money / MAX_MONEY) * 100); var superadoPts = pts >= MAX_PTS; var superadoMoney = money >= MAX_MONEY; var superadoAmbos = superadoPts && superadoMoney; var ptsEl = document.getElementById('ath-pts-val'); var moneyEl = document.getElementById('ath-money-val'); if (ptsEl) { ptsEl.textContent = pts.toFixed(2); ptsEl.classList.remove('pulse'); void ptsEl.offsetWidth; ptsEl.classList.add('pulse'); ptsEl.classList.toggle('superado', superadoPts); } if (moneyEl) { moneyEl.textContent = money; moneyEl.classList.remove('pulse'); void moneyEl.offsetWidth; moneyEl.classList.add('pulse'); moneyEl.classList.toggle('superado', superadoMoney); } var tPts = document.getElementById('ath-pts-target'); var tMoney = document.getElementById('ath-money-target'); if (tPts) tPts.classList.toggle('superado', superadoPts); if (tMoney) tMoney.classList.toggle('superado', superadoMoney); var barPts = document.getElementById('ath-bar-pts'); var barMoney = document.getElementById('ath-bar-money'); if (barPts) { barPts.style.width = pctPts + '%'; barPts.classList.toggle('superado', superadoPts); } if (barMoney) { barMoney.style.width = pctMoney + '%'; barMoney.classList.toggle('superado', superadoMoney); } if (superadoAmbos) { if (!athPrevSuperado) { athPrevSuperado = true; setTimeout(function() { if (typeof lanzarFuegos === 'function') lanzarFuegos(3500); }, 300); } else { setTimeout(function() { if (typeof lanzarFuegos === 'function') lanzarFuegos(2500); }, 150); } } else { athPrevSuperado = false; } } var athPlantComp = 'global'; function athSetComp(comp) { athPlantComp = comp; document.querySelectorAll('.plant-filter-btn').forEach(function(b) { b.classList.toggle('active', b.dataset.comp === comp); }); document.querySelectorAll('.plant-row').forEach(function(row) { var tipos = row.classList.contains('por') ? ['gol','yel','red','mvp','poder','pen-parado','pen-prov','pen-gol','falta-gol','propia'] : ['gol','yel','red','mvp','poder','pen-gol','pen-prov','pen-parado','falta-gol','propia']; var cols = row.querySelectorAll('.plant-stat'); tipos.forEach(function(tipo, i) { var el = row.querySelector('.ps-' + tipo); if (!el || !cols[i]) return; var v = parseInt(el.getAttribute('data-' + comp) || el.getAttribute('data-global') || '0'); cols[i].textContent = v; cols[i].className = 'plant-stat' + (v > 0 ? (' ' + tipo) : ' zero'); if (el) el.setAttribute('data-' + comp, v); }); var anyActive = Array.from(row.querySelectorAll('.plant-stat')).some(function(c){ return !c.classList.contains('zero'); }); row.classList.toggle('has-stat', anyActive); }); } function tog(id) { var el = document.getElementById(id); if (!el) return; if (id === 'comp-box') { var isOpen = el.style.display !== 'none' && el.style.display !== ''; el.style.display = isOpen ? 'none' : 'block'; var arr = document.getElementById('comp-arr'); if (arr) arr.style.transform = isOpen ? '' : 'rotate(180deg)'; } else { el.classList.toggle('open'); } }
 
+/* script block 15 */
 
 var atmPrevSuperado = false;
 function atmSetComp(comp) {
@@ -1708,6 +1956,7 @@ function atmSetComp(comp) {
 var atmPlantComp = 'global';
 
 
+/* script block 16 */
 var fwCanvas = document.getElementById('fireworks-canvas'); var fwCtx = fwCanvas ? fwCanvas.getContext('2d') : null; var fwParticles = []; var fwRunning = false; var fwTimer = null; function fwResize() { if (!fwCanvas) return; fwCanvas.width = window.innerWidth; fwCanvas.height = window.innerHeight; } window.addEventListener('resize', fwResize); function fwCreateBurst(x, y) { var colors = ['#f0c040','#4fc86a','#ff6060','#60b0ff','#ff80ff','#ffffff','#ffaa20']; for (var i = 0; i < 60; i++) { var angle = (Math.PI * 2 / 60) * i + Math.random() * 0.3; var speed = 2 + Math.random() * 5; fwParticles.push({ x: x, y: y, vx: Math.cos(angle) * speed, vy: Math.sin(angle) * speed, alpha: 1, size: 2 + Math.random() * 3, color: colors[Math.floor(Math.random() * colors.length)], decay: 0.012 + Math.random() * 0.012 }); } } function fwLoop() { if (!fwRunning || !fwCtx) return; fwCtx.clearRect(0, 0, fwCanvas.width, fwCanvas.height); fwParticles = fwParticles.filter(function(p) { return p.alpha > 0.02; }); fwParticles.forEach(function(p) { p.x += p.vx; p.y += p.vy; p.vy += 0.06; p.vx *= 0.99; p.alpha -= p.decay; fwCtx.save(); fwCtx.globalAlpha = Math.max(0, p.alpha); fwCtx.fillStyle = p.color; fwCtx.shadowBlur = 6; fwCtx.shadowColor = p.color; fwCtx.beginPath(); fwCtx.arc(p.x, p.y, p.size, 0, Math.PI * 2); fwCtx.fill(); fwCtx.restore(); }); requestAnimationFrame(fwLoop); } var fwBurstInterval = null; function lanzarFuegos(duracion) { if (!fwCanvas || !fwCtx) return; fwResize(); fwCanvas.style.display = 'block'; var overlay = document.getElementById('celebracion-overlay'); if (overlay) { overlay.style.display = 'flex'; } fwRunning = true; fwParticles = []; fwLoop(); var w = fwCanvas.width; var h = fwCanvas.height; fwBurstInterval = setInterval(function() { var x = 0.15 * w + Math.random() * 0.7 * w; var y = 0.1 * h + Math.random() * 0.6 * h; fwCreateBurst(x, y); }, 220); setTimeout(function() { clearInterval(fwBurstInterval); fwRunning = false; setTimeout(function() { fwCanvas.style.display = 'none'; if (overlay) overlay.style.display = 'none'; }, 1200); }, duracion || 3000); }
 function triggerShootingBall(gf, team) {
   var ball = gf.querySelector('.ml-shooting-ball');
@@ -1729,12 +1978,16 @@ function triggerShootingBall(gf, team) {
   }, 3100);
 }
 
+/* script block 17 */
 window.addEventListener('scroll',function(){ var b=document.getElementById('goto-top'); if(window.scrollY>300)b.classList.add('show'); else b.classList.remove('show'); }); var _origGo=window.go; window.go=function(id){ if(_origGo)_origGo(id); else{document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active');}); var el=document.getElementById(id);if(el)el.classList.add('active');} if(id==='s-liga-clas' && typeof window.buildLigaClas==='function'){ window.buildLigaClas(); } if(id==='s-liga-stats' && typeof window.buildLigaStatsDashboard==='function'){ window.buildLigaStatsDashboard(); } setTimeout(function(){window.scrollTo({top:0,behavior:'smooth'});},50); };
 
+/* script block 18 */
 function showChampionsIntro() { var overlay = document.getElementById('ucl-intro'); if (!overlay) return; overlay.classList.add('show'); setTimeout(function(){ overlay.classList.remove('show'); }, 1300); } var _origGoChamp = window.go; window.go = function(id) { if (id === 's-champions') { showChampionsIntro(); } if (_origGoChamp) _origGoChamp(id); else { document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active');}); var el = document.getElementById(id); if(el) el.classList.add('active'); } setTimeout(function(){window.scrollTo({top:0,behavior:'smooth'});},50); };
 
+/* script block 19 */
 var _compSoundMap = { 's-champions': { snd:'snd-ucl', flash:'flash-ucl' }, 's-superliga': { snd:'snd-kdb', flash:'flash-kdb' } }; var _lastCompScreen = null; function playCompSound(targetId) { var cfg = _compSoundMap[targetId]; if (!cfg) return; var snd = document.getElementById(cfg.snd); if (snd) { snd.currentTime = 0; snd.play().catch(function(){}); } var fl = document.getElementById('comp-flash'); if (fl) { fl.className = ''; fl.style.display = 'block'; fl.offsetWidth; fl.className = cfg.flash; setTimeout(function(){ fl.style.display='none'; fl.className=''; }, 950); } } function goWithSound(id, sndKey) { var fromId = _lastCompScreen; _lastCompScreen = id; if (fromId !== id) { var cfg = _compSoundMap[id]; if (cfg) playCompSound(id); } go(id); } var _prevGoFn = window.go; window.go = function(id) { var prev = _lastCompScreen; if (_compSoundMap[id]) { if (prev !== id) { playCompSound(id); } } _lastCompScreen = id; if (_prevGoFn) _prevGoFn(id); else { document.querySelectorAll('.screen').forEach(function(s){s.classList.remove('active');}); var el=document.getElementById(id); if(el)el.classList.add('active'); } };
 
+/* script block 20 */
 
 (function(){
   var LIGA_TEAMS_EQ = [
@@ -1780,6 +2033,7 @@ var _compSoundMap = { 's-champions': { snd:'snd-ucl', flash:'flash-ucl' }, 's-su
 })();
 
 
+/* script block 21 */
 
 (function(){
 
@@ -1812,8 +2066,8 @@ var _compSoundMap = { 's-champions': { snd:'snd-ucl', flash:'flash-ucl' }, 's-su
   ────────────────────────────────────────────────────────────────── */
 
   window.mlSimEngine = function(cfg) {
-    var TEAM_A  = cfg.teamA;
-    var TEAM_B  = cfg.teamB;
+    var TEAM_A  = (cfg.teamA || '').trim();
+    var TEAM_B  = (cfg.teamB || '').trim();
     var sqA     = cfg.sqA;
     var sqB     = cfg.sqB;
     var matchKey= cfg.matchKey;
@@ -1822,6 +2076,55 @@ var _compSoundMap = { 's-champions': { snd:'snd-ucl', flash:'flash-ucl' }, 's-su
 
     if (!btn || !list) return;
     btn.textContent = "0'"; btn.className = 'ml-timer running';
+
+    // ── Guardia null: si sqFromRegistry no encuentra el equipo ────────
+    if (!sqA || !sqA.length) {
+      btn.textContent = '⚠️ ERROR'; btn.className = 'ml-timer';
+      var errDiv = document.createElement('div'); errDiv.className = 'ml-ht';
+      errDiv.textContent = '⚠️ Plantilla no encontrada: ' + TEAM_A;
+      list.appendChild(errDiv);
+      return;
+    }
+    if (!sqB || !sqB.length) {
+      btn.textContent = '⚠️ ERROR'; btn.className = 'ml-timer';
+      var errDiv2 = document.createElement('div'); errDiv2.className = 'ml-ht';
+      errDiv2.textContent = '⚠️ Plantilla no encontrada: ' + TEAM_B;
+      list.appendChild(errDiv2);
+      return;
+    }
+
+    // ── CONVOCATORIA 18: split titulares / banquillo ─────────────────
+    // sqFromRegistry ya devuelve p[4]='titular'|'suplente'
+    var activeA = sqA.filter(function(p){ return !p[4]||p[4]==='titular'; });
+    var benA    = sqA.filter(function(p){ return p[4]==='suplente'; });
+    var activeB = sqB.filter(function(p){ return !p[4]||p[4]==='titular'; });
+    var benB    = sqB.filter(function(p){ return p[4]==='suplente'; });
+    if(!activeA.length) activeA = sqA.slice();
+    if(!activeB.length) activeB = sqB.slice();
+    // Índices para sustituciones (hasta 4 por equipo desde min 46)
+    var subIdxA=0, subIdxB=0;
+    var subMinsA=(function(n){var m=[];for(var i=0;i<n;i++)m.push(46+Math.floor(Math.random()*44));return m.sort(function(a,b){return a-b;});})(Math.min(4,benA.length));
+    var subMinsB=(function(n){var m=[];for(var i=0;i<n;i++)m.push(46+Math.floor(Math.random()*44));return m.sort(function(a,b){return a-b;});})(Math.min(4,benB.length));
+    function applySubsUpTo(min){
+      while(subIdxA<subMinsA.length&&subMinsA[subIdxA]<=min){
+        var outfA=activeA.filter(function(p){return p[2]!=='P';});
+        if(outfA.length&&subIdxA<benA.length){
+          var wA=outfA.reduce(function(a,b){return(a[3]||70)<(b[3]||70)?a:b;});
+          var iA=activeA.indexOf(wA); if(iA>=0) activeA.splice(iA,1);
+          activeA.push(benA[subIdxA]);
+        }
+        subIdxA++;
+      }
+      while(subIdxB<subMinsB.length&&subMinsB[subIdxB]<=min){
+        var outfB=activeB.filter(function(p){return p[2]!=='P';});
+        if(outfB.length&&subIdxB<benB.length){
+          var wB=outfB.reduce(function(a,b){return(a[3]||70)<(b[3]||70)?a:b;});
+          var iB=activeB.indexOf(wB); if(iB>=0) activeB.splice(iB,1);
+          activeB.push(benB[subIdxB]);
+        }
+        subIdxB++;
+      }
+    }
 
     // ── helpers ──────────────────────────────────────────────────────
     // ── PODER BASADO EN RATINGS REALES ─────────────────────────────
@@ -1846,8 +2149,25 @@ var _compSoundMap = { 's-champions': { snd:'snd-ucl', flash:'flash-ucl' }, 's-su
       for(var wi=0;wi<sq.length;wi++){c+=(sq[wi][3]||30);if(r<c)return sq[wi];}
       return sq[sq.length-1];
     }
-    function rndSqNonGK(sq){var f=sq.filter(function(p){return p[2]!=='P';});if(!f.length)return rndSq(sq);var hasW=f.some(function(p){return p[3]!==undefined;});if(!hasW)return f[Math.floor(Math.random()*f.length)];var tot=f.reduce(function(s,p){return s+(p[3]||30);},0);var r=Math.random()*tot;var c=0;for(var wi=0;wi<f.length;wi++){c+=(f[wi][3]||30);if(r<c)return f[wi];}return f[f.length-1];}
-    function rndGK(sq){var g=sq.filter(function(p){return p[2]==='P';});return g.length?g[0]:rndSq(sq);}
+    // Usa activeA/activeB (jugadores en campo en ese momento)
+    function rndActive(team){return team==='a'?activeA:activeB;}
+    function rndSqNonGK(sq){
+      var active=sq===sqA?activeA:(sq===sqB?activeB:sq);
+      if(!active||!active.length) return ['0','Jugador','M',70];
+      var f=active.filter(function(p){return p[2]!=='P';});
+      if(!f.length)f=active;
+      var tot=f.reduce(function(s,p){return s+(p[3]||30);},0);
+      if(!tot)return f[Math.floor(Math.random()*f.length)];
+      var r=Math.random()*tot;var c=0;
+      for(var wi=0;wi<f.length;wi++){c+=(f[wi][3]||30);if(r<c)return f[wi];}
+      return f[f.length-1];
+    }
+    function rndGK(sq){
+      var active=sq===sqA?activeA:(sq===sqB?activeB:sq);
+      if(!active||!active.length) return ['1','Portero','P',70];
+      var g=active.filter(function(p){return p[2]==='P';});
+      return g.length?g[0]:rndSq(active);
+    }
     function rndTeam(){return Math.random()<probA?'a':'b';}
     var extraA = Math.floor(Math.random()*4)+1;
     var extraB = Math.floor(Math.random()*8)+1;
@@ -1865,7 +2185,9 @@ var _compSoundMap = { 's-champions': { snd:'snd-ucl', flash:'flash-ucl' }, 's-su
     // ── AMARILLAS SIMPLES (1-4) ───────────────────────────────────────
     var numYellow = Math.floor(Math.random()*4)+1;
     for(var j=0;j<numYellow;j++){
-      var ct=rndTeam(); var csq=ct==='a'?sqA:sqB; var cp=rndSqNonGK(csq);
+      var ct=rndTeam(); var csq=ct==='a'?sqA:sqB;
+      applySubsUpTo(rndMin()); // actualizar activos antes de elegir jugador
+      var cp=rndSqNonGK(csq);
       var key=ct+cp[1];
       if(usedYellow.indexOf(key)!==-1)continue;
       usedYellow.push(key);
@@ -1993,9 +2315,11 @@ var _compSoundMap = { 's-champions': { snd:'snd-ucl', flash:'flash-ucl' }, 's-su
     var _maxGoals = (rA >= 88 || rB >= 88) ? 7 : (rA >= 84 || rB >= 84) ? 6 : 5;
     var numGoals=Math.floor(Math.random()*(_maxGoals+1));
     for(var i=0;i<numGoals;i++){
-      var gt=rndTeam(); var gsq=gt==='a'?sqA:sqB; var gp=rndSqNonGK(gsq);
+      var gt=rndTeam(); var gsq=gt==='a'?sqA:sqB;
+      var gMin=rndMin(); applySubsUpTo(gMin);
+      var gp=rndSqNonGK(gsq);
       if(gt==='a')sa++;else sb++;
-      evts.push({min:rndMin(),ico:'⚽',team:gt,player:gp,type:'gol'});
+      evts.push({min:gMin,ico:'⚽',team:gt,player:gp,type:'gol'});
     }
 
     // ── EFECTO ROJA: reduce goles del equipo sancionado tras la roja ─
@@ -2017,16 +2341,7 @@ var _compSoundMap = { 's-champions': { snd:'snd-ucl', flash:'flash-ucl' }, 's-su
       });
     }
 
-    // ── SUSTITUCIONES (2-4, desde el min 55) ─────────────────────────
-    var numSubs=Math.floor(Math.random()*3)+2;
-    for(var s=0;s<numSubs;s++){
-      var smin=55+Math.floor(Math.random()*30);
-      var st=Math.random()<0.5?'a':'b';
-      var ssq=st==='a'?sqA:sqB;
-      var si1=Math.floor(Math.random()*ssq.length);
-      var si2; do{si2=Math.floor(Math.random()*ssq.length);}while(si2===si1);
-      evts.push({min:smin,ico:'🔄',team:st,playerOut:ssq[si1],playerIn:ssq[si2],type:'sub'});
-    }
+    // ── Sustituciones gestionadas al inicio del engine ─────────────
 
     evts.sort(function(a,b){return a.min-b.min;});
 
@@ -2118,6 +2433,8 @@ var _compSoundMap = { 's-champions': { snd:'snd-ucl', flash:'flash-ucl' }, 's-su
     function renderEvtEl(ev){
       if(ev.type==='ht'||ev.type==='sub')return;
       var d=document.createElement('div'); d.className='ml-evt-item';
+      d.setAttribute('data-team', ev.team);
+      d.setAttribute('data-type', ev.type);
       var teamName=ev.team==='a'?TEAM_A:TEAM_B;
       d.innerHTML='<span class="ml-evt-min">'+ev.min+"'</span>"
         +'<span class="ml-evt-ico">'+ev.ico+'</span>'
@@ -2142,6 +2459,13 @@ var _compSoundMap = { 's-champions': { snd:'snd-ucl', flash:'flash-ucl' }, 's-su
           var gf=document.getElementById(cfg.gfId);
           if(gf){gf.classList.add('show');if(typeof triggerShootingBall==='function')triggerShootingBall(gf,(ev.type==='propia'?(ev.team==='a'?'b':'a'):ev.team));setTimeout(function(){gf.classList.remove('show');},3000);}
         },ms+50);
+      }
+      if(ev.ico==='🟥'||ev.ico==='🟨🟥'){
+        (function(evCopy,msDelay){
+          setTimeout(function(){
+            
+          }, msDelay+80);
+        })(ev, ms);
       }
     });
 
@@ -2169,9 +2493,9 @@ var _compSoundMap = { 's-champions': { snd:'snd-ucl', flash:'flash-ucl' }, 's-su
       r.textContent='🏁 FIN · '+TEAM_A+' '+sa+' – '+sb+' '+TEAM_B
         +(winner==='Empate'?' · EMPATE':' · 🏆 '+winner.toUpperCase()+' GANA');
       // Conteo tarjetas/MVP para clasificación
-      var _ta_a=evts.filter(function(e){return e.team==='a'&&(e.ico==='🟨'||e.ico==='🟨🟥');}).length;
+      var _ta_a=evts.filter(function(e){return e.team==='a'&&e.ico==='🟨';}).length;
       var _tr_a=evts.filter(function(e){return e.team==='a'&&(e.ico==='🟥'||e.ico==='🟨🟥');}).length;
-      var _ta_b=evts.filter(function(e){return e.team==='b'&&(e.ico==='🟨'||e.ico==='🟨🟥');}).length;
+      var _ta_b=evts.filter(function(e){return e.team==='b'&&e.ico==='🟨';}).length;
       var _tr_b=evts.filter(function(e){return e.team==='b'&&(e.ico==='🟥'||e.ico==='🟨🟥');}).length;
       var _mvp_a=mvpTeam===TEAM_A?1:0;
       var _mvp_b=mvpTeam===TEAM_B?1:0;
@@ -2187,6 +2511,7 @@ var _compSoundMap = { 's-champions': { snd:'snd-ucl', flash:'flash-ucl' }, 's-su
 })();
 
 
+/* script block 22 */
 
 function actaTog(matchKey) {
   var toggle = document.getElementById('acta-toggle-' + matchKey);
@@ -2195,6 +2520,95 @@ function actaTog(matchKey) {
   var open = body.classList.contains('open');
   body.classList.toggle('open', !open);
   toggle.classList.toggle('open', !open);
+}
+
+// ── Botón PREVIA: cuestionario pre-partido → sanciones ──
+function mlPreviaClick(matchKey) {
+  var wrap = document.getElementById('mlw-' + matchKey);
+  var compKey = 'liga';
+  var isHvH = wrap && wrap.classList.contains('hvh');
+  window._ppBlockId = null;
+  if (wrap) {
+    var jm = wrap.closest('.jmatches');
+    if (jm && jm.id) {
+      var jid = jm.id;
+      window._ppBlockId = jid;
+      if (jid === 'cal-copa-fin')          compKey = 'copa-fin';
+      else if (jid === 'sc-final')         compKey = 'sc-final';
+      else if (jid === 'cal-usc-f')        compKey = 'usc-fin';
+      else if (jid === 'ucl-fin')          compKey = 'ucl-fin';
+      else if (jid === 'uel-fin')          compKey = 'uel-fin';
+      else if (jid === 'uecl-fin')         compKey = 'uecl-fin';
+      else if (jid === 'cal-inter-f')      compKey = 'inter-fin';
+      else if (jid === 'sc-semis')         compKey = 'sc';
+      else if (jid.startsWith('cal-sc-'))  compKey = 'sc';
+      else if (jid.startsWith('cal-usc-')) compKey = 'usc';
+      else if (jid.startsWith('cal-copa-'))compKey = 'copa';
+      else if (jid.startsWith('cal-l'))    compKey = 'liga';
+      else if (jid.startsWith('ucl-'))     compKey = 'ucl';
+      else if (jid.startsWith('uel-'))     compKey = 'uel';
+      else if (jid.startsWith('uecl-'))    compKey = 'uecl';
+      else if (jid.startsWith('cal-sl'))   compKey = 'superliga';
+      else if (jid.startsWith('cal-inter-'))compKey = 'inter';
+    }
+  }
+  // Determinar prórroga automática según reglas
+  // HvH: siempre hay prórroga y penaltis
+  // HvIA: Copa 1r/2r/dieciseisavos, USC, SC, Inter, Fases finales selecciones → sí
+  // HvIA: Liga y fase de grupos europeos → NO
+  var prorroga;
+  if (isHvH) {
+    prorroga = 'Sí';
+  } else {
+    var conProrroga = ['copa','copa-fin','sc','sc-final','usc','usc-fin','inter','inter-fin','ucl-fin','uel-fin','uecl-fin'];
+    prorroga = (conProrroga.indexOf(compKey) !== -1) ? 'Sí' : 'No';
+  }
+  // Duración según HvH o HvIA
+  var duracion = isHvH ? '10 min' : '8 min';
+  // Mostrar cuestionario
+  if (typeof window.showPrePartidoOverlay === 'function') {
+    window.showPrePartidoOverlay(matchKey, compKey, prorroga, duracion, isHvH);
+  }
+}
+
+function _renderSancionBanner(matchKey, bodyEl) {
+  var humanKeys = ['j1m1','j1m2','j1m3'];
+  if (humanKeys.indexOf(matchKey) === -1) return;
+  if (!window.SANCION_STORE) return;
+  // j1m1/j1m2/j1m3 son todos Liga en Jornada 1
+  var compKey = 'liga';
+  var sancionCompConfig = {
+    liga:{ label:'Liga EA Sports', esFinal:false },
+    copa:{ label:'Copa del Rey', esFinal:false },'copa-fin':{ label:'Copa del Rey · Final', esFinal:true },
+    sc:{ label:'Supercopa de España', esFinal:false },'sc-final':{ label:'Supercopa · Final', esFinal:true },
+    usc:{ label:'UEFA Super Cup', esFinal:false },'usc-fin':{ label:'UEFA Super Cup · Final', esFinal:true },
+    ucl:{ label:'Champions League', esFinal:false },'ucl-fin':{ label:'Champions League · Final', esFinal:true },
+    uel:{ label:'Europa League', esFinal:false },'uel-fin':{ label:'Europa League · Final', esFinal:true },
+    uecl:{ label:'Conference League', esFinal:false },'uecl-fin':{ label:'Conference League · Final', esFinal:true },
+    superliga:{ label:'Superliga', esFinal:false },
+    inter:{ label:'Copa Intercontinental', esFinal:false },'inter-fin':{ label:'Intercontinental · Final', esFinal:true }
+  };
+  var cfg = sancionCompConfig[compKey] || { label: compKey, esFinal: false };
+  var sanciones = (!cfg.esFinal && window.SANCION_STORE[compKey]) ? window.SANCION_STORE[compKey] : [];
+  // Eliminar banner anterior
+  var prev = bodyEl.querySelector('.sancion-acta-banner');
+  if (prev) prev.remove();
+  if (!sanciones || !sanciones.length) return;
+  var banner = document.createElement('div');
+  banner.className = 'sancion-acta-banner';
+  banner.innerHTML =
+    '<div class="sab-header"><span class="sab-icon">🚫</span><span class="sab-title">JUGADORES SANCIONADOS · ' + cfg.label.toUpperCase() + '</span></div>' +
+    sanciones.map(function(s) {
+      return '<div class="sab-row">'
+        + '<span class="sab-name">' + s.name + '</span>'
+        + '<span class="sab-sep">·</span>'
+        + '<span class="sab-team">' + s.team + '</span>'
+        + '<span class="sab-reason">' + s.reason + '</span>'
+        + '</div>';
+    }).join('');
+  var list = document.getElementById('ml-acta-list-' + matchKey);
+  if (list) bodyEl.insertBefore(banner, list);
+  else bodyEl.appendChild(banner);
 }
 // Acta observers
 (function() {
@@ -2244,6 +2658,7 @@ function actaTog(matchKey) {
 })();
 
 
+/* script block 23 */
 
 // --- FIX v6: collect stats from all acta events (manual + simulated) ---
 (function(){
@@ -2261,7 +2676,7 @@ const ICON_MAP = {
 };
 
 function normal(n){
- return (n||"").toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu,"").trim();
+ return (n||"").toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").trim();
 }
 
 function getAllActaEvents(){
@@ -2305,6 +2720,7 @@ document.addEventListener("DOMContentLoaded",rebuildLigaStats);
 })();
 
 
+/* script block 24 */
 
 // --- FIX v8: ligar estadísticas por equipo + dorsal (y nombre como apoyo) ---
 (function(){
@@ -2395,7 +2811,7 @@ document.addEventListener("DOMContentLoaded",rebuildLigaStats);
 
   function canonicalTeamName(name){
     var key = norm(name);
-    return TEAM_ALIASES[key] || String(name || '').trim();
+    return (window.TEAM_ALIASES||{})[key] || String(name || '').trim();
   }
 
   function ensureSpan(row, cls){
@@ -2595,4 +3011,1714 @@ document.addEventListener("DOMContentLoaded",rebuildLigaStats);
       return res;
     };
   }
+})();
+
+
+/* script block 25 */
+
+(function(){
+
+  /* ─────────────────────────────────────────────────
+     1. ESTADO DEL MARCADOR: GRIS / ROJO / AMARILLO
+     ─────────────────────────────────────────────── */
+  var ALL_MIDS = ['j1m1','j1m2','j1m3','j1m4','j1m5','j1m6','j1m7','j1m8','j1m9','j1m10'];
+
+  function getScoreEl(mid) {
+    var a = document.getElementById('sc-' + mid + '-a');
+    return a ? a.closest('.ml-score') : null;
+  }
+
+  function setScoreState(mid, state) {
+    var el = getScoreEl(mid);
+    if (!el) return;
+    el.classList.remove('state-pending','state-playing','state-finished');
+    el.classList.add('state-' + state);
+  }
+  // Expose globally so _renderTimer functions can call it directly
+  window._setScoreState = setScoreState;
+
+  // Init all to pending
+  function initStates() {
+    ALL_MIDS.forEach(function(mid) { setScoreState(mid, 'pending'); });
+  }
+
+  /* Patch human match timers (j1m1-j1m3) */
+  function patchHumanTimers() {
+    ['j1m1','j1m2','j1m3'].forEach(function(mid) {
+      var clickName = 'mlTimerClick_' + mid;
+      var origClick = window[clickName];
+      if (typeof origClick !== 'function') return; // safe guard
+      window[clickName] = function() {
+        var res;
+        try { res = origClick.apply(this, arguments); } catch(e) {}
+        setTimeout(function() { syncHumanState(mid); }, 50);
+        return res;
+      };
+    });
+  }
+
+  function syncHumanState(mid) {
+    var btn = document.getElementById('ml-timer-' + mid);
+    if (!btn) return;
+    if (btn.classList.contains('finished') || btn.textContent.indexOf('FIN') !== -1) {
+      setScoreState(mid, 'finished');
+    } else if (btn.classList.contains('running')) {
+      setScoreState(mid, 'playing');
+    } else {
+      // If timer has been started at least once (seconds > 0), keep as pending
+      // We use a data attribute to track "ever started"
+      var ever = btn.getAttribute('data-ever-started');
+      if (ever) {
+        setScoreState(mid, 'pending'); // paused but not finished
+      }
+    }
+  }
+
+  /* Patch IA simulate functions (j1m4-j1m10) */
+  function patchIASimulate() {
+    ['j1m4','j1m5','j1m6','j1m7','j1m8','j1m9','j1m10'].forEach(function(mid) {
+      var simName = 'mlSimulate_' + mid;
+      var origSim = window[simName];
+      if (typeof origSim !== 'function') return;
+      window[simName] = function() {
+        setScoreState(mid, 'playing');
+        var res = origSim.apply(this, arguments);
+        // After ~30s simulation finishes (max sim time is ~30500ms)
+        setTimeout(function() { setScoreState(mid, 'finished'); }, 31000);
+        return res;
+      };
+    });
+  }
+
+  /* Watch timer buttons for human matches via MutationObserver */
+  function watchTimerBtns() {
+    ['j1m1','j1m2','j1m3'].forEach(function(mid) {
+      var btn = document.getElementById('ml-timer-' + mid);
+      if (!btn) return;
+      var obs = new MutationObserver(function() {
+        if (btn.classList.contains('finished') || btn.textContent.indexOf('FIN') !== -1) {
+          setScoreState(mid, 'finished');
+        } else if (btn.classList.contains('running')) {
+          btn.setAttribute('data-ever-started','1');
+          setScoreState(mid, 'playing');
+        } else {
+          var ever = btn.getAttribute('data-ever-started');
+          if (!ever) setScoreState(mid, 'pending');
+          // If paused, keep current (playing→paused still shows red is fine,
+          // but let's keep grey until first start)
+        }
+      });
+      obs.observe(btn, { attributes: true, characterData: true, subtree: true, childList: true });
+    });
+  }
+
+  /* Watch IA timer btn text for "FIN" */
+  function watchIATimers() {
+    ['j1m4','j1m5','j1m6','j1m7','j1m8','j1m9','j1m10'].forEach(function(mid) {
+      var btn = document.getElementById('ml-timer-' + mid);
+      if (!btn) return;
+      var obs = new MutationObserver(function() {
+        var txt = btn.textContent || '';
+        if (txt.indexOf('FIN') !== -1 || btn.classList.contains('finished')) {
+          setScoreState(mid, 'finished');
+        } else if (txt.indexOf('SIMULAR') === -1 && txt !== '') {
+          // Simulation running
+          setScoreState(mid, 'playing');
+        }
+      });
+      obs.observe(btn, { attributes: true, characterData: true, subtree: true, childList: true });
+    });
+  }
+
+  /* ─────────────────────────────────────────────────
+     2. MODAL DE EDICIÓN DE EVENTOS
+     ─────────────────────────────────────────────── */
+  var _editState = { mid: null, evId: null };
+
+  var ICONS = {
+    gol:'⚽', propia:'🚫', 'pen-gol':'🥅', 'pen-fallo':'❌',
+    'pen-prov':'🤦', 'pen-parado':'🖐', 'falta-gol':'🎯',
+    amarilla:'🟨', 'd-amarilla':'🟨🟥', roja:'🟥', mvp:'⭐'
+  };
+  var SCORING = ['gol','propia','pen-gol','falta-gol'];
+
+  /* Get _events array for a given match (they live in separate scopes,
+     but are exposed on the match's HTML via a registry we build) */
+  function getEventsRegistry() {
+    if (!window._matchEventsRegistry) window._matchEventsRegistry = {};
+    return window._matchEventsRegistry;
+  }
+
+  /* ─────────────────────────────────────────────────
+     REGISTRY: captura referencias vivas a _events y _sc
+     de cada partido humano parcheando sus funciones
+     ─────────────────────────────────────────────── */
+  window.__eventsRegistry = {};
+
+  function buildEventsRegistry() {
+    ['j1m1','j1m2','j1m3'].forEach(function(mid) {
+
+      // Patch mlPlConfirm (player-picker confirm) to register live refs
+      var origConfirm = window['mlPlConfirm_' + mid];
+      if (typeof origConfirm === 'function') {
+        window['mlPlConfirm_' + mid] = function(num, name) {
+          origConfirm.apply(this, arguments);
+          // After push, snapshot the live arrays via the del function closure trick
+          _captureRegistry(mid);
+        };
+      }
+
+      // Patch mlDelEvt to register live refs (it has access to _events/_sc in closure)
+      var origDel = window['mlDelEvt_' + mid];
+      if (typeof origDel === 'function') {
+        window['mlDelEvt_' + mid] = function(id) {
+          origDel.apply(this, arguments);
+          _captureRegistry(mid);
+        };
+      }
+
+      // Also patch _renderActa to expose it globally for the save function
+      var origRender = window['_renderActa_' + mid];
+      if (typeof origRender === 'function') {
+        window['_renderActa_' + mid] = function() {
+          var res = origRender.apply(this, arguments);
+          _captureRegistry(mid);
+          return res;
+        };
+      }
+    });
+  }
+
+  /* Capture the live _events array and _sc object by reading from the DOM
+     and keeping a registry that _saveEditModal can mutate directly.
+     Since we can't access the IIFE vars, we maintain a PARALLEL registry
+     that stays in sync via patched functions. */
+  function _captureRegistry(mid) {
+    // Read current state from DOM
+    var list = document.getElementById('ml-acta-list-' + mid);
+    if (!list) return;
+    var items = list.querySelectorAll('.ml-evt-item');
+    var events = [];
+    items.forEach(function(item) {
+      var delBtn = item.querySelector('.ml-evt-del');
+      var idMatch = delBtn ? (delBtn.getAttribute('onclick')||'').match(/\((\d+)\)/) : null;
+      var id = idMatch ? parseInt(idMatch[1]) : null;
+      if (!id) return;
+      var minEl  = item.querySelector('.ml-evt-min');
+      var icoEl  = item.querySelector('.ml-evt-ico');
+      var nameEl = item.querySelector('.ml-evt-name');
+      var minTxt = minEl ? minEl.textContent.replace("'",'').trim() : '0';
+      var nameTxt = nameEl ? nameEl.textContent.trim() : '';
+      var dotPos = nameTxt.indexOf('. ');
+      var num  = dotPos !== -1 ? nameTxt.slice(0, dotPos).trim() : '';
+      var name = dotPos !== -1 ? nameTxt.slice(dotPos + 2).trim() : nameTxt;
+      var scAEl = document.getElementById('sc-' + mid + '-a');
+      var scBEl = document.getElementById('sc-' + mid + '-b');
+      events.push({
+        id: id,
+        min: parseInt(minTxt) || 0,
+        type: item.getAttribute('data-type') || '',
+        team: item.getAttribute('data-team') || 'a',
+        ico: icoEl ? icoEl.textContent.trim() : '',
+        num: num,
+        name: name
+      });
+      if (!window.__eventsRegistry[mid]) {
+        window.__eventsRegistry[mid] = { events: events, sc: {a:0,b:0}, renderActa: null };
+      }
+    });
+    // Recalculate score from events
+    var sa = 0, sb = 0;
+    events.forEach(function(ev) {
+      var scoring = ['gol','propia','pen-gol','falta-gol'];
+      if (scoring.indexOf(ev.type) !== -1) {
+        var st = ev.type === 'propia' ? (ev.team === 'a' ? 'b' : 'a') : ev.team;
+        if (st === 'a') sa++; else sb++;
+      }
+    });
+    if (!window.__eventsRegistry[mid]) {
+      window.__eventsRegistry[mid] = { events: [], sc: {a:0,b:0}, renderActa: null };
+    }
+    window.__eventsRegistry[mid].events = events;
+    window.__eventsRegistry[mid].sc = {a: sa, b: sb};
+    window.__eventsRegistry[mid].renderActa = window['_renderActa_' + mid];
+  }
+
+  /* Read events from DOM (data-team, data-type already set + we need id from onclick) */
+  function getEventsFromDOM(mid) {
+    var list = document.getElementById('ml-acta-list-' + mid);
+    if (!list) return [];
+    var items = list.querySelectorAll('.ml-evt-item');
+    var evs = [];
+    items.forEach(function(item) {
+      var editBtn = item.querySelector('.ml-evt-edit');
+      var delBtn  = item.querySelector('.ml-evt-del');
+      if (!editBtn && !delBtn) return;
+      // extract id from onclick of del button: mlDelEvt_jXmX(ID)
+      var idMatch = delBtn ? (delBtn.getAttribute('onclick')||'').match(/\((\d+)\)/) : null;
+      var id = idMatch ? parseInt(idMatch[1]) : null;
+      var minEl   = item.querySelector('.ml-evt-min');
+      var icoEl   = item.querySelector('.ml-evt-ico');
+      var nameEl  = item.querySelector('.ml-evt-name');
+      var teamEl  = item.querySelector('.ml-evt-team');
+      var minTxt  = minEl ? minEl.textContent.replace("'",'').trim() : '0';
+      var nameTxt = nameEl ? nameEl.textContent.trim() : '';
+      var numPart = nameTxt.split('.')[0] || '';
+      var namePart = nameTxt.indexOf('. ') !== -1 ? nameTxt.split('. ').slice(1).join('. ') : nameTxt;
+      evs.push({
+        id: id,
+        min: parseInt(minTxt)||0,
+        type: item.getAttribute('data-type') || '',
+        team: item.getAttribute('data-team') || 'a',
+        ico: icoEl ? icoEl.textContent.trim() : '',
+        num: numPart.trim(),
+        name: namePart.trim(),
+        teamLabel: teamEl ? teamEl.textContent.trim() : ''
+      });
+    });
+    return evs;
+  }
+
+  /* Get squads for a match */
+  function getSquadsForMatch(mid) {
+    var sqA = [], sqB = [], nameA = '', nameB = '';
+    var scA = document.getElementById('sc-' + mid + '-a');
+    if (scA) {
+      var header = scA.closest('.ml-header');
+      if (header) {
+        var names = header.querySelectorAll('.ml-team-name');
+        if (names[0]) nameA = names[0].textContent.trim();
+        if (names[1]) nameB = names[1].textContent.trim();
+      }
+    }
+    // Try SQUAD_REGISTRY first
+    if (nameA && window.SQUAD_REGISTRY && window.SQUAD_REGISTRY[nameA]) sqA = window.SQUAD_REGISTRY[nameA];
+    else if (window['_sqA_' + mid]) sqA = window['_sqA_' + mid];
+    if (nameB && window.SQUAD_REGISTRY && window.SQUAD_REGISTRY[nameB]) sqB = window.SQUAD_REGISTRY[nameB];
+    else if (window['_sqB_' + mid]) sqB = window['_sqB_' + mid];
+    return { sqA: sqA, sqB: sqB, nameA: nameA, nameB: nameB };
+  }
+
+  /* Build optgroup options for a squad array */
+  function buildSquadOptions(sq, teamName) {
+    var html = '<optgroup label="——  ' + teamName + '  ——">';
+    sq.forEach(function(p) {
+      if (p.h) {
+        html += '</optgroup><optgroup label="' + p.h + '">';
+      } else {
+        html += '<option value="' + p[0] + '|' + p[1].replace(/"/g,'&quot;') + '">' + p[0] + '. ' + p[1] + '</option>';
+      }
+    });
+    html += '</optgroup>';
+    return html;
+  }
+
+  /* When player selected from selector, fill manual field */
+  window._onEditPlayerSel = function(val) {
+    if (!val) return;
+    var parts = val.split('|');
+    var num = parts[0] || '';
+    var name = parts.slice(1).join('|') || '';
+    document.getElementById('_editManual').value = num + '. ' + name;
+  };
+
+  window._openEditModal = function(mid, evId) {
+    var evs = getEventsFromDOM(mid);
+    var ev  = evs.find(function(e){ return e.id === evId; });
+    if (!ev) return;
+
+    _editState.mid  = mid;
+    _editState.evId = evId;
+
+    // Set type, team, min
+    document.getElementById('_editType').value = ev.type || 'gol';
+    document.getElementById('_editMin').value  = ev.min  || 1;
+
+    // Update team labels
+    var sq = getSquadsForMatch(mid);
+    var selTeam = document.getElementById('_editTeam');
+    selTeam.options[0].text = (sq.nameA || 'Local') + ' (local)';
+    selTeam.options[1].text = (sq.nameB || 'Visitante') + ' (visitante)';
+    selTeam.value = ev.team || 'a';
+
+    // Populate squad selector
+    var selPl = document.getElementById('_editPlayerSel');
+    var optHTML = '<option value="">— seleccionar jugador —</option>';
+    optHTML += buildSquadOptions(sq.sqA, sq.nameA || 'Local');
+    optHTML += buildSquadOptions(sq.sqB, sq.nameB || 'Visitante');
+    selPl.innerHTML = optHTML;
+    selPl.value = '';
+
+    // Fill manual field with current num. name
+    var manual = ev.num ? (ev.num + '. ' + ev.name) : ev.name;
+    document.getElementById('_editManual').value = manual || '';
+
+    var m = document.getElementById('_editModal');
+    m.style.display = '';
+    m.classList.add('show');
+  };
+
+  function updateTeamLabels(mid) {
+    // kept for compatibility but now handled in _openEditModal
+  }
+
+  window._closeEditModal = function() {
+    var m = document.getElementById('_editModal');
+    if (m) { m.classList.remove('show'); m.style.display = 'none'; }
+    _editState.mid  = null;
+    _editState.evId = null;
+  };
+
+  window._saveEditModal = function() {
+    var mid   = _editState.mid;
+    var evId  = _editState.evId;
+    if (!mid || !evId) return;
+
+    var newType   = document.getElementById('_editType').value;
+    var newTeam   = document.getElementById('_editTeam').value;
+    var newMin    = parseInt(document.getElementById('_editMin').value) || 1;
+    var manualVal = document.getElementById('_editManual').value.trim();
+
+    if (!manualVal) { alert('⚠️ Escribe el jugador manualmente o selecciónalo de la plantilla.'); return; }
+
+    var newNum = '', newName = '';
+    var dotIdx = manualVal.indexOf('. ');
+    if (dotIdx !== -1) {
+      newNum  = manualVal.slice(0, dotIdx).trim();
+      newName = manualVal.slice(dotIdx + 2).trim();
+    } else {
+      newName = manualVal;
+    }
+    if (!newName) { alert('⚠️ El nombre del jugador es obligatorio.'); return; }
+
+    var humanMids = ['j1m1','j1m2','j1m3'];
+    if (humanMids.indexOf(mid) !== -1) {
+      // Step 1: delete old event — correctly updates internal _events[] and _sc{}
+      var delFn = window['mlDelEvt_' + mid];
+      if (typeof delFn === 'function') delFn(evId);
+
+      // Step 2: inject the new event directly using mlPlConfirm after setting _pendingEvt
+      // via mlDirectPick (which sets the IIFE-scoped _pendingEvt), then suppress the UI.
+      // We temporarily replace mlShowPl to be a no-op so no picker overlay opens,
+      // and replace _currentMin to return our desired minute.
+      var origShowPl   = window['mlShowPl_' + mid];
+      var origMinFn    = window['_currentMin_' + mid];
+
+      window['mlShowPl_' + mid]    = function() {}; // suppress picker UI
+      window['_currentMin_' + mid] = function() { return newMin; };
+
+      // mlDirectPick sets scoped _pendingEvt then calls mlShowPl (now no-op)
+      var directPickFn = window['mlDirectPick_' + mid];
+      if (typeof directPickFn === 'function') directPickFn(ICONS[newType] || newType, newType, newTeam);
+
+      // mlPlConfirm reads the scoped _pendingEvt and pushes to _events[]
+      var confirmFn = window['mlPlConfirm_' + mid];
+      if (typeof confirmFn === 'function') confirmFn(newNum || '0', newName);
+
+      // Restore patched functions
+      window['mlShowPl_' + mid]    = origShowPl;
+      window['_currentMin_' + mid] = origMinFn;
+
+      window._closeEditModal();
+      return;
+    }
+
+    // Fallback for IA matches
+    var delFnIA = window['mlDelEvt_' + mid];
+    if (typeof delFnIA === 'function') delFnIA(evId);
+    injectEventDOM(mid, newType, newTeam, newMin, newNum, newName);
+    window._closeEditModal();
+  };
+
+  /* Inject event directly into DOM as fallback */
+  function injectEventDOM(mid, type, team, min, num, name) {
+    var list = document.getElementById('ml-acta-list-' + mid);
+    if (!list) return;
+    var emp = list.querySelector('.ml-acta-empty');
+    if (emp) emp.remove();
+    var ico = ICONS[type] || '•';
+    var scA = document.getElementById('sc-' + mid + '-a');
+    var header = scA ? scA.closest('.ml-header') : null;
+    var names = header ? header.querySelectorAll('.ml-team-name') : [];
+    var teamLabel = team === 'a' ? (names[0] ? names[0].textContent : 'Local') : (names[1] ? names[1].textContent : 'Visitante');
+    var newId = Date.now();
+    var row = document.createElement('div');
+    row.className = 'ml-evt-item';
+    row.setAttribute('data-team', team);
+    row.setAttribute('data-type', type);
+    row.innerHTML = '<span class="ml-evt-min">'+min+"'</span>"
+      + '<span class="ml-evt-ico">'+ico+'</span>'
+      + '<span class="ml-evt-name">'+num+'. '+name+'</span>'
+      + '<span class="ml-evt-team">'+teamLabel+'</span>'
+      + '<button class="ml-evt-edit" onclick="window._openEditModal(\''+mid+'\','+newId+')" title="Editar">✏️</button>'
+      + '<button class="ml-evt-del" onclick="mlDelEvt_'+mid+'('+newId+')">✕</button>';
+    // Insert in sorted position
+    var items = list.querySelectorAll('.ml-evt-item');
+    var inserted = false;
+    for (var i = 0; i < items.length; i++) {
+      var m = parseInt((items[i].querySelector('.ml-evt-min')||{}).textContent||'999');
+      if (min < m) { list.insertBefore(row, items[i]); inserted = true; break; }
+    }
+    if (!inserted) list.appendChild(row);
+  }
+
+  /* Expose _pushEvent_jXmX for each human match so saveEditModal can use it.
+     This function needs to access the match's closed-scope _events and _sc.
+     We do this by patching the existing render function which is in scope. */
+  function exposePushEvent(mid) {
+    /* We intercept _renderActa to capture the events reference.
+       But since _events is a var in IIFE scope, we need another trick:
+       We parse the current acta DOM to reconstruct score deltas. */
+
+    /* The cleanest way without touching the original IIFE is to:
+       1. Count current score from acta DOM
+       2. After delFn removes the event, recalculate score from remaining events
+       3. Push new event by calling the existing add pathway (mlDirectPick + mlPlConfirm) */
+
+    window['_pushEvent_' + mid] = function(type, team, min, num, name) {
+      /* Recalculate scores from DOM after deletion */
+      setTimeout(function() {
+        var list = document.getElementById('ml-acta-list-' + mid);
+        if (!list) return;
+        var items = list.querySelectorAll('.ml-evt-item');
+        var sa = 0, sb = 0;
+        items.forEach(function(item) {
+          var t = item.getAttribute('data-type');
+          var te = item.getAttribute('data-team');
+          if (t === 'gol' || t === 'falta-gol' || t === 'pen-gol') {
+            if (te === 'a') sa++; else sb++;
+          } else if (t === 'propia') {
+            if (te === 'a') sb++; else sa++;
+          }
+        });
+
+        /* Now add the new event score contribution */
+        var scoringTypes = ['gol','propia','pen-gol','falta-gol'];
+        if (scoringTypes.indexOf(type) !== -1) {
+          var st = (type === 'propia') ? (team === 'a' ? 'b' : 'a') : team;
+          if (st === 'a') sa++; else sb++;
+        }
+
+        /* Update score display */
+        var scAEl = document.getElementById('sc-' + mid + '-a');
+        var scBEl = document.getElementById('sc-' + mid + '-b');
+        if (scAEl) scAEl.textContent = sa;
+        if (scBEl) scBEl.textContent = sb;
+
+        /* Inject the event row */
+        injectEventDOM(mid, type, team, min, num, name);
+
+      }, 60);
+    };
+  }
+
+  /* ─────────────────────────────────────────────────
+     INIT — compatible con archivos locales (content://)
+     ─────────────────────────────────────────────── */
+  function _doInit() {
+    initStates();
+    patchIASimulate();
+    watchIATimers();
+    buildEventsRegistry();
+    ['j1m1','j1m2','j1m3'].forEach(exposePushEvent);
+  }
+
+  // Ejecutar con múltiples estrategias para garantizar que funcione
+  // en Android con content:// o file://
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+      setTimeout(_doInit, 100);
+    });
+  } else {
+    // Ya cargado (inline script ejecutado después del DOM)
+    setTimeout(_doInit, 100);
+  }
+
+  // Close Twitch menus on outside click
+  document.addEventListener('click', function() {
+    document.querySelectorAll('.ml-twitch-menu.open').forEach(function(m){ m.classList.remove('open'); });
+  });
+
+  // Close modal on backdrop click
+  document.getElementById('_editModal').addEventListener('click', function(e) {
+    if (e.target === this) window._closeEditModal();
+  });
+
+})();
+
+
+/* script block 26 */
+
+(function(){
+
+  // ══ STORES GLOBALES ══════════════════════════════════════════
+  window.YELLOW_STORE   = window.YELLOW_STORE   || {};  // acumulación amarillas
+  window.SANCION_STORE  = window.SANCION_STORE  || {};  // sanciones pendientes pre-partido
+  window._sancionShownFor = window._sancionShownFor || {};
+  window._sancionCallback = null;
+  window._spostCallback   = null;
+
+  // ══ CONFIG CICLOS POR COMPETICIÓN ════════════════════════════
+  var COMP_CONFIG = {
+    'liga':       { label:'Liga EA Sports',            ciclo:3, esFinal:false },
+    'copa':       { label:'Copa del Rey',              ciclo:2, esFinal:false },
+    'copa-fin':   { label:'Copa del Rey · Final',      ciclo:2, esFinal:true  },
+    'sc':         { label:'Supercopa de España',       ciclo:2, esFinal:false },
+    'sc-final':   { label:'Supercopa · Final',         ciclo:2, esFinal:true  },
+    'usc':        { label:'UEFA Super Cup',            ciclo:2, esFinal:false },
+    'usc-fin':    { label:'UEFA Super Cup · Final',    ciclo:2, esFinal:true  },
+    'ucl':        { label:'Champions League',          ciclo:2, esFinal:false },
+    'ucl-fin':    { label:'Champions League · Final',  ciclo:2, esFinal:true  },
+    'uel':        { label:'Europa League',             ciclo:2, esFinal:false },
+    'uel-fin':    { label:'Europa League · Final',     ciclo:2, esFinal:true  },
+    'uecl':       { label:'Conference League',         ciclo:2, esFinal:false },
+    'uecl-fin':   { label:'Conference League · Final', ciclo:2, esFinal:true  },
+    'superliga':  { label:'Superliga',                 ciclo:2, esFinal:false },
+    'inter':      { label:'Copa Intercontinental',     ciclo:2, esFinal:false },
+    'inter-fin':  { label:'Intercontinental · Final',  ciclo:2, esFinal:true  },
+  };
+
+  // ══ MAPEO BLOQUE-ID → COMP KEY ═══════════════════════════════
+  function getCompFromBlockId(id) {
+    if (!id) return null;
+    if (id === 'cal-copa-fin')     return 'copa-fin';
+    if (id === 'sc-final')         return 'sc-final';
+    if (id === 'cal-usc-f')        return 'usc-fin';
+    if (id === 'ucl-fin')          return 'ucl-fin';
+    if (id === 'uel-fin')          return 'uel-fin';
+    if (id === 'uecl-fin')         return 'uecl-fin';
+    if (id === 'cal-inter-f')      return 'inter-fin';
+    if (id === 'sc-semis')         return 'sc';
+    if (id.startsWith('cal-sc-'))  return 'sc';
+    if (id.startsWith('cal-usc-')) return 'usc';
+    if (id.startsWith('cal-copa-'))return 'copa';
+    if (id.startsWith('cal-l'))    return 'liga';
+    if (id.startsWith('ucl-'))     return 'ucl';
+    if (id.startsWith('uel-'))     return 'uel';
+    if (id.startsWith('uecl-'))    return 'uecl';
+    if (id.startsWith('cal-sl'))   return 'superliga';
+    if (id.startsWith('cal-inter-'))return 'inter';
+    return null;
+  }
+
+  // ══ SORTEO DE PARTIDOS DE SUSPENSIÓN ════════════════════════
+  // Doble amarilla → 1 o 2 partidos (50/50)
+  function sorteoDobleAmarilla() {
+    return Math.random() < 0.5 ? 1 : 2;
+  }
+  // Roja directa → 2-8 partidos con pesos decrecientes
+  // 2:35% | 3:25% | 4:17% | 5:10% | 6:7% | 7:4% | 8:2%
+  function sorteoRojaDirecta() {
+    var r = Math.random();
+    if (r < 0.35) return 2;
+    if (r < 0.60) return 3;
+    if (r < 0.77) return 4;
+    if (r < 0.87) return 5;
+    if (r < 0.94) return 6;
+    if (r < 0.98) return 7;
+    return 8;
+  }
+
+  // ══ MOTOR: calcular sanciones de un partido ══════════════════
+  // events: array de eventos del partido
+  // humanTeam: 'a' o 'b' (el equipo humano)
+  // teamName: nombre del equipo humano
+  // compKey: clave de competición
+  // Devuelve array de { name, team, reason, partidos, tipo }
+  window.calcularSancionesPartido = function(events, humanTeam, teamName, compKey) {
+    var cfg   = COMP_CONFIG[compKey] || { label: compKey, ciclo: 3, esFinal: false };
+    var result = [];
+    if (!events || !events.length) return result;
+
+    // Yellows acumulados de este partido por jugador (solo equipo humano)
+    var yellowsEnPartido = {};
+    var processedExpulsion = {};
+
+    events.forEach(function(ev) {
+      if (ev.team !== humanTeam) return;
+      var key = ev.num + '::' + ev.name;
+
+      // ── Amarilla simple ──
+      if (ev.type === 'amarilla') {
+        // Acumular en YELLOW_STORE para ciclo
+        var compStore = window.YELLOW_STORE[compKey] = window.YELLOW_STORE[compKey] || {};
+        var playerKey = ev.name + '::' + teamName;
+        if (!compStore[playerKey]) compStore[playerKey] = { name: ev.name, team: teamName, count: 0 };
+        compStore[playerKey].count++;
+
+        // Comprobar si alcanzó ciclo
+        if (compStore[playerKey].count >= cfg.ciclo) {
+          compStore[playerKey].count = 0; // reset ciclo
+          // Calcular sorteo (acumulación = 1 partido siempre según reglamento)
+          if (!processedExpulsion[key]) {
+            processedExpulsion[key] = true;
+            result.push({
+              name: ev.name,
+              team: teamName,
+              tipo: 'acumulacion',
+              reason: cfg.ciclo + ' 🟨 acumuladas (ciclo completado)',
+              partidos: 1
+            });
+            // Añadir a SANCION_STORE para próxima apertura de partido
+            _addSancion(ev.name, teamName, compKey, 'Ciclo de amarillas — 1 partido');
+          }
+        }
+      }
+
+      // ── Doble amarilla (expulsión, NO suma ciclo) ──
+      else if (ev.type === 'd-amarilla') {
+        if (!processedExpulsion[key]) {
+          processedExpulsion[key] = true;
+          var partidos = sorteoDobleAmarilla();
+          result.push({
+            name: ev.name,
+            team: teamName,
+            tipo: 'd-amarilla',
+            reason: 'Doble amarilla — expulsión',
+            partidos: partidos
+          });
+          _addSancion(ev.name, teamName, compKey, 'Doble amarilla — ' + partidos + (partidos === 1 ? ' partido' : ' partidos'));
+        }
+      }
+
+      // ── Roja directa ──
+      else if (ev.type === 'roja') {
+        if (!processedExpulsion[key]) {
+          processedExpulsion[key] = true;
+          var pts = sorteoRojaDirecta();
+          result.push({
+            name: ev.name,
+            team: teamName,
+            tipo: 'roja',
+            reason: 'Roja directa',
+            partidos: pts
+          });
+          _addSancion(ev.name, teamName, compKey, 'Roja directa — ' + pts + ' partido' + (pts > 1 ? 's' : ''));
+        }
+      }
+    });
+
+    return result;
+  };
+
+  function _addSancion(playerName, teamName, comp, reason) {
+    if (!window.SANCION_STORE[comp]) window.SANCION_STORE[comp] = [];
+    var exists = window.SANCION_STORE[comp].some(function(s) {
+      return s.name === playerName && s.team === teamName;
+    });
+    if (!exists) {
+      window.SANCION_STORE[comp].push({ name: playerName, team: teamName, reason: reason });
+    }
+  }
+
+  window.cumplirSancion = function(playerName, teamName, compKey) {
+    var comp = compKey || 'liga';
+    if (!window.SANCION_STORE[comp]) return;
+    window.SANCION_STORE[comp] = window.SANCION_STORE[comp].filter(function(s) {
+      return !(s.name === playerName && s.team === teamName);
+    });
+  };
+
+  // ══ OVERLAY PRE-PARTIDO ══════════════════════════════════════
+  window.showSancionOverlay = function(compKey, blockId, onConfirm) {
+    var cfg = COMP_CONFIG[compKey] || { label: compKey, esFinal: false };
+    var sanciones = (!cfg.esFinal && window.SANCION_STORE[compKey]) ? window.SANCION_STORE[compKey] : [];
+    var compLbl = document.getElementById('sancion-ov-comp-lbl');
+    var warnEl  = document.getElementById('sancion-ov-warn');
+    var listYel = document.getElementById('sancion-ov-list-yel');
+    var listRed = document.getElementById('sancion-ov-list-red');
+    var listInj = document.getElementById('sancion-ov-list-inj');
+    if (!listYel) { if (onConfirm) onConfirm(); return; }
+
+    // Añadir jornada/ronda al label de competición
+    var ROUND_MAP = {
+      'cal-l1':'J1','cal-l2':'J2','cal-l3':'J3','cal-l4':'J4',
+      'cal-l5':'J5','cal-l6':'J6','cal-l7':'J7','cal-l8':'J8',
+      'cal-l9':'J9','cal-l10':'J10','cal-l11':'J11','cal-l12':'J12',
+      'cal-eu1':'Grupo J1','cal-eu2':'Grupo J2','cal-eu3':'Grupo J3','cal-eu4':'Grupo J4',
+      'cal-copa-1r':'1ª Ronda','cal-copa-2r':'2ª Ronda','cal-copa-16':'Dieciseisavos',
+      'cal-copa-8':'Octavos','cal-copa-4':'Cuartos','cal-copa-sf':'Semis','cal-copa-fin':'Final',
+      'cal-sc-s':'Semis','sc-semis':'Semis','sc-final':'Final',
+      'cal-usc-s':'Semis','cal-usc-f':'Final',
+      'cal-rm1':'J1','cal-rm2':'J2','cal-rm3':'J3',
+      'cal-sl1':'J1','cal-sl2':'J2','cal-sl3':'J3',
+      'ucl-fin':'Final','uel-fin':'Final','uecl-fin':'Final','cal-inter-f':'Final'
+    };
+    var resolvedBlockId = blockId || window._ppBlockId || null;
+    var compLabel = cfg.label;
+    if (resolvedBlockId && ROUND_MAP[resolvedBlockId]) {
+      compLabel += ' · ' + ROUND_MAP[resolvedBlockId];
+    }
+    if (compLbl) compLbl.textContent = compLabel;
+    window._sancionCallback = onConfirm || null;
+
+    // Separar sanciones por tipo
+    var san = sanciones.filter(function(s){ return s.tipo === 'amarilla' || !s.tipo; });
+    var exp = sanciones.filter(function(s){ return s.tipo === 'roja' || s.tipo === 'd-amarilla'; });
+    // Lesionados: no hay sistema aún, siempre vacío por ahora
+    var inj = [];
+
+    function renderCard(s, ico) {
+      var partidos = s.partidos ? s.partidos : null;
+      return '<div class="sancion-card">'
+        + '<div class="sancion-card-icon">' + ico + '</div>'
+        + '<div class="sancion-card-info">'
+        + '<div class="sancion-card-name">' + s.name + '</div>'
+        + '<div class="sancion-card-team">' + s.team + '</div>'
+        + '<div class="sancion-card-reason">' + s.reason + '</div>'
+        + '</div>'
+        + (partidos ? '<div class="sancion-card-partidos"><span class="sancion-card-pnum">' + partidos + '</span><span class="sancion-card-plbl">PARTIDO' + (partidos > 1 ? 'S' : '') + '</span></div>' : '')
+        + '</div>';
+    }
+    function renderEmpty(txt) {
+      return '<div class="sancion-empty">' + txt + '</div>';
+    }
+
+    listYel.innerHTML = san.length ? san.map(function(s){ return renderCard(s,'🟨'); }).join('') : renderEmpty('✅ Sin sancionados');
+    listRed.innerHTML = exp.length ? exp.map(function(s){ return renderCard(s,'🟥'); }).join('') : renderEmpty('✅ Sin expulsados');
+    listInj.innerHTML = renderEmpty('🚑 Sin lesionados');
+
+    var hayBajas = san.length || exp.length || inj.length;
+    if (warnEl) warnEl.style.display = hayBajas ? 'block' : 'none';
+
+    document.getElementById('sancion-overlay').classList.add('show');
+    window.scrollTo(0, 0);
+  };
+
+  window._sancionConfirm = function() {
+    document.getElementById('sancion-overlay').classList.remove('show');
+    if (window._sancionCallback) { window._sancionCallback(); window._sancionCallback = null; }
+  };
+
+  // ══ OVERLAY POST-PARTIDO ═════════════════════════════════════
+  window.showSancionPostOverlay = function(sanciones, compKey, onConfirm) {
+    var cfg = COMP_CONFIG[compKey] || { label: compKey };
+    var listEl  = document.getElementById('spost-list');
+    var compLbl = document.getElementById('spost-comp-lbl');
+    var subEl   = document.getElementById('spost-sub');
+    var iconEl  = document.getElementById('spost-icon');
+    if (!listEl) { if (onConfirm) onConfirm(); return; }
+
+    window._spostCallback = onConfirm || null;
+    compLbl.textContent = cfg.label;
+
+    if (!sanciones || !sanciones.length) {
+      // Sin sanciones — no mostrar overlay
+      if (onConfirm) onConfirm();
+      return;
+    }
+
+    // Icono según tipo de sanción más grave
+    var tieneRoja = sanciones.some(function(s){ return s.tipo === 'roja'; });
+    var tieneDAmr = sanciones.some(function(s){ return s.tipo === 'd-amarilla'; });
+    iconEl.textContent = tieneRoja ? '🟥' : tieneDAmr ? '🟨🟥' : '🟨';
+    subEl.textContent  = sanciones.length === 1 ? 'UN JUGADOR SANCIONADO' : sanciones.length + ' JUGADORES SANCIONADOS';
+
+    listEl.innerHTML = sanciones.map(function(s) {
+      var tipoLabel = s.tipo === 'roja'         ? 'ROJA DIRECTA'
+                    : s.tipo === 'd-amarilla'    ? 'DOBLE AMARILLA'
+                    : 'ACUMULACIÓN DE AMARILLAS';
+      return '<div class="spost-card">'
+        + '<div class="spost-card-badge">' + tipoLabel + '</div>'
+        + '<div class="spost-card-ico">' + (s.tipo==='roja'?'🟥': s.tipo==='d-amarilla'?'🟨🟥':'🟨') + '</div>'
+        + '<div class="spost-card-info">'
+        + '<div class="spost-card-name">' + s.name + '</div>'
+        + '<div class="spost-card-team">' + s.team + '</div>'
+        + '<div class="spost-card-reason">' + s.reason + '</div>'
+        + '</div>'
+        + '<div style="display:flex;flex-direction:column;align-items:center;flex-shrink:0">'
+        + '<div class="spost-card-partidos">' + s.partidos + '</div>'
+        + '<div class="spost-card-partidos-lbl">PARTIDO' + (s.partidos > 1 ? 'S' : '') + '</div>'
+        + '</div>'
+        + '</div>';
+    }).join('');
+
+    document.getElementById('sancion-post-overlay').classList.add('show');
+    window.scrollTo(0, 0);
+  };
+
+  window._spostConfirm = function() {
+    document.getElementById('sancion-post-overlay').classList.remove('show');
+    if (window._spostCallback) { window._spostCallback(); window._spostCallback = null; }
+  };
+
+  // tog() sin intercepción de sanciones — los desplegables abren directamente
+  // (el overlay de sanciones solo se muestra desde el botón PREVIA)
+
+  // ══ HOOK EN mlEndMatch: llamar tras registrar resultado ══════
+  // Se llama como: window.procesarSancionesPostPartido(events, humanTeam, teamName, compKey)
+  window.procesarSancionesPostPartido = function(events, humanTeam, teamName, compKey) {
+    var sanciones = window.calcularSancionesPartido(events, humanTeam, teamName, compKey);
+    window.showSancionPostOverlay(sanciones, compKey, null);
+  };
+
+})();
+
+
+/* script block 27 */
+
+(function(){
+
+  // ── PRE-PARTIDO OVERLAY ──────────────────────────────────────────
+  var _ppMatchKey = null;
+  var _ppCompKey  = null;
+  var _ppChecked  = {};
+  var _ppItems    = [];
+
+  function _buildItems(matchKey, compKey, prorroga, duracion, isHvH) {
+    // Fixed items for Liga Jornada 1
+    var estadio  = 'eFootball Stadium';
+    var estacion = 'Verano';
+    var tiempo   = 'Soleado';
+    var balon    = "Ligue 1 McDonald's";
+    var nivel    = 'Crack';
+    var formaT   = 'Excelente';
+    var formaR   = 'Normal';
+    var sust     = '6';
+    var ventanas = '6';
+
+    // Get real values from venue-bar if possible
+    var vbar = document.getElementById('venue-bar-' + matchKey);
+    if (vbar) {
+      var nm = vbar.querySelector('.ml-venue-name');
+      var wt = vbar.querySelector('.ml-venue-weather');
+      if (nm) estadio = nm.textContent.trim();
+      if (wt) {
+        var wtext = wt.textContent.replace(/\s+/g,' ').trim();
+        // format: "☀️ Soleado · Verano"
+        var parts = wtext.replace(/[\u2600-\u27FF\uFE0F]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDFFF]/g,'').trim().split('\u00B7');
+        if (parts.length >= 2) {
+          tiempo   = parts[0].trim();
+          estacion = parts[1].trim();
+        }
+      }
+    }
+    // Ball name
+    var bwrap = document.getElementById('ball-wrap-' + matchKey);
+    if (bwrap) {
+      var bn = bwrap.querySelector('.ml-ball-name');
+      if (bn) balon = bn.textContent.trim();
+    }
+
+    var items = [
+      { id:'estadio',   ico:'🏟️',  lbl:'Estadio',          val:estadio },
+      { id:'estacion',  ico:'🌞',  lbl:'Estación',          val:estacion },
+      { id:'tiempo',    ico:'☀️',  lbl:'Tiempo',            val:tiempo },
+      { id:'balon',     ico:'⚽️', lbl:'Balón',             val:balon },
+      { id:'nivel',     ico:'🎮',  lbl:'Nivel',             val:nivel },
+      { id:'formaT',    ico:'⬆️',  lbl:'Forma Tuya',        val:formaT },
+      { id:'formaR',    ico:'➡️',  lbl:'Forma Rival',       val:formaR },
+      { id:'duracion',  ico:'⏱️', lbl:'Duración',          val:duracion + (isHvH ? ' vs Humano' : ' vs IA') },
+      { id:'prorroga',  ico:'⏰️', lbl:'Prórroga y Penaltis', val:prorroga },
+      { id:'sust',      ico:'🔃',  lbl:'Sustituciones',     val:sust },
+      { id:'ventanas',  ico:'🚪',  lbl:'Ventanas',          val:ventanas },
+      { id:'cambioET',  ico:'➕',  lbl:'+1 cambio Prórroga', val:prorroga === 'Sí' ? 'Sí' : 'No aplica' },
+      { id:'balon2',    ico:'⚽️', lbl:'Balón',             val:balon }
+    ];
+    return items;
+  }
+
+  function _renderList(items) {
+    var list = document.getElementById('pp-list');
+    if (!list) return;
+    list.innerHTML = items.map(function(item) {
+      var checked = _ppChecked[item.id];
+      return '<div class="pp-item' + (checked ? ' checked' : '') + '" data-ppid="' + item.id + '">'
+        + '<span class="pp-item-lbl"><span class="pp-ico">' + item.ico + '</span>' + item.lbl + '</span>'
+        + '<span class="pp-item-val">' + item.val + '</span>'
+        + '<span class="pp-check">' + (checked ? '\u2705' : '\u{1F533}') + '</span>'
+        + '</div>';
+    }).join('');
+    var divs = list.querySelectorAll('.pp-item');
+    for (var i = 0; i < divs.length; i++) {
+      (function(d) {
+        d.addEventListener('click', function() {
+          window._ppToggle(d.getAttribute('data-ppid'));
+        });
+      })(divs[i]);
+    }
+  }
+
+  function _checkAllDone() {
+    return _ppItems.every(function(item) { return _ppChecked[item.id]; });
+  }
+
+  function _updateBtn() {
+    var btn = document.getElementById('pp-confirm-btn');
+    if (!btn) return;
+    var done = _checkAllDone();
+    btn.disabled = !done;
+    btn.textContent = done ? '✅ LISTO · CONTINUAR' : '🔳 MARCA TODOS LOS AJUSTES';
+  }
+
+  window._ppToggle = function(id) {
+    _ppChecked[id] = !_ppChecked[id];
+    _renderList(_ppItems);
+    _updateBtn();
+    // If all done, reveal venue-bar and ball immediately
+    if (_checkAllDone() && _ppMatchKey) {
+      var vbar = document.getElementById('venue-bar-' + _ppMatchKey);
+      var bwrap = document.getElementById('ball-wrap-' + _ppMatchKey);
+      if (vbar) vbar.classList.remove('pre-hidden');
+      if (bwrap) bwrap.classList.remove('pre-hidden');
+    }
+  };
+
+  window.showPrePartidoOverlay = function(matchKey, compKey, prorroga, duracion, isHvH) {
+    _ppMatchKey = matchKey;
+    _ppCompKey  = compKey;
+    _ppChecked  = {};
+    _ppItems    = _buildItems(matchKey, compKey, prorroga, duracion, isHvH);
+
+    var COMP_LABELS = {
+      'liga':'Liga EA Sports','copa':'Copa del Rey','copa-fin':'Copa del Rey · Final',
+      'sc':'Supercopa de España','sc-final':'Supercopa · Final',
+      'usc':'UEFA Super Cup','usc-fin':'UEFA Super Cup · Final',
+      'ucl':'Champions League','ucl-fin':'Champions League · Final',
+      'uel':'Europa League','uel-fin':'Europa League · Final',
+      'uecl':'Conference League','uecl-fin':'Conference League · Final',
+      'superliga':'Superliga','inter':'Copa Intercontinental','inter-fin':'Intercontinental · Final'
+    };
+
+    var sub = document.getElementById('pp-subtitle');
+    if (sub) sub.textContent = (COMP_LABELS[compKey] || compKey).toUpperCase();
+
+    _renderList(_ppItems);
+    _updateBtn();
+    document.getElementById('prepartido-overlay').classList.add('show');
+    window.scrollTo(0, 0);
+  };
+
+  window._ppConfirm = function() {
+    if (!_checkAllDone()) return;
+    // Reveal venue-bar and ball (in case not yet revealed)
+    if (_ppMatchKey) {
+      var vbar = document.getElementById('venue-bar-' + _ppMatchKey);
+      var bwrap = document.getElementById('ball-wrap-' + _ppMatchKey);
+      if (vbar) vbar.classList.remove('pre-hidden');
+      if (bwrap) bwrap.classList.remove('pre-hidden');
+      // Ocultar botón PREVIA, dejar solo el timer
+      var previaBtn = document.getElementById('ml-previa-' + _ppMatchKey);
+      if (previaBtn) previaBtn.style.display = 'none';
+    }
+    document.getElementById('prepartido-overlay').classList.remove('show');
+    // Mostrar overlay de sancionados; al confirmar, revelar el timer
+    var mk = _ppMatchKey;
+    if (typeof window.showSancionOverlay === 'function') {
+      window.showSancionOverlay(_ppCompKey, null, function() {
+        var timerBtn = document.getElementById('ml-timer-' + mk);
+        if (timerBtn) timerBtn.style.display = '';
+        var addBtn = document.getElementById('ml-add-btn-' + mk);
+        if (addBtn) addBtn.style.visibility = '';
+        var actBar = document.getElementById('ml-actions-bar-' + mk);
+        if (actBar) actBar.style.visibility = '';
+      });
+    } else {
+      var timerBtn = document.getElementById('ml-timer-' + mk);
+      if (timerBtn) timerBtn.style.display = '';
+    }
+  };
+
+})();
+
+
+/* script block 28 */
+
+(function(){
+  // ── Enhance submenu-cards with background icon ──────────────────
+  document.querySelectorAll('.submenu-card').forEach(function(card){
+    // Skip already enhanced
+    if(card.querySelector('[data-bg-enhanced]')) return;
+    card.style.position='relative';
+    card.style.overflow='hidden';
+
+    var emojiEl=card.querySelector('.sc-emoji');
+    var imgEl=card.querySelector('.sc-img');
+    var txt=emojiEl?emojiEl.textContent:'';
+
+    // Choose better icon by label
+    var label=(card.querySelector('.sc-label')||{}).textContent||'';
+    var ico={
+      'Liga EA Sports':'⚽','Copa del Rey':'🏆','Supercopa de España':'👑','Estadísticas':'📊',
+      'Clasificación':'📊','Champions League':'⭐','Europa League':'🔶',
+      'Conference League':'🟢','UEFA Supercup':'🥇','Intercontinental':'🌎',
+      'Superliga':'⭐','Fase de Liga':'⭐','Fase Grupos':'🏆','Playoffs / Final':'🥇',
+      'Fase Previa':'🔶','Playoffs Final':'🥇','Cuadro de Eliminatorias':'🗂️',
+      'Calendario':'📅'
+    }[label.trim()]||txt||'⚽';
+
+    // Background element
+    if(imgEl&&imgEl.src){
+      var bg=document.createElement('img');
+      bg.src=imgEl.src;
+      bg.setAttribute('aria-hidden','true');
+      bg.setAttribute('data-bg-enhanced','1');
+      bg.style.cssText='position:absolute;right:-12px;top:50%;transform:translateY(-50%);height:175%;width:auto;object-fit:contain;opacity:0.22;pointer-events:none;z-index:0;';
+      card.insertBefore(bg,card.firstChild);
+    } else {
+      var bg=document.createElement('span');
+      bg.textContent=ico;
+      bg.setAttribute('aria-hidden','true');
+      bg.setAttribute('data-bg-enhanced','1');
+      bg.style.cssText='position:absolute;right:-10px;top:50%;transform:translateY(-50%);font-size:70px;opacity:0.2;pointer-events:none;line-height:1;z-index:0;';
+      card.insertBefore(bg,card.firstChild);
+    }
+
+    // Overlay
+    var ov=document.createElement('div');
+    ov.setAttribute('aria-hidden','true');
+    ov.style.cssText='position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,0.52) 0%,rgba(0,0,0,0.15) 55%,rgba(0,0,0,0) 100%);pointer-events:none;z-index:1;';
+    card.insertBefore(ov,card.children[1]);
+
+    // Lift content above overlay
+    Array.from(card.children).forEach(function(c){
+      if(!c.getAttribute('data-bg-enhanced')&&!c.style.cssText.includes('inset')){
+        c.style.position='relative';
+        c.style.zIndex='2';
+      }
+    });
+  });
+
+  // ── Enhance Resto de Ligas flag cards ───────────────────────────
+  var ligasEl=document.getElementById('s-ligas');
+  if(!ligasEl)return;
+  ligasEl.querySelectorAll('.menu-card').forEach(function(card){
+    if(card.querySelector('[data-flag-bg]')) return;
+    // Skip already enhanced team/main cards
+    if(card.querySelector('.mc-equipo-badge-bg,.mc-main-bg')) return;
+    card.style.position='relative';
+    card.style.overflow='hidden';
+
+    var emojiEl=card.querySelector('.mc-emoji');
+    if(!emojiEl)return;
+
+    var bg=document.createElement('span');
+    bg.textContent=emojiEl.textContent;
+    bg.setAttribute('aria-hidden','true');
+    bg.setAttribute('data-flag-bg','1');
+    bg.style.cssText='position:absolute;right:-10px;top:50%;transform:translateY(-50%);font-size:54px;opacity:0.38;pointer-events:none;line-height:1;z-index:0;';
+    card.insertBefore(bg,card.firstChild);
+
+    var ov=document.createElement('div');
+    ov.setAttribute('aria-hidden','true');
+    ov.style.cssText='position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,0.48) 0%,rgba(0,0,0,0.12) 55%,rgba(0,0,0,0) 100%);pointer-events:none;z-index:1;';
+    card.insertBefore(ov,card.children[1]);
+
+    Array.from(card.children).forEach(function(c){
+      if(!c.getAttribute('data-flag-bg')&&!c.style.cssText.includes('inset')){
+        c.style.position='relative';
+        c.style.zIndex='2';
+      }
+    });
+  });
+})();
+
+
+/* script block 29 */
+
+(function() {
+'use strict';
+
+// ══════════════════════════════════════════════════════════
+// 1. BAJA STORE — persiste en sesión
+// ══════════════════════════════════════════════════════════
+// Estructura: { 'Nombre Jugador': { tipo:'lesion'|'sancion'|'expulsion', liga:N, copa:N, europa:N } }
+window.BAJA_STORE = window.BAJA_STORE || {};
+
+// Helper: obtener tipo de baja
+function _bajaTipo(nombre) {
+  var b = window.BAJA_STORE[nombre];
+  if (!b) return null;
+  return (typeof b === 'string') ? b : b.tipo;
+}
+// Helper: obtener partidos restantes
+function _bajaPartidos(nombre) {
+  var b = window.BAJA_STORE[nombre];
+  if (!b) return {liga:0,copa:0,europa:0};
+  if (typeof b === 'string') return {liga:0,copa:0,europa:0};
+  return { liga: b.liga||0, copa: b.copa||0, europa: b.europa||0 };
+}
+// Helper: texto resumen de partidos restantes para mostrar en la fila
+function _bajaBadgeText(nombre) {
+  var p = _bajaPartidos(nombre);
+  var parts = [];
+  if (p.liga > 0)   parts.push('L' + p.liga);
+  if (p.copa > 0)   parts.push('C' + p.copa);
+  if (p.europa > 0) parts.push('E' + p.europa);
+  return parts.join(' ');
+}
+
+// ══════════════════════════════════════════════════════════
+// 2. MODAL DE BAJA
+// ══════════════════════════════════════════════════════════
+var _bajaRow   = null;
+var _bajaName  = null;
+
+window.openBajaModal = function(row, nombre) {
+  _bajaRow  = row;
+  _bajaName = nombre;
+  document.getElementById('baja-modal-name').textContent = nombre.toUpperCase();
+
+  // Mostrar panel de partidos si hay baja activa
+  var tipo = _bajaTipo(nombre);
+  var panel = document.getElementById('baja-partidos-panel');
+  if (tipo) {
+    panel.style.display = 'block';
+    var p = _bajaPartidos(nombre);
+    document.getElementById('baja-p-liga').textContent   = p.liga;
+    document.getElementById('baja-p-copa').textContent   = p.copa;
+    document.getElementById('baja-p-europa').textContent = p.europa;
+  } else {
+    panel.style.display = 'none';
+  }
+  document.getElementById('baja-modal').classList.add('show');
+};
+
+// Ajuste de partidos restantes desde los botones +/-
+window._bajaPartidosAdj = function(comp, delta) {
+  if (!_bajaName) return;
+  var b = window.BAJA_STORE[_bajaName];
+  if (!b || typeof b === 'string') {
+    // Convertir a objeto si era string antiguo
+    var tipo = (typeof b === 'string') ? b : 'lesion';
+    b = window.BAJA_STORE[_bajaName] = { tipo: tipo, liga:0, copa:0, europa:0 };
+  }
+  b[comp] = Math.max(0, (b[comp]||0) + delta);
+  document.getElementById('baja-p-' + comp).textContent = b[comp];
+  // Actualizar badge en la fila
+  _updateBajaBadge(_bajaRow, _bajaName);
+  if (typeof window._refreshSancionInjList === 'function') window._refreshSancionInjList();
+};
+
+function _updateBajaBadge(row, nombre) {
+  if (!row) return;
+  var badge = row.querySelector('.plant-baja-badge');
+  var txt = _bajaBadgeText(nombre);
+  if (badge) {
+    badge.textContent = txt;
+    badge.style.display = txt ? 'inline' : 'none';
+  }
+}
+
+window._bajaClose = function() {
+  document.getElementById('baja-modal').classList.remove('show');
+  document.querySelectorAll('.plant-row.row-longpress').forEach(function(r){
+    r.classList.remove('row-longpress');
+  });
+  _bajaRow = null; _bajaName = null;
+};
+
+window._bajaPick = function(tipo) {
+  if (!_bajaRow || !_bajaName) { window._bajaClose(); return; }
+  if (tipo === 'clear') {
+    delete window.BAJA_STORE[_bajaName];
+    _bajaRow.classList.remove('baja-lesion','baja-sancion','baja-expulsion');
+    var btn = _bajaRow.querySelector('.plant-baja-btn');
+    if (btn) { btn.textContent = ''; btn.className = 'plant-baja-btn'; }
+    var badge = _bajaRow.querySelector('.plant-baja-badge');
+    if (badge) { badge.textContent = ''; badge.style.display = 'none'; }
+  } else {
+    // Preservar partidos si ya existía la baja
+    var prev = window.BAJA_STORE[_bajaName];
+    var prevPartidos = (prev && typeof prev === 'object') ? { liga: prev.liga||0, copa: prev.copa||0, europa: prev.europa||0 } : { liga:0, copa:0, europa:0 };
+    window.BAJA_STORE[_bajaName] = { tipo: tipo, liga: prevPartidos.liga, copa: prevPartidos.copa, europa: prevPartidos.europa };
+    _bajaRow.classList.remove('baja-lesion','baja-sancion','baja-expulsion');
+    _bajaRow.classList.add('baja-' + tipo);
+    var btn = _bajaRow.querySelector('.plant-baja-btn');
+    var ico = tipo === 'lesion' ? '🚑' : tipo === 'sancion' ? '🟨' : '🟥';
+    if (btn) { btn.textContent = ico; btn.className = 'plant-baja-btn ' + tipo; }
+    // Mostrar panel de partidos inmediatamente
+    document.getElementById('baja-partidos-panel').style.display = 'block';
+    document.getElementById('baja-p-liga').textContent   = prevPartidos.liga;
+    document.getElementById('baja-p-copa').textContent   = prevPartidos.copa;
+    document.getElementById('baja-p-europa').textContent = prevPartidos.europa;
+    _updateBajaBadge(_bajaRow, _bajaName);
+    // NO cerrar el modal — dejar al usuario ajustar partidos
+    if (typeof window._refreshSancionInjList === 'function') window._refreshSancionInjList();
+    return; // no cerrar
+  }
+  window._bajaClose();
+  if (typeof window._refreshSancionInjList === 'function') window._refreshSancionInjList();
+};
+
+// ══════════════════════════════════════════════════════════
+// 3. SINCRONIZAR PLANT-ROWS DESDE SQUAD_REGISTRY
+//    — actualiza nombre, valor 🛡, y añade botón baja
+// ══════════════════════════════════════════════════════════
+var POS_MAP_H = {
+  '🧤 PORTEROS': 'por',
+  '🛡 DEFENSAS': 'def',
+  '⚙️ MEDIOS':   'med',
+  '⚡ DELANTEROS':'del'
+};
+var POS_LABEL = {
+  'por': '🧤 PORTEROS',
+  'def': '🛡 DEFENSAS',
+  'med': '⚙️ MEDIOS',
+  'del': '⚡ DELANTEROS'
+};
+
+function makePlantRow(num, nombre, posClass, poder) {
+  var baja = _bajaTipo(nombre) || '';
+  var bajaClass = baja ? ' baja-' + baja : '';
+  var bajaIco   = baja === 'lesion' ? '🚑' : baja === 'sancion' ? '🟨' : baja === 'expulsion' ? '🟥' : '';
+  var btnClass  = 'plant-baja-btn' + (baja ? ' ' + baja : '');
+  var badgeTxt  = _bajaBadgeText(nombre);
+  var span = function(cls, content) {
+    return '<span class="plant-stat zero"><span class="' + cls + '" data-global="0" data-liga="0" data-copa="0" data-uecl="0" data-super="0" hidden></span>' + content + '</span>';
+  };
+  return '<div class="plant-row ' + posClass + bajaClass + '" data-player="' + nombre.replace(/"/g,'&quot;') + '">'
+    + '<span class="plant-num">' + num + '</span>'
+    + '<span class="plant-name">' + nombre
+      + (badgeTxt ? ' <span class="plant-baja-badge">' + badgeTxt + '</span>' : '<span class="plant-baja-badge" style="display:none"></span>')
+    + '</span>'
+    + span('ps-gol','0')
+    + span('ps-yel','0')
+    + span('ps-red','0')
+    + span('ps-mvp','0')
+    + '<span class="plant-stat poder zero">' + (poder || 70) + '</span>'
+    + '<span class="plant-stat zero frac"><span class="ps-pen-gol" data-global="0" data-liga="0" data-copa="0" data-uecl="0" data-super="0" data-tirado="0" hidden></span>0/0</span>'
+    + span('ps-pen-prov','0')
+    + span('ps-pen-parado','0')
+    + span('ps-falta-gol','0')
+    + span('ps-propia','0')
+    + '<button class="' + btnClass + '" title="Marcar baja" onclick="window.openBajaModal(this.closest(\'.plant-row\'),\'' + nombre.replace(/'/g,"\\'") + '\')">' + bajaIco + '</button>'
+    + '</div>';
+}
+
+function makePosHdr(posClass, screenEl) {
+  // Intentar detectar color del equipo desde el screen
+  var hdrStyle = '';
+  var h2 = screenEl ? screenEl.querySelector('.sec-hdr h2') : null;
+  return '<div class="plant-pos-hdr"><i class="ico">' + POS_LABEL[posClass].split(' ')[0] + '</i> '
+    + POS_LABEL[posClass].replace(/^[^\s]+\s/,'').toUpperCase() + '</div>';
+}
+
+function syncSquadToScreen(screenId, teamName) {
+  var reg = window.SQUAD_REGISTRY && window.SQUAD_REGISTRY[teamName];
+  if (!reg || !reg.length) return;
+
+  // Buscar el contenedor de la plantilla en este screen
+  var screen = document.getElementById(screenId);
+  if (!screen) return;
+  var plantBody = screen.querySelector('.ent-body[id$="-plantilla"], .ent-body[id*="plantilla"]');
+  if (!plantBody) {
+    // Fallback: cualquier div que contenga plant-row
+    plantBody = screen.querySelector('[class*="body-plantilla"], [class*="plant"]');
+  }
+  if (!plantBody) return;
+
+  // Construir HTML desde registry
+  var posMap = {
+    '🧤 PORTEROS':'por', '🛡 DEFENSAS':'def',
+    '⚙️ MEDIOS':'med',   '⚡ DELANTEROS':'del',
+    '⚙️CENTROCAMPISTAS':'med','⚙️ CENTROCAMPISTAS':'med'
+  };
+  var html = '';
+  var curPos = 'med';
+  var prevPos = null;
+  for (var i = 0; i < reg.length; i++) {
+    var e = reg[i];
+    if (e.h) {
+      curPos = posMap[e.h] || 'med';
+      if (curPos !== prevPos) {
+        html += makePosHdr(curPos, screen);
+        html += '<div class="pos-mini-hdr ' + curPos + '"><span>#</span><span>Jugador</span><span>⚽</span><span>🟨</span><span>🟥</span><span>⭐</span><span>🛡</span></div>';
+        prevPos = curPos;
+      }
+    } else {
+      html += makePlantRow(e[0], e[1], curPos, e[2] || 70);
+    }
+  }
+
+  // Preservar el filter-bar y col-hdr si existen, reemplazar solo las rows+headers de posición
+  var filterBar = plantBody.querySelector('.plant-filter-bar');
+  var colHdr    = plantBody.querySelector('.plant-col-hdr');
+  var badge     = plantBody.querySelector('.badge-total,[class*="badge-total"]');
+
+  // Limpiar solo filas de jugadores y headers de posición
+  var toRemove = plantBody.querySelectorAll('.plant-row, .plant-pos-hdr, .pos-mini-hdr');
+  toRemove.forEach(function(el) { el.parentNode.removeChild(el); });
+
+  // Insertar nuevo HTML
+  var tmp = document.createElement('div');
+  tmp.innerHTML = html;
+  while (tmp.firstChild) {
+    plantBody.appendChild(tmp.firstChild);
+  }
+
+  // Actualizar badge total
+  var totalBadge = plantBody.querySelector('[class*="badge-total"]');
+  var total = reg.filter(function(e){ return !e.h; }).length;
+  if (totalBadge) totalBadge.textContent = total;
+
+  // Restaurar bajas visuales
+  plantBody.querySelectorAll('.plant-row[data-player]').forEach(function(row) {
+    var nombre = row.getAttribute('data-player');
+    var baja = nombre && window.BAJA_STORE[nombre];
+    if (baja) {
+      row.classList.add('baja-' + baja);
+      var btn = row.querySelector('.plant-baja-btn');
+      var ico = baja === 'lesion' ? '🚑' : baja === 'sancion' ? '🟨' : '🟥';
+      if (btn) { btn.textContent = ico; btn.className = 'plant-baja-btn ' + baja; }
+    }
+  });
+}
+
+// Mapa screenId → teamName
+var SCREEN_SQUAD_MAP = {
+  's-athletic':      'Athletic Club',
+  's-betis':         'Real Betis',
+  's-sociedad':      'Real Sociedad',
+  's-madrid':        'Real Madrid',
+  's-barca':         'FC Barcelona',
+  's-atletico':      'Atlético Madrid',
+  's-albacete':      'Albacete BP',
+  's-villarreal':    'Villarreal CF',
+  's-sevilla':       'Sevilla FC',
+  's-espanyol':      'Espanyol',
+  's-getafe':        'Getafe CF',
+  'celta-screen':    'Celta de Vigo',
+  'osasuna-screen':  'Osasuna',
+  'alaves-screen':   'Deportivo Alavés',
+  'girona-screen':   'Girona FC',
+  'oviedo-screen':   'Real Oviedo',
+  'levante-screen':  'Levante UD',
+  'mallorca-screen': 'Mallorca',
+  'elche-screen':    'Elche CF',
+  'valencia-screen': 'Valencia CF',
+  'rayo-screen':     'Rayo Vallecano'
+};
+
+// Sincronizar al abrir cada pantalla de equipo
+var _syncedScreens = {};
+var _origGo = window.go;
+window.go = function(screenId) {
+  if (_origGo) _origGo(screenId);
+  if (SCREEN_SQUAD_MAP[screenId] && !_syncedScreens[screenId]) {
+    _syncedScreens[screenId] = true;
+    // Pequeño delay para asegurar que la pantalla es visible
+    setTimeout(function() {
+      syncSquadToScreen(screenId, SCREEN_SQUAD_MAP[screenId]);
+    }, 80);
+  }
+};
+
+// También sincronizar en DOMContentLoaded para la pantalla activa inicial
+document.addEventListener('DOMContentLoaded', function() {
+  var active = document.querySelector('.screen.active');
+  if (active && SCREEN_SQUAD_MAP[active.id] && !_syncedScreens[active.id]) {
+    _syncedScreens[active.id] = true;
+    syncSquadToScreen(active.id, SCREEN_SQUAD_MAP[active.id]);
+  }
+});
+
+// ══════════════════════════════════════════════════════════
+// 4. sqFromRegistry RESPETA BAJA_STORE
+//    — parcha la función existente para excluir bajas
+// ══════════════════════════════════════════════════════════
+var _origSqFromRegistry = window.sqFromRegistry;
+window.sqFromRegistry = function(teamName, opts) {
+  // Obtener bajas del BAJA_STORE para este equipo
+  var reg = window.SQUAD_REGISTRY && (
+    window.SQUAD_REGISTRY[teamName] ||
+    window.SQUAD_REGISTRY[(window.TEAM_ALIASES||{})[teamName]] 
+  );
+  var bajaNames = [];
+  if (reg) {
+    reg.forEach(function(e) {
+      if (!e.h && window.BAJA_STORE[e[1]]) {
+        bajaNames.push(e[1]);
+      }
+    });
+  }
+  // Fusionar con excluded recibido
+  var existingExcluded = (opts && opts.excluded) ? opts.excluded : [];
+  var allExcluded = existingExcluded.concat(bajaNames);
+  var newOpts = { excluded: allExcluded };
+  if (opts) {
+    for (var k in opts) {
+      if (k !== 'excluded') newOpts[k] = opts[k];
+    }
+  }
+  return _origSqFromRegistry ? _origSqFromRegistry(teamName, newOpts) : [];
+};
+
+// sqFromRegistryFull también respeta bajas (devuelve todos pero marca los que están de baja)
+var _origSqFromRegistryFull = window.sqFromRegistryFull;
+window.sqFromRegistryFull = function(teamName) {
+  var result = _origSqFromRegistryFull ? _origSqFromRegistryFull(teamName) : [];
+  // Marcar jugadores en baja — los mantiene en la lista (humano ve todos)
+  // pero con una propiedad 'baja' para que el overlay los muestre tachados
+  result.forEach(function(p) {
+    var baja = window.BAJA_STORE[p[1]];
+    if (baja) p[5] = baja; // p[5] = tipo de baja
+  });
+  return result;
+};
+
+// ══════════════════════════════════════════════════════════
+// 5. CONECTAR LESIONADOS AL OVERLAY PRE-PARTIDO
+// ══════════════════════════════════════════════════════════
+window._refreshSancionInjList = function() {
+  var listInj = document.getElementById('sancion-ov-list-inj');
+  if (!listInj) return;
+  var bajas = Object.keys(window.BAJA_STORE);
+  if (!bajas.length) {
+    listInj.innerHTML = '<div class="sancion-empty">🚑 Sin lesionados</div>';
+    return;
+  }
+  listInj.innerHTML = bajas.map(function(nombre) {
+    var b    = window.BAJA_STORE[nombre];
+    var tipo = (typeof b === 'string') ? b : b.tipo;
+    var ico  = tipo === 'lesion' ? '🚑' : tipo === 'sancion' ? '🟨' : '🟥';
+    var lbl  = tipo === 'lesion' ? 'LESIONADO' : tipo === 'sancion' ? 'SANCIONADO' : 'EXPULSADO';
+    var p    = (typeof b === 'object') ? b : {liga:0,copa:0,europa:0};
+    var partsTxt = '';
+    if (p.liga > 0)   partsTxt += '<span style="margin-right:8px">🇪🇸 ' + p.liga + 'P</span>';
+    if (p.copa > 0)   partsTxt += '<span style="margin-right:8px">🏆 ' + p.copa + 'P</span>';
+    if (p.europa > 0) partsTxt += '<span>🌍 ' + p.europa + 'P</span>';
+    return '<div class="sancion-card">'
+      + '<div class="sancion-card-icon">' + ico + '</div>'
+      + '<div class="sancion-card-info">'
+      + '<div class="sancion-card-name">' + nombre + '</div>'
+      + '<div class="sancion-card-reason">' + lbl + '</div>'
+      + (partsTxt ? '<div style="font-family:Oswald,sans-serif;font-size:11px;color:#f0c040;margin-top:3px;letter-spacing:1px;">' + partsTxt + '</div>' : '')
+      + '</div></div>';
+  }).join('');
+  var warnEl = document.getElementById('sancion-ov-warn');
+  if (warnEl) warnEl.style.display = 'block';
+};
+
+// Parchar showSancionOverlay para incluir bajas reales
+var _origShowSancionOverlay = window.showSancionOverlay;
+window.showSancionOverlay = function(compKey, blockId, onConfirm) {
+  if (_origShowSancionOverlay) _origShowSancionOverlay(compKey, blockId, onConfirm);
+  // Actualizar lista de lesionados/bajas
+  window._refreshSancionInjList();
+};
+
+// ══════════════════════════════════════════════════════════
+// 6. SUSTITUCIÓN EXTRA EN PRÓRROGA — IA vs IA
+//    Se aplica al simulador global (window.simularPartido)
+//    La 5ª sustitución ocurre entre min 91-120, invisible en acta
+// ══════════════════════════════════════════════════════════
+// Parcheamos la función de simulación para añadir sub extra en ET
+// La lógica está en window.runIASimulation o en el bloque inline
+// Como está inline, parcheamos applySubsUpTo via el evento global
+
+// Añadir un hook post-simulación que, si hubo prórroga, aplica sub extra
+// Esto se hace extendiendo el cfg.onEnd
+var _origRunSimulation = window.runIASimulation;
+if (_origRunSimulation) {
+  window.runIASimulation = function(cfg) {
+    var _origOnEnd = cfg.onEnd;
+    cfg.onEnd = function(sa, sb, evts, mvpName, mvpTeam) {
+      // La prórroga extra ya está gestionada internamente; solo llamar original
+      if (_origOnEnd) _origOnEnd(sa, sb, evts, mvpName, mvpTeam);
+    };
+    return _origRunSimulation(cfg);
+  };
+}
+
+// Para los simuladores inline (que ya tienen applySubsUpTo),
+// extendemos la lógica de sustituciones para agregar la 5ª en prórroga
+// Esto se aplica directamente al bloque de código inline del simulador IA vs IA
+// que ya usa benA/benB. Añadimos la función global para ser llamada si hay ET:
+window.applyETSub = function(activeA, activeB, benA, benB, subIdxA, subIdxB) {
+  // Sub extra equipo A en prórroga (min 91-120)
+  if (subIdxA < benA.length) {
+    var outfA = activeA.filter(function(p){ return p[2] !== 'P'; });
+    if (outfA.length) {
+      var wA = outfA.reduce(function(a,b){ return (a[3]||70)<(b[3]||70)?a:b; });
+      var iA = activeA.indexOf(wA);
+      if (iA >= 0) activeA.splice(iA, 1);
+      activeA.push(benA[subIdxA]);
+    }
+  }
+  // Sub extra equipo B en prórroga
+  if (subIdxB < benB.length) {
+    var outfB = activeB.filter(function(p){ return p[2] !== 'P'; });
+    if (outfB.length) {
+      var wB = outfB.reduce(function(a,b){ return (a[3]||70)<(b[3]||70)?a:b; });
+      var iB = activeB.indexOf(wB);
+      if (iB >= 0) activeB.splice(iB, 1);
+      activeB.push(benB[subIdxB]);
+    }
+  }
+};
+
+// ══════════════════════════════════════════════════════════
+// 7. MOSTRAR CONVOCATORIA EN OVERLAY DE PARTIDO (HvH / HvIA)
+//    — Jugadores en baja aparecen tachados y no son seleccionables
+// ══════════════════════════════════════════════════════════
+// Parchar el renderizado del overlay de selección de jugador
+// para mostrar bajas visualmente
+var _styleOverlay = document.createElement('style');
+_styleOverlay.textContent =
+  '.ml-pl-ov-btn.jugador-baja { opacity:.4; text-decoration:line-through; pointer-events:none; cursor:not-allowed; }'
+  + '.ml-pl-ov-btn.jugador-baja::after { content:" 🚫"; font-size:10px; }';
+document.head.appendChild(_styleOverlay);
+
+// Parchar mlShowPl_* para marcar bajas en overlay de jugadores
+// Usamos MutationObserver en los overlays de selección de jugador
+document.addEventListener('click', function(e) {
+  // Detectar cuando se abre un overlay de plantilla
+  setTimeout(function() {
+    document.querySelectorAll('.ml-pl-ov-list').forEach(function(list) {
+      list.querySelectorAll('.ml-pl-ov-btn').forEach(function(btn) {
+        var nameEl = btn.querySelector('.ml-pl-ov-name');
+        if (!nameEl) return;
+        var nombre = nameEl.textContent.trim();
+        if (window.BAJA_STORE[nombre]) {
+          btn.classList.add('jugador-baja');
+          btn.disabled = true;
+          btn.title = 'Jugador no disponible (' + window.BAJA_STORE[nombre] + ')';
+        }
+      });
+    });
+  }, 100);
+}, true);
+
+// ══════════════════════════════════════════════════════════
+// 8. INTEGRAR SUSTITUCIÓN EXTRA ET EN LOS SIMULADORES INLINE
+//    Esto se inyecta en el contexto del simulador IA via
+//    la variable global _etSubApplied
+// ══════════════════════════════════════════════════════════
+// Los simuladores inline ya calculan ft90/ht45/sa/sb
+// Cuando sa===sb al ft90 en competiciones con prórroga,
+// el sistema existente maneja ET. Aquí añadimos la sub extra:
+window._etSubApplied = window._etSubApplied || {};
+// La sub extra se aplica automáticamente a través del hook
+// window.applyETSub que es llamado por el simulador si detecta ET
+
+// ══════════════════════════════════════════════════════════
+// 9. FORZAR SINCRONIZACIÓN DE PLANTILLAS AL HACER go()
+//    para equipos que ya tienen plant-rows en el HTML
+// ══════════════════════════════════════════════════════════
+// Re-sincronizar al volver a entrar en una pantalla de equipo
+// (el _syncedScreens evita re-renderizar innecesariamente,
+//  pero si se actualizó BAJA_STORE sí debe refrescar el visual)
+window.refreshPlantBajas = function(screenId) {
+  var screen = document.getElementById(screenId);
+  if (!screen) return;
+  screen.querySelectorAll('.plant-row[data-player]').forEach(function(row) {
+    var nombre = row.getAttribute('data-player');
+    if (!nombre) {
+      // Intentar obtener desde plant-name
+      var nameEl = row.querySelector('.plant-name');
+      if (nameEl) nombre = nameEl.textContent.trim();
+    }
+    if (!nombre) return;
+    var baja = window.BAJA_STORE[nombre];
+    row.classList.remove('baja-lesion','baja-sancion','baja-expulsion');
+    var btn = row.querySelector('.plant-baja-btn');
+    if (baja) {
+      row.classList.add('baja-' + baja);
+      var ico = baja === 'lesion' ? '🚑' : baja === 'sancion' ? '🟨' : '🟥';
+      if (btn) { btn.textContent = ico; btn.className = 'plant-baja-btn ' + baja; }
+    } else {
+      if (btn) { btn.textContent = ''; btn.className = 'plant-baja-btn'; }
+    }
+  });
+};
+
+// ══════════════════════════════════════════════════════════
+// 10. AÑADIR BOTÓN BAJA A PLANT-ROWS EXISTENTES (HTML FIJO)
+//     + LONG PRESS para mostrar el botón
+// ══════════════════════════════════════════════════════════
+var _lpTimer = null;
+var _lpRow   = null;
+
+function addLongPressToRow(row) {
+  if (row._lpBound) return;
+  row._lpBound = true;
+  function onStart(e) {
+    _lpRow = row;
+    _lpTimer = setTimeout(function() {
+      row.classList.add('row-longpress');
+      // Auto-quitar el highlight tras 3s si no se pulsa el botón
+      setTimeout(function() {
+        if (!document.getElementById('baja-modal') || !document.getElementById('baja-modal').classList.contains('show')) {
+          row.classList.remove('row-longpress');
+        }
+      }, 3000);
+    }, 500);
+  }
+  function onEnd() {
+    clearTimeout(_lpTimer);
+    _lpTimer = null;
+  }
+  row.addEventListener('touchstart', onStart, {passive:true});
+  row.addEventListener('touchend',   onEnd,   {passive:true});
+  row.addEventListener('touchmove',  onEnd,   {passive:true});
+  row.addEventListener('mousedown',  onStart);
+  row.addEventListener('mouseup',    onEnd);
+  row.addEventListener('mouseleave', onEnd);
+}
+
+// Limpiar longpress al cerrar modal
+var _origBajaClose = window._bajaClose;
+window._bajaClose = function() {
+  if (_origBajaClose) _origBajaClose();
+  document.querySelectorAll('.plant-row.row-longpress').forEach(function(r){
+    r.classList.remove('row-longpress');
+  });
+};
+function addBajaButtonsToExistingRows() {
+  document.querySelectorAll('.plant-row').forEach(function(row) {
+    // Añadir long press a todas las filas
+    addLongPressToRow(row);
+    if (row.querySelector('.plant-baja-btn')) return; // ya tiene botón
+    var nameEl = row.querySelector('.plant-name');
+    if (!nameEl) return;
+    var nombre = nameEl.textContent.trim();
+    if (!nombre) return;
+    row.setAttribute('data-player', nombre);
+    var baja = _bajaTipo(nombre);
+    var bajaIco = baja === 'lesion' ? '🚑' : baja === 'sancion' ? '🟨' : baja === 'expulsion' ? '🟥' : '';
+    var btnClass = 'plant-baja-btn' + (baja ? ' ' + baja : '');
+    if (baja) {
+      row.classList.remove('baja-lesion','baja-sancion','baja-expulsion');
+      row.classList.add('baja-' + baja);
+    }
+    // Añadir badge de partidos si no existe
+    if (!nameEl.querySelector('.plant-baja-badge')) {
+      var badge = document.createElement('span');
+      badge.className = 'plant-baja-badge';
+      var badgeTxt = _bajaBadgeText(nombre);
+      badge.textContent = badgeTxt;
+      badge.style.display = badgeTxt ? 'inline' : 'none';
+      nameEl.appendChild(badge);
+    }
+    var btn = document.createElement('button');
+    btn.className = btnClass;
+    btn.textContent = bajaIco;
+    btn.title = 'Marcar baja';
+    btn.setAttribute('onclick', "window.openBajaModal(this.closest('.plant-row'),'" + nombre.replace(/'/g,"\\'") + "')");
+    row.appendChild(btn);
+  });
+}
+
+// Ejecutar al cargar
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', addBajaButtonsToExistingRows);
+} else {
+  addBajaButtonsToExistingRows();
+}
+
+// También ejecutar después de cada go() para asegurar rows de nuevas pantallas
+var _origGo2 = window.go;
+window.go = function(screenId) {
+  if (_origGo2) _origGo2(screenId);
+  setTimeout(addBajaButtonsToExistingRows, 150);
+  if (SCREEN_SQUAD_MAP[screenId]) {
+    setTimeout(function() {
+      syncSquadToScreen(screenId, SCREEN_SQUAD_MAP[screenId]);
+    }, 200);
+  }
+};
+
+console.log('[eFootball] Sistema de Bajas + Sincronización de Plantillas + ET Sub activado ✓');
+
 })();
