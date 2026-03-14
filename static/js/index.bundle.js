@@ -983,7 +983,7 @@ window.mlCloseModal_j1m1=function(){document.getElementById('ml-modal-j1m1').cla
 var _evtToStat={gol:'gol',amarilla:'yel','d-amarilla':'yel',roja:'red',mvp:'mvp','pen-prov':'pen-prov','pen-parado':'pen-parado','pen-gol':'pen-gol','falta-gol':'falta-gol',propia:'propia'};
 function _removeEmpty_j1m1(){var emp=document.querySelector('#ml-acta-list-j1m1 .ml-acta-empty');if(emp)emp.remove();};
 window.mlConfirmEvt_j1m1=function(){if(!_pendingEvt)return;var sel=document.getElementById('ml-modal-sel-j1m1');var parts=sel.value.split('|');var num=parts[0],name=parts[1];var e=_pendingEvt;var min=_currentMin_j1m1();var scoringTypes=['gol','propia','pen-gol','falta-gol'];if(scoringTypes.indexOf(e.type)!==-1){var st=(e.type==='propia')?(e.team==='a'?'b':'a'):e.team;_sc[st]++;document.getElementById('sc-j1m1-a').textContent=_sc.a;document.getElementById('sc-j1m1-b').textContent=_sc.b;}var icons={gol:'⚽',propia:'🚫','pen-gol':'🥅','pen-fallo':'❌','pen-prov':'🤦','pen-parado':'🖐','falta-gol':'🎯',amarilla:'🟨','d-amarilla':'🟨🟥',roja:'🟥',mvp:'⭐'};_events.push({min:min,label:e.label,type:e.type,team:e.team,num:num,name:name,ico:icons[e.type]||'•',id:Date.now()});_renderActa_j1m1();  mlCloseModal_j1m1();};
-function _renderActa_j1m1(){var list=document.getElementById('ml-acta-list-j1m1');var sorted=_events.slice().sort(function(a,b){return a.min-b.min;});list.innerHTML='';if(sorted.length===0){list.innerHTML='<div class="ml-acta-empty">Sin eventos registrados</div>';return;}sorted.forEach(function(ev){var row=document.createElement('div');row.className='ml-evt-item';row.setAttribute('data-team',ev.team);row.setAttribute('data-type',ev.type);var tl=(ev.team==='a')?TEAM_A_NAME:TEAM_B_NAME;row.innerHTML='<span class="ml-evt-min">'+ev.min+"'</span>"+'<span class="ml-evt-ico">'+ev.ico+'</span>'+'<span class="ml-evt-name">'+ev.num+'. '+ev.name+'</span>'+'<span class="ml-evt-team">'+tl+'</span>'+'<button class="ml-evt-edit" onclick="window._openEditModal(\'j1m1\','+ev.id+')" title="Editar">✏️</button>'+'<button class="ml-evt-del" onclick="mlDelEvt_j1m1('+ev.id+')">✕</button>';list.appendChild(row);});};
+function _renderActa_j1m1(){var list=document.getElementById('ml-acta-list-j1m1');var sorted=_events.slice().sort(function(a,b){return a.min-b.min;});list.innerHTML='';if(sorted.length===0){list.innerHTML='<div class="ml-acta-empty">Sin eventos registrados</div>';return;}sorted.forEach(function(ev){var row=document.createElement('div');row.className='ml-evt-item';row.setAttribute('data-team',ev.team);row.setAttribute('data-type',ev.type);var tl=(ev.team==='a')?TEAM_A_NAME:TEAM_B_NAME;var _penFalloExtra='';if(ev.type==='pen-parado'){var _contrario=ev.team==='a'?'b':'a';var _fallado=sorted.find(function(e){return e.type==='pen-fallo'&&e.team===_contrario&&e.min===ev.min;});if(_fallado){_penFalloExtra='<span class="ml-evt-pen-fallo">❌ '+_fallado.num+'. '+_fallado.name+'</span>';}}row.innerHTML='<span class="ml-evt-min">'+ev.min+"'</span>"+'<span class="ml-evt-ico">'+ev.ico+'</span>'+'<span class="ml-evt-name">'+ev.num+'. '+ev.name+'</span>'+_penFalloExtra+'<span class="ml-evt-team">'+tl+'</span>'+'<button class="ml-evt-edit" onclick="window._openEditModal(\'j1m1\','+ev.id+')" title="Editar">✏️</button>'+'<button class="ml-evt-del" onclick="mlDelEvt_j1m1('+ev.id+')">✕</button>';list.appendChild(row);});};
 window.mlDelEvt_j1m1=function(id){var ev=_events.find(function(e){return e.id===id;});if(!ev)return;var scoringTypes=['gol','propia','pen-gol','falta-gol'];if(scoringTypes.indexOf(ev.type)!==-1){var st=(ev.type==='propia')?(ev.team==='a'?'b':'a'):ev.team;_sc[st]=Math.max(0,_sc[st]-1);document.getElementById('sc-j1m1-a').textContent=_sc.a;document.getElementById('sc-j1m1-b').textContent=_sc.b;}_events=_events.filter(function(e){return e.id!==id;});_renderActa_j1m1();};
 })();
 
@@ -1025,7 +1025,7 @@ window.mlCloseModal_j1m2=function(){document.getElementById('ml-modal-j1m2').cla
 var _evtToStat={gol:'gol',amarilla:'yel','d-amarilla':'yel',roja:'red',mvp:'mvp','pen-prov':'pen-prov','pen-parado':'pen-parado','pen-gol':'pen-gol','falta-gol':'falta-gol',propia:'propia'};
 function _removeEmpty_j1m2(){var emp=document.querySelector('#ml-acta-list-j1m2 .ml-acta-empty');if(emp)emp.remove();};
 window.mlConfirmEvt_j1m2=function(){if(!_pendingEvt)return;var sel=document.getElementById('ml-modal-sel-j1m2');var parts=sel.value.split('|');var num=parts[0],name=parts[1];var e=_pendingEvt;var min=_currentMin_j1m2();var scoringTypes=['gol','propia','pen-gol','falta-gol'];if(scoringTypes.indexOf(e.type)!==-1){var st=(e.type==='propia')?(e.team==='a'?'b':'a'):e.team;_sc[st]++;document.getElementById('sc-j1m2-a').textContent=_sc.a;document.getElementById('sc-j1m2-b').textContent=_sc.b;}var icons={gol:'⚽',propia:'🚫','pen-gol':'🥅','pen-fallo':'❌','pen-prov':'🤦','pen-parado':'🖐','falta-gol':'🎯',amarilla:'🟨','d-amarilla':'🟨🟥',roja:'🟥',mvp:'⭐'};_events.push({min:min,label:e.label,type:e.type,team:e.team,num:num,name:name,ico:icons[e.type]||'•',id:Date.now()});_renderActa_j1m2();  mlCloseModal_j1m2();};
-function _renderActa_j1m2(){var list=document.getElementById('ml-acta-list-j1m2');var sorted=_events.slice().sort(function(a,b){return a.min-b.min;});list.innerHTML='';if(sorted.length===0){list.innerHTML='<div class="ml-acta-empty">Sin eventos registrados</div>';return;}sorted.forEach(function(ev){var row=document.createElement('div');row.className='ml-evt-item';row.setAttribute('data-team',ev.team);row.setAttribute('data-type',ev.type);var tl=(ev.team==='a')?TEAM_A_NAME:TEAM_B_NAME;row.innerHTML='<span class="ml-evt-min">'+ev.min+"'</span>"+'<span class="ml-evt-ico">'+ev.ico+'</span>'+'<span class="ml-evt-name">'+ev.num+'. '+ev.name+'</span>'+'<span class="ml-evt-team">'+tl+'</span>'+'<button class="ml-evt-edit" onclick="window._openEditModal(\'j1m2\','+ev.id+')" title="Editar">✏️</button>'+'<button class="ml-evt-del" onclick="mlDelEvt_j1m2('+ev.id+')">✕</button>';list.appendChild(row);});};
+function _renderActa_j1m2(){var list=document.getElementById('ml-acta-list-j1m2');var sorted=_events.slice().sort(function(a,b){return a.min-b.min;});list.innerHTML='';if(sorted.length===0){list.innerHTML='<div class="ml-acta-empty">Sin eventos registrados</div>';return;}sorted.forEach(function(ev){var row=document.createElement('div');row.className='ml-evt-item';row.setAttribute('data-team',ev.team);row.setAttribute('data-type',ev.type);var tl=(ev.team==='a')?TEAM_A_NAME:TEAM_B_NAME;var _penFalloExtra='';if(ev.type==='pen-parado'){var _contrario=ev.team==='a'?'b':'a';var _fallado=sorted.find(function(e){return e.type==='pen-fallo'&&e.team===_contrario&&e.min===ev.min;});if(_fallado){_penFalloExtra='<span class="ml-evt-pen-fallo">❌ '+_fallado.num+'. '+_fallado.name+'</span>';}}row.innerHTML='<span class="ml-evt-min">'+ev.min+"'</span>"+'<span class="ml-evt-ico">'+ev.ico+'</span>'+'<span class="ml-evt-name">'+ev.num+'. '+ev.name+'</span>'+_penFalloExtra+'<span class="ml-evt-team">'+tl+'</span>'+'<button class="ml-evt-edit" onclick="window._openEditModal(\'j1m2\','+ev.id+')" title="Editar">✏️</button>'+'<button class="ml-evt-del" onclick="mlDelEvt_j1m2('+ev.id+')">✕</button>';list.appendChild(row);});};
 window.mlDelEvt_j1m2=function(id){var ev=_events.find(function(e){return e.id===id;});if(!ev)return;var scoringTypes=['gol','propia','pen-gol','falta-gol'];if(scoringTypes.indexOf(ev.type)!==-1){var st=(ev.type==='propia')?(ev.team==='a'?'b':'a'):ev.team;_sc[st]=Math.max(0,_sc[st]-1);document.getElementById('sc-j1m2-a').textContent=_sc.a;document.getElementById('sc-j1m2-b').textContent=_sc.b;}_events=_events.filter(function(e){return e.id!==id;});_renderActa_j1m2();};
 })();
 
@@ -1059,7 +1059,7 @@ var _sqA_j1m3=[];var _sqB_j1m3=[];(function(){  var regA=window.sqFromRegistryFu
 window.mlCloseModal_j1m3=function(){document.getElementById('ml-modal-j1m3').classList.remove('show');_pendingEvt=null;};
 function _removeEmpty_j1m3(){var emp=document.querySelector('#ml-acta-list-j1m3 .ml-acta-empty');if(emp)emp.remove();};
 window.mlConfirmEvt_j1m3=function(){if(!_pendingEvt)return;var sel=document.getElementById('ml-modal-sel-j1m3');var parts=sel.value.split('|');var num=parts[0],name=parts[1];var e=_pendingEvt;var min=_currentMin_j1m3();var scoringTypes=['gol','propia','pen-gol','falta-gol'];if(scoringTypes.indexOf(e.type)!==-1){var st=(e.type==='propia')?(e.team==='a'?'b':'a'):e.team;_sc[st]++;document.getElementById('sc-j1m3-a').textContent=_sc.a;document.getElementById('sc-j1m3-b').textContent=_sc.b;}var icons={gol:'⚽',propia:'🚫','pen-gol':'🥅','pen-fallo':'❌','pen-prov':'🤦','pen-parado':'🖐','falta-gol':'🎯',amarilla:'🟨','d-amarilla':'🟨🟥',roja:'🟥',mvp:'⭐'};_events.push({min:min,label:e.label,type:e.type,team:e.team,num:num,name:name,ico:icons[e.type]||'•',id:Date.now()});_renderActa_j1m3();  mlCloseModal_j1m3();};
-function _renderActa_j1m3(){var list=document.getElementById('ml-acta-list-j1m3');var sorted=_events.slice().sort(function(a,b){return a.min-b.min;});list.innerHTML='';if(sorted.length===0){list.innerHTML='<div class="ml-acta-empty">Sin eventos registrados</div>';return;}sorted.forEach(function(ev){var row=document.createElement('div');row.className='ml-evt-item';row.setAttribute('data-team',ev.team);row.setAttribute('data-type',ev.type);var tl=(ev.team==='a')?TEAM_A_NAME:TEAM_B_NAME;row.innerHTML='<span class="ml-evt-min">'+ev.min+"'</span>"+'<span class="ml-evt-ico">'+ev.ico+'</span>'+'<span class="ml-evt-name">'+ev.num+'. '+ev.name+'</span>'+'<span class="ml-evt-team">'+tl+'</span>'+'<button class="ml-evt-edit" onclick="window._openEditModal(\'j1m3\','+ev.id+')" title="Editar">✏️</button>'+'<button class="ml-evt-del" onclick="mlDelEvt_j1m3('+ev.id+')">✕</button>';list.appendChild(row);});};
+function _renderActa_j1m3(){var list=document.getElementById('ml-acta-list-j1m3');var sorted=_events.slice().sort(function(a,b){return a.min-b.min;});list.innerHTML='';if(sorted.length===0){list.innerHTML='<div class="ml-acta-empty">Sin eventos registrados</div>';return;}sorted.forEach(function(ev){var row=document.createElement('div');row.className='ml-evt-item';row.setAttribute('data-team',ev.team);row.setAttribute('data-type',ev.type);var tl=(ev.team==='a')?TEAM_A_NAME:TEAM_B_NAME;var _penFalloExtra='';if(ev.type==='pen-parado'){var _contrario=ev.team==='a'?'b':'a';var _fallado=sorted.find(function(e){return e.type==='pen-fallo'&&e.team===_contrario&&e.min===ev.min;});if(_fallado){_penFalloExtra='<span class="ml-evt-pen-fallo">❌ '+_fallado.num+'. '+_fallado.name+'</span>';}}row.innerHTML='<span class="ml-evt-min">'+ev.min+"'</span>"+'<span class="ml-evt-ico">'+ev.ico+'</span>'+'<span class="ml-evt-name">'+ev.num+'. '+ev.name+'</span>'+_penFalloExtra+'<span class="ml-evt-team">'+tl+'</span>'+'<button class="ml-evt-edit" onclick="window._openEditModal(\'j1m3\','+ev.id+')" title="Editar">✏️</button>'+'<button class="ml-evt-del" onclick="mlDelEvt_j1m3('+ev.id+')">✕</button>';list.appendChild(row);});};
 window.mlDelEvt_j1m3=function(id){var ev=_events.find(function(e){return e.id===id;});if(!ev)return;var scoringTypes=['gol','propia','pen-gol','falta-gol'];if(scoringTypes.indexOf(ev.type)!==-1){var st=(ev.type==='propia')?(ev.team==='a'?'b':'a'):ev.team;_sc[st]=Math.max(0,_sc[st]-1);document.getElementById('sc-j1m3-a').textContent=_sc.a;document.getElementById('sc-j1m3-b').textContent=_sc.b;}_events=_events.filter(function(e){return e.id!==id;});_renderActa_j1m3();};
 })();
 
@@ -1748,9 +1748,8 @@ window.mlSimulate_j1m10=function(){
         applyEventToRoster(roster, teamName, playerName, type, ico);
       });
 
-      if(data.mvpName && data.mvpTeam){
-        applyEventToRoster(roster, data.mvpTeam, data.mvpName, 'mvp', '⭐');
-      }
+      // MVP ya viene dentro de data.evts como type:'mvp' — NO aplicar de nuevo desde mvpName/mvpTeam
+      // para evitar doble conteo
     }
 
     Object.keys(LIGA_PLAYER_MATCH_STORE).forEach(function(matchKey){
@@ -2436,9 +2435,12 @@ var _compSoundMap = { 's-champions': { snd:'snd-ucl', flash:'flash-ucl' }, 's-su
       d.setAttribute('data-team', ev.team);
       d.setAttribute('data-type', ev.type);
       var teamName=ev.team==='a'?TEAM_A:TEAM_B;
+      var _iaFalloExtra='';
+      if(ev.type==='pen-parado'){var _iaContrario=ev.team==='a'?'b':'a';var _iaFallado=evts.find(function(e){return e.type==='pen-fallo'&&e.team===_iaContrario&&e.min===ev.min;});if(_iaFallado){_iaFalloExtra='<span class="ml-evt-pen-fallo">❌ '+_iaFallado.player[1]+'</span>';}}
       d.innerHTML='<span class="ml-evt-min">'+ev.min+"'</span>"
         +'<span class="ml-evt-ico">'+ev.ico+'</span>'
         +'<span class="ml-evt-name">'+ev.player[1]+'</span>'
+        +_iaFalloExtra
         +'<span class="ml-evt-team">'+teamName+'</span>';
       list.appendChild(d);
     }
@@ -2492,6 +2494,11 @@ var _compSoundMap = { 's-champions': { snd:'snd-ucl', flash:'flash-ucl' }, 's-su
       var r=document.createElement('div'); r.className='ml-ht ml-ht-fin';
       r.textContent='🏁 FIN · '+TEAM_A+' '+sa+' – '+sb+' '+TEAM_B
         +(winner==='Empate'?' · EMPATE':' · 🏆 '+winner.toUpperCase()+' GANA');
+      // Añadir MVP a evts para que se contabilice en estadísticas igual que en partidos manuales
+      if(mvpName){
+        var mvpTeamKey = mvpTeam===TEAM_A?'a':'b';
+        evts.push({min:90,ico:'⭐',team:mvpTeamKey,player:['',mvpName],type:'mvp'});
+      }
       // Conteo tarjetas/MVP para clasificación
       var _ta_a=evts.filter(function(e){return e.team==='a'&&e.ico==='🟨';}).length;
       var _tr_a=evts.filter(function(e){return e.team==='a'&&(e.ico==='🟥'||e.ico==='🟨🟥');}).length;
@@ -2975,9 +2982,7 @@ document.addEventListener("DOMContentLoaded",rebuildLigaStats);
         var teamName = canonicalTeamName(ev && (ev.realTeam || ev.teamName || ev.team_label || (ev.team === 'a' ? data.teamA : ev.team === 'b' ? data.teamB : ev.team)) || '');
         applyEvent(index, teamName, ev);
       });
-      if(data.mvpName && data.mvpTeam){
-        applyEvent(index, data.mvpTeam, { type:'mvp', ico:'⭐', player:['', data.mvpName] });
-      }
+      // MVP ya viene dentro de data.evts — NO aplicar de nuevo para evitar doble conteo
     });
 
     extractDomFallbackEvents().forEach(function(x){
@@ -2990,14 +2995,7 @@ document.addEventListener("DOMContentLoaded",rebuildLigaStats);
 
   window.rebuildLigaPlayerStatsFixed = rebuildLigaPlayerStatsFixed;
 
-  var originalRegistrar = window.registrarLigaPlayerStats;
-  if(typeof originalRegistrar === 'function'){
-    window.registrarLigaPlayerStats = function(){
-      var res = originalRegistrar.apply(this, arguments);
-      try { rebuildLigaPlayerStatsFixed(); } catch(e) {}
-      return res;
-    };
-  }
+  // No se envuelve registrarLigaPlayerStats para evitar doble reconstrucción al editar MVP
 
   document.addEventListener('DOMContentLoaded', function(){
     setTimeout(rebuildLigaPlayerStatsFixed, 50);
